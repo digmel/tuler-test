@@ -1,41 +1,52 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from "react-native";
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flexGrow: 1,
-    justifyContent: 'center',
-  },
-  link: {
-    color: 'blue',
-  },
-  textContainer: {
-    alignItems: 'center',
-    marginTop: 16,
-  },
-  text: {
-    alignItems: 'center',
-    fontSize: 24,
-    marginBottom: 24,
-  },
-})
-
-export default function App(props) {
+export default function App() {
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
-        React Native for Web & Next.js
+        Case Studies
       </Text>
 
-      <Text style={styles.link} accessibilityRole="link" href={`/alternate`}>
-        A universal link
+      <Text
+        style={styles.link}
+        accessibilityRole="link"
+        href={`/glutenFreeAppPage`}
+      >
+        Gluten Free App
       </Text>
 
-      <View style={styles.textContainer}>
-        <Text accessibilityRole="header" aria-level="2" style={styles.text}>
-          Subheader
-        </Text>
-      </View>
+      <Text
+        style={styles.link}
+        accessibilityRole="link"
+        href={`/reduceFoodWasteAppPage`}
+      >
+        Reduce Food Waste App
+      </Text>
+
+      <Text
+        style={styles.link}
+        accessibilityRole="link"
+        href={`/firstAidAppPage`}
+      >
+        First Aid App
+      </Text>
     </View>
-  )
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    flexGrow: 1,
+    justifyContent: "center",
+  },
+  link: {
+    color: "blue",
+    marginBottom: 30,
+  },
+  text: {
+    alignItems: "center",
+    fontSize: 24,
+    marginBottom: 24,
+  },
+});
