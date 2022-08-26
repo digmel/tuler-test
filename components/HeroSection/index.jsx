@@ -2,13 +2,14 @@ import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
+import { textStyles } from "../config/textStyles";
 
 export const HeroSection = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
-        <Text style={styles.title}>Hi, I’m Elene 👋</Text>
-        <Text style={styles.subtitle}>
+        <Text style={textStyles.headline}>Hi, I’m Elene 👋</Text>
+        <Text style={[textStyles.subtitle, { paddingTop: 24 }]}>
           Google certified UX/UI Designer with the mission to create delightful
           experiences and lovable products for people!
         </Text>

@@ -3,7 +3,7 @@ import { colors } from "../../components";
 
 export const styles = StyleSheet.create({
   container: {
-    marginVertical: 12,
+    marginVertical: 25,
     backgroundColor: colors.light,
     height: 652,
     shadowColor: colors.shadow,

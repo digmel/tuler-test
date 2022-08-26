@@ -1,13 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
-import { Screen } from "../screen";
 import Image from "next/image";
 import { textStyles } from "../config/textStyles";
 
 export const Card = () => {
   return (
-    <Screen>
+    <>
       <View style={styles.container}>
         <View style={styles.leftContainer}>
           <Image
@@ -36,6 +35,6 @@ export const Card = () => {
           <Text style={[textStyles.link, styles.link]}>View More</Text>
         </View>
       </View>
-    </Screen>
+    </>
   );
 };
