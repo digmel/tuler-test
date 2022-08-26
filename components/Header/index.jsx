@@ -5,13 +5,14 @@ import { styles } from "./styles";
 export const Header = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
-
-      <Text style={styles.title}>Projects</Text>
-
-      <Text style={styles.title}>About</Text>
-
-      <Text style={styles.title}>elene.uxdesign@gmail.com</Text>
+      <View style={styles.leftContainer}>
+        <Text style={styles.title}>Home</Text>
+        <Text style={styles.title}>Projects</Text>
+        <Text style={styles.title}>About</Text>
+      </View>
+      <View style={styles.rightContainer}>
+        <Text style={styles.title}>elene.uxdesign@gmail.com</Text>
+      </View>
     </View>
   );
 };
