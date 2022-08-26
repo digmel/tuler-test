@@ -20,5 +20,13 @@ export const styles = StyleSheet.create({
   rightContainer: {
     justifyContent: "center",
     flexBasis: "45%",
+    paddingEnd: 80,
+  },
+  link: {
+    paddingTop: 100,
+    alignSelf: "flex-end",
+  },
+  divider: {
+    paddingVertical: 20,
   },
 });
