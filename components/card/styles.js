@@ -16,11 +16,9 @@ export const styles = StyleSheet.create({
   leftContainer: {
     flexBasis: "55%",
     justifyContent: "center",
-    backgroundColor: "green",
   },
   rightContainer: {
     justifyContent: "center",
     flexBasis: "45%",
-    backgroundColor: "red",
   },
 });

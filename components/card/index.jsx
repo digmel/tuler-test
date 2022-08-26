@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import { styles } from "./styles";
 import { Screen } from "../screen";
 import Image from "next/image";
+import { textStyles } from "../config/textStyles";
 
 export const Card = () => {
   return (
@@ -17,7 +18,7 @@ export const Card = () => {
           />
         </View>
         <View style={styles.rightContainer}>
-          <Text>hello</Text>
+          <Text style={textStyles.label}>hello</Text>
         </View>
       </View>
     </Screen>
