@@ -1,10 +1,11 @@
-import { Header, HeroSection } from "../components";
+import { Header, HeroSection, Card } from "../components";
 
 export default function App() {
   return (
     <>
       <Header />
       <HeroSection />
+      <Card />
     </>
   );
 }
