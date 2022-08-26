@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../components";
 
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     flexDirection: "row",
     height: 524,
-    backgroundColor: "#FAFAFA",
+    backgroundColor: colors.grayLight,
     paddingHorizontal: 160,
     paddingVertical: 80,
   },
@@ -28,12 +29,12 @@ export const styles = StyleSheet.create({
     fontSize: 80,
     fontWeight: 600,
     marginBottom: 24,
-    color: "#2D2D2D",
+    color: colors.primary,
   },
   subtitle: {
     fontSize: 36,
     fontWeight: 300,
     marginBottom: 24,
-    color: "#2D2D2D",
+    color: colors.primary,
   },
 });

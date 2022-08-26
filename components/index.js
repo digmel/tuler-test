@@ -1,2 +1,3 @@
-export * from "./Header";
-export * from "./HeroSection";
+export * from "./config/colors";
+export * from "./header";
+export * from "./heroSection";
