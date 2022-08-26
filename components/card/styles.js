@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     marginVertical: 12,
     backgroundColor: colors.light,
     height: 652,
-    shadowColor: colors.dark,
+    shadowColor: colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,

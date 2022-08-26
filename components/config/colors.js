@@ -7,6 +7,6 @@ export const colors = {
   gray: "#E3E5E8",
   grayDark: "#565F67",
   light: "#FFFFFF",
-  dark: "#000000",
+  shadow: "#000000",
   link: "#125A95",
 };

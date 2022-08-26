@@ -46,6 +46,6 @@ export const textStyles = {
     fontSize: 20,
     fontWeight: 300,
     letterSpacing: "1%",
-    color: colors.dark,
+    color: colors.grayDark,
   },
 };

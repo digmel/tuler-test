@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     height: 101,
     backgroundColor: colors.light,
-    shadowColor: colors.dark,
+    shadowColor: colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,
