@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
   leftContainer: {
     flexBasis: "55%",
     justifyContent: "center",
+    paddingHorizontal: 36,
   },
   rightContainer: {
     justifyContent: "center",

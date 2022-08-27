@@ -4,33 +4,31 @@ import { styles } from "./styles";
 import Image from "next/image";
 import { textStyles } from "../config/textStyles";
 
-export const Card = () => {
+export const Card = ({
+  imagePath,
+  imageWidth,
+  imageHeight,
+  label,
+  title,
+  description,
+}) => {
   return (
     <>
       <View style={styles.container}>
         <View style={styles.leftContainer}>
-          <Image
-            src="/assets/gluten-hero.svg"
-            width={639}
-            height={500}
-            alt="Author Image"
-          />
+          <Image src={imagePath} width={imageWidth} height={imageHeight} />
         </View>
 
         <View style={styles.rightContainer}>
-          <Text style={textStyles.label}>1-WEEK UX/UI CHALLENGE</Text>
+          <Text style={textStyles.label}>{label}</Text>
 
-          <Text style={textStyles.h1.regular}>
-            Gluten-Free Restaurant Finder
-          </Text>
+          <Text style={textStyles.h1.regular}>{title}</Text>
 
           <View style={styles.divider}>
             <Image src="/assets/card-divider.svg" width={637} height={5} />
           </View>
 
-          <Text style={textStyles.card}>
-            The app allows users to find restaurant based on their preferences.
-          </Text>
+          <Text style={textStyles.card}>{description}</Text>
 
           <Text style={[textStyles.link, styles.link]}>View More</Text>
         </View>

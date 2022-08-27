@@ -25,8 +25,9 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-end",
   },
-  title: {
+  menu: {
     fontSize: 16,
     marginHorizontal: 44,
+    alignItems: "center",
   },
 });
