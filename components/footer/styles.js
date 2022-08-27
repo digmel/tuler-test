@@ -27,4 +27,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginHorizontal: 44,
   },
+  icon: {
+    paddingHorizontal: 16,
+  },
 });
