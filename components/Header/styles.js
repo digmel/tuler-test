@@ -13,17 +13,18 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 7,
     paddingHorizontal: 160,
+    paddingTop: 36,
     justifyContent: "space-between",
   },
-  leftContainer: {
+  contentStart: {
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "flex-start",
+    alignSelf: "flex-start",
   },
-  rightContainer: {
+  contentEnd: {
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "flex-end",
+    alignSelf: "flex-start",
   },
   menu: {
     fontSize: 16,
