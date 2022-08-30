@@ -1,9 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { textStyles } from "../config/textStyles";
-import { imageLoader } from "../config/imageLoader";
 import { styles } from "./styles";
-import Image from "next/image";
+import Image from "../image";
 
 export const Footer = () => {
   return (
@@ -15,7 +14,6 @@ export const Footer = () => {
             width={40}
             height={40}
             alt="Author Image"
-            loader={imageLoader}
           />
         </View>
         <View style={styles.icon}>
@@ -24,7 +22,6 @@ export const Footer = () => {
             width={40}
             height={40}
             alt="Author Image"
-            loader={imageLoader}
           />
         </View>
         <View style={styles.icon}>
@@ -33,7 +30,6 @@ export const Footer = () => {
             width={40}
             height={40}
             alt="Author Image"
-            loader={imageLoader}
           />
         </View>
       </View>

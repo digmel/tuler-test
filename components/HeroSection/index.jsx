@@ -1,9 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
-import Image from "next/image";
 import { textStyles } from "../config/textStyles";
-import { imageLoader } from "../config/imageLoader";
+import Image from "../image";
 
 export const HeroSection = () => {
   return (
@@ -18,7 +17,6 @@ export const HeroSection = () => {
       <View style={styles.rightContainer}>
         <View style={styles.imageContainer}>
           <Image
-            loader={imageLoader}
             src="/assets/hero.svg"
             width={364}
             height={364}

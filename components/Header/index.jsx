@@ -1,9 +1,8 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { textStyles } from "../config/textStyles";
-import { imageLoader } from "../config/imageLoader";
-import Image from "next/image";
 import { styles } from "./styles";
+import Image from "../image";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
   const homeActiveStyle = isHome ? { paddingBottom: 4, fontWeight: 500 } : {};
@@ -20,12 +19,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isHome && (
             <View style={{ alignItems: "center" }}>
-              <Image
-                src="/assets/active-menu.svg"
-                width={131}
-                height={16}
-                loader={imageLoader}
-              />
+              <Image src="/assets/active-menu.svg" width={131} height={16} />
             </View>
           )}
         </Pressable>
@@ -37,12 +31,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isProject && (
             <View style={{ alignItems: "center" }}>
-              <Image
-                src="/assets/active-menu.svg"
-                width={131}
-                height={16}
-                loader={imageLoader}
-              />
+              <Image src="/assets/active-menu.svg" width={131} height={16} />
             </View>
           )}
         </Pressable>
@@ -56,12 +45,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isAbout && (
             <View style={{ alignItems: "center" }}>
-              <Image
-                src="/assets/active-menu.svg"
-                width={131}
-                height={16}
-                loader={imageLoader}
-              />
+              <Image src="/assets/active-menu.svg" width={131} height={16} />
             </View>
           )}
         </Pressable>
