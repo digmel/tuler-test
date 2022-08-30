@@ -26,7 +26,8 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignSelf: "flex-start",
   },
-  menu: {
+  menuItem: {
+    width: 100,
     fontSize: 16,
     marginHorizontal: 44,
     alignItems: "center",

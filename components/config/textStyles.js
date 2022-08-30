@@ -71,7 +71,7 @@ export const textStyles = {
     color: colors.primary,
     lineHeight: "130%",
   },
-  menu: {
+  menuItem: {
     fontSize: 24,
     fontWeight: 300,
     color: colors.primary,

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { textStyles } from "../config/textStyles";
 
 export const Card = ({
+  link,
   imagePath,
   imageWidth,
   imageHeight,
@@ -14,7 +15,7 @@ export const Card = ({
 }) => {
   return (
     <>
-      <View style={styles.container}>
+      <View style={styles.container} accessibilityRole="link" href={link}>
         <View style={styles.leftContainer}>
           <Image src={imagePath} width={imageWidth} height={imageHeight} />
         </View>

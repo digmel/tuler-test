@@ -11,7 +11,7 @@ import { ScrollView, Text, View } from "react-native";
 export default function App() {
   return (
     <ScrollView>
-      <Header />
+      <Header isHome={true} />
       <HeroSection />
       <Screen>
         <View style={{ paddingTop: 70 }}>
@@ -19,6 +19,7 @@ export default function App() {
         </View>
 
         <Card
+          link={`/GlutenFreeApp`}
           imagePath="/assets/gluten-hero.svg"
           imageWidth={639}
           imageHeight={500}
@@ -27,6 +28,7 @@ export default function App() {
           description="The app allows users to find restaurant based on their preferences."
         />
         <Card
+          link={`/FoodWasteApp`}
           imagePath="/assets/waste-hero.svg"
           imageWidth={509}
           imageHeight={500}
@@ -35,6 +37,7 @@ export default function App() {
           description="Using the app people reduce food waste while helping others as well."
         />
         <Card
+          link={`/FirstAidApp`}
           imagePath="/assets/first-aid-hero.svg"
           imageWidth={786}
           imageHeight={500}
