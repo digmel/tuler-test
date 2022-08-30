@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { textStyles } from "../config/textStyles";
+import { imageLoader } from "../config/imageLoader";
 import Image from "next/image";
 import { styles } from "./styles";
 
@@ -19,7 +20,12 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isHome && (
             <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
+              <Image
+                src="/assets/active-menu.svg"
+                width={131}
+                height={16}
+                loader={imageLoader}
+              />
             </View>
           )}
         </Pressable>
@@ -31,7 +37,12 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isProject && (
             <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
+              <Image
+                src="/assets/active-menu.svg"
+                width={131}
+                height={16}
+                loader={imageLoader}
+              />
             </View>
           )}
         </Pressable>
@@ -45,7 +56,12 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
           {isAbout && (
             <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
+              <Image
+                src="/assets/active-menu.svg"
+                width={131}
+                height={16}
+                loader={imageLoader}
+              />
             </View>
           )}
         </Pressable>
