@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
-import Image from "../image";
+import Image from "next/image";
 import { textStyles } from "../config/textStyles";
 
 export const Card = ({

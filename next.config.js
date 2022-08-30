@@ -1,8 +1,6 @@
-module.exports = {
-  images: {
-    unoptimized: true,
-    loader: "custom",
-  },
+const withExportImages = require("next-export-optimize-images");
+
+module.exports = withExportImages({
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -30,4 +28,4 @@ module.exports = {
     ];
     return config;
   },
-};
+});

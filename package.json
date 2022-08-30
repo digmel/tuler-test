@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export",
+    "export": "next build && next export && next-export-optimize-images",
     "start": "next start",
-    "purge": "rm -rf node_modules .next out yarn.lock"
+    "purge": "rm -rf node_modules .next out yarn.lock",
+    "out": "npx http-server out"
   },
   "dependencies": {
     "@types/react-native": "^0.69.5",
@@ -16,6 +17,7 @@
     "react-native-web": "^0.13.14"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.13.14"
+    "babel-plugin-react-native-web": "^0.13.14",
+    "next-export-optimize-images": "^1.6.2"
   }
 }

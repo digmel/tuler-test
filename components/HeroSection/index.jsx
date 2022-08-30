@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 import { textStyles } from "../config/textStyles";
-import Image from "../image";
+import Image from "next/image";
 
 export const HeroSection = () => {
   return (

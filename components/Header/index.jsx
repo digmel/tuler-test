@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
-import Image from "../image";
+import Image from "next/image";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
   const homeActiveStyle = isHome ? { paddingBottom: 4, fontWeight: 500 } : {};
