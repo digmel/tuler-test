@@ -4,7 +4,7 @@ import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
 import Image from "next/image";
 
-const Header = ({ isHome, isProject, isAbout }) => {
+export const Header = ({ isHome, isProject, isAbout }) => {
   const homeActiveStyle = isHome ? { paddingBottom: 4, fontWeight: 500 } : {};
   const projectActiveStyle = isProject
     ? { paddingBottom: 4, fontWeight: 500 }
@@ -57,5 +57,3 @@ const Header = ({ isHome, isProject, isAbout }) => {
     </View>
   );
 };
-
-export default Header;
