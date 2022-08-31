@@ -12,6 +12,7 @@ module.exports = {
       "react-native$": "react-native-web",
     };
     config.resolve.extensions = [
+      ".js",
       ".web.js",
       ".web.jsx",
       ".web.ts",

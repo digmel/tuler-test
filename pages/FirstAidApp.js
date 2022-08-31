@@ -1,12 +1,5 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
-import {
-  Header,
-  HeroSection,
-  Card,
-  textStyles,
-  Screen,
-  Footer,
-} from "../components";
+import { Header, Footer } from "../components";
 
 export default function FirstAidApp() {
   return (
