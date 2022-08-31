@@ -39,7 +39,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
         <Pressable
           style={styles.menuItem}
           accessibilityRole="link"
-          href={`/About`}
+          href={`/about`}
         >
           <Text style={[textStyles.menuItem, aboutActiveStyle]}>About</Text>
 
