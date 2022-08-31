@@ -1,18 +1,10 @@
-const withExportImages = require("next-export-optimize-images");
-
-module.exports = withExportImages({
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      "/": { page: "/" },
-      "/About": { page: "/About" },
-      "/FirstAidApp": { page: "/FirstAidApp" },
-      "/FoodWasteApp": { page: "/FoodWasteApp" },
-      "/GlutenFreeApp": { page: "/GlutenFreeApp" },
-    };
+module.exports = {
+  images: {
+    loader: "akamai",
+    path: "./",
   },
+  assetPrefix: "./",
+
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -28,4 +20,4 @@ module.exports = withExportImages({
     ];
     return config;
   },
-});
+};
