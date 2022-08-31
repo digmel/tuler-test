@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { textStyles } from "../config/textStyles";
 import Image from "next/image";
 
-export const HeroSection = () => {
+const HeroSection = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
@@ -27,3 +27,5 @@ export const HeroSection = () => {
     </View>
   );
 };
+
+export default HeroSection;
