@@ -5,3 +5,4 @@ export * from "./Header";
 export * from "./footer";
 export * from "./HeroSection";
 export * from "./card";
+export * from "./Section";
