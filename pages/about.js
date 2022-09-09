@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { Header, textStyles, Screen, Section, Footer } from "../components";
+import Image from "next/image";
 
 export default function About() {
   return (
     <ScrollView>
       <Header isAbout={true} />
       <Screen>
-        <Text style={textStyles.headline}>About me</Text>
+        {/* <Text style={textStyles.headline}>About me</Text> */}
 
         <View style={styles.container}>
           <View style={styles.contentStart}>
@@ -33,7 +34,14 @@ export default function About() {
             />
           </View>
 
-          <View style={styles.contentEnd}></View>
+          <View style={styles.contentEnd}>
+            <Image
+              src="/assets/about-cover.png"
+              width={570}
+              height={380}
+              alt="Author Image"
+            />
+          </View>
         </View>
       </Screen>
       <Footer />
@@ -50,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentEnd: {
-    flexBasis: "45%",
+    marginLeft: 90,
   },
   text: {
     paddingTop: 300,
