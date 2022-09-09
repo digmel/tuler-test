@@ -14,7 +14,7 @@ export default function App() {
       <Header isHome={true} />
       <HeroSection />
       <Screen>
-        <View style={{ paddingTop: 70 }}>
+        <View>
           <Text style={textStyles.h2}>Case Studies</Text>
         </View>
 
