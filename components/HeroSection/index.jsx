@@ -7,22 +7,16 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.leftContainer}>
-        <Text style={textStyles.headline}>Hi, I’m Elene 👋</Text>
-        <Text style={[textStyles.subtitle, { paddingTop: 24 }]}>
+      <View style={styles.contentStart}>
+        <Image src="/assets/hero.svg" width={150} height={150} />
+      </View>
+
+      <View style={styles.contentEnd}>
+        <Text style={textStyles.h2}>Hi, I’m Elene 👋</Text>
+        <Text style={textStyles.body}>
           Google certified UX/UI Designer with the mission to create delightful
           experiences and lovable products for people!
         </Text>
-      </View>
-      <View style={styles.rightContainer}>
-        <View style={styles.imageContainer}>
-          <Image
-            src="/assets/hero.svg"
-            width={364}
-            height={364}
-            alt="Author Image"
-          />
-        </View>
       </View>
     </View>
   );

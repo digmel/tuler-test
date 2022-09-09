@@ -26,6 +26,7 @@ export const textStyles = {
     fontWeight: 600,
     color: colors.primary,
     lineHeight: "130%",
+    marginBottom: 28,
   },
   subtitle: {
     fontSize: 36,

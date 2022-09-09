@@ -1,7 +1,16 @@
 import React from "react";
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import { styles } from "./styles";
+import { Header, Footer } from "../../components";
 
-export const Screen = ({ children }) => {
-  return <View style={styles.container}>{children}</View>;
+export const Screen = ({ children, isHome, isProject, isAbout }) => {
+  return (
+    <ScrollView style={styles.container}>
+      <Header isHome={isHome} isProject={isProject} isAbout={isAbout} />
+
+      <View style={styles.content}>{children}</View>
+
+      <Footer />
+    </ScrollView>
+  );
 };
