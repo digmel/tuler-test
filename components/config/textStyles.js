@@ -10,7 +10,7 @@ export const textStyles = {
   },
   h1: {
     regular: {
-      fontSize: 64,
+      fontSize: 48,
       fontWeight: 400,
       color: colors.primary,
       lineHeight: "130%",
@@ -78,7 +78,7 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   card: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: 300,
     color: colors.primary,
     lineHeight: "130%",

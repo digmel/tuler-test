@@ -12,8 +12,8 @@ export default function App() {
       <Card
         link={`/GlutenFreeApp`}
         imagePath="/assets/gluten-hero.svg"
-        imageWidth={639}
-        imageHeight={500}
+        imageWidth={559}
+        imageHeight={438}
         label="1-WEEK UX/UI CHALLENGE"
         title="Gluten-Free Restaurant Finder"
         description="The app allows users to find restaurant based on their preferences."
@@ -21,8 +21,8 @@ export default function App() {
       <Card
         link={`/FoodWasteApp`}
         imagePath="/assets/waste-hero.svg"
-        imageWidth={509}
-        imageHeight={500}
+        imageWidth={444}
+        imageHeight={438}
         label="RESEARCH / PRODUCT DESIGN"
         title="Reduce Food Waste by Sharing It"
         description="Using the app people reduce food waste while helping others as well."
@@ -30,8 +30,8 @@ export default function App() {
       <Card
         link={`/FirstAidApp`}
         imagePath="/assets/first-aid-hero.svg"
-        imageWidth={786}
-        imageHeight={500}
+        imageWidth={649}
+        imageHeight={419}
         label="RESEARCH / PRODUCT DESIGN"
         title="First Aid App"
         description="Learn how to handle yourself and casualties during an emergency."

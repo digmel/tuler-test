@@ -1,9 +1,17 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Screen } from "../components";
+import { Screen, ProjectHero } from "../components";
 
 export default function FirstAidApp() {
   return (
     <Screen isProject={true}>
+      <ProjectHero
+        link="https://eleneux.com/"
+        imagePath="/assets/first-aid-hero.svg"
+        imageWidth={826}
+        imageHeight={525}
+        title="First Aid App"
+        description="Learn how to handle yourself and casualties during an emergency."
+      />
       <View style={styles.container}>
         <Text style={styles.text}>FirstAidApp Page</Text>
       </View>
