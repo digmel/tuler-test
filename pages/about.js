@@ -33,8 +33,8 @@ export default function About() {
         <View style={styles.contentEnd}>
           <Image
             src="/assets/about-cover.png"
-            width={570}
-            height={380}
+            width={574}
+            height={381}
             alt="Author Image"
           />
         </View>
@@ -53,5 +53,6 @@ const styles = StyleSheet.create({
   },
   contentEnd: {
     marginLeft: 90,
+    marginTop: 20,
   },
 });

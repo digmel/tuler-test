@@ -1,8 +1,10 @@
-import React from "react";
-import { View, Text, Pressable } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Pressable, Clipboard } from "react-native";
 import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
 import Image from "next/image";
+
+const contactEmail = "elene.uxdesign@gmail.com";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
   const homeActiveStyle = isHome ? { paddingBottom: 4, fontWeight: 500 } : {};
@@ -11,9 +13,19 @@ export const Header = ({ isHome, isProject, isAbout }) => {
     : {};
   const aboutActiveStyle = isAbout ? { paddingBottom: 4, fontWeight: 500 } : {};
 
+  const [isEmailVisible, setIsEmailVisible] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
+
+  const onContact = () => {
+    Clipboard.setString(contactEmail);
+    setIsEmailVisible(true);
+    setIsButtonVisible(false);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.contentStart}>
+        {/* Home */}
         <Pressable style={styles.menuItem} accessibilityRole="link" href={`/`}>
           <Text style={[textStyles.menuItem, homeActiveStyle]}>Home</Text>
 
@@ -24,6 +36,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           )}
         </Pressable>
 
+        {/* Projects */}
         <Pressable style={styles.menuItem}>
           <Text style={[textStyles.menuItem, projectActiveStyle]}>
             Projects
@@ -36,6 +49,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           )}
         </Pressable>
 
+        {/* About */}
         <Pressable
           style={styles.menuItem}
           accessibilityRole="link"
@@ -51,8 +65,14 @@ export const Header = ({ isHome, isProject, isAbout }) => {
         </Pressable>
       </View>
 
+      {/* Contact */}
       <View style={styles.contentEnd}>
-        <Text style={textStyles.menuItem}>elene.uxdesign@gmail.com</Text>
+        {isButtonVisible && (
+          <Pressable style={styles.button} onPress={onContact}>
+            <Text style={textStyles.menuItem}>Contact</Text>
+          </Pressable>
+        )}
+        {isEmailVisible && <Text style={textStyles.label}>{contactEmail}</Text>}
       </View>
     </View>
   );
