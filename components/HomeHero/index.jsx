@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { textStyles } from "../config/textStyles";
 import Image from "next/image";
 
-export const HeroSection = () => {
+export const HomeHero = () => {
   return (
     <View style={styles.container}>
       <View style={styles.contentStart}>

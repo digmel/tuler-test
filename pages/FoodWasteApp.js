@@ -1,22 +1,13 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
-import {
-  Header,
-  HeroSection,
-  Card,
-  textStyles,
-  Screen,
-  Footer,
-} from "../components";
+import { StyleSheet, Text, View } from "react-native";
+import { Screen } from "../components";
 
 export default function FoodWasteApp() {
   return (
-    <ScrollView>
-      <Header isProject={true} />
+    <Screen isProject={true}>
       <View style={styles.container}>
         <Text style={styles.text}>FoodWasteApp Page</Text>
       </View>
-      <Footer />
-    </ScrollView>
+    </Screen>
   );
 }
 

@@ -1,15 +1,13 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
-import { Header, Footer } from "../components";
+import { StyleSheet, Text, View } from "react-native";
+import { Screen } from "../components";
 
 export default function FirstAidApp() {
   return (
-    <ScrollView>
-      <Header isProject={true} />
+    <Screen isProject={true}>
       <View style={styles.container}>
         <Text style={styles.text}>FirstAidApp Page</Text>
       </View>
-      <Footer />
-    </ScrollView>
+    </Screen>
   );
 }
 

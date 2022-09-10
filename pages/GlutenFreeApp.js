@@ -1,22 +1,21 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
-import {
-  Header,
-  HeroSection,
-  Card,
-  textStyles,
-  Screen,
-  Footer,
-} from "../components";
+import { StyleSheet, Text, View } from "react-native";
+import { ProjectHero, Screen } from "../components";
 
 export default function GlutenFreeApp() {
   return (
-    <ScrollView>
-      <Header isProject={true} />
+    <Screen isProject={true}>
+      <ProjectHero
+        link="https://eleneux.com/"
+        imagePath="/assets/gluten-hero.svg"
+        imageWidth={662}
+        imageHeight={525}
+        title="Gluten-Free Restaurant Finder"
+        description="The app allows users to find restaurant based on their preferences."
+      />
       <View style={styles.container}>
         <Text style={styles.text}>GlutenFreeApp Page</Text>
       </View>
-      <Footer />
-    </ScrollView>
+    </Screen>
   );
 }
 

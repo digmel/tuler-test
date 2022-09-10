@@ -1,17 +1,10 @@
-import {
-  Header,
-  HeroSection,
-  Card,
-  textStyles,
-  Screen,
-  Footer,
-} from "../components";
+import { Card, textStyles, Screen, HomeHero } from "../components";
 import { Text, View } from "react-native";
 
 export default function App() {
   return (
     <Screen isHome={true}>
-      <HeroSection />
+      <HomeHero />
       <View>
         <Text style={textStyles.h2}>Case Studies</Text>
       </View>
