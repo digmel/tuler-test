@@ -28,10 +28,10 @@ export const styles = StyleSheet.create({
     marginStart: 70,
   },
   link: {
-    paddingTop: 100,
+    paddingTop: 80,
     alignSelf: "flex-end",
   },
   divider: {
-    paddingVertical: 20,
+    paddingVertical: 16,
   },
 });

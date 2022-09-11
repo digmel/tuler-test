@@ -23,7 +23,7 @@ export const Card = ({
         <View style={styles.containerEnd}>
           <Text style={textStyles.label}>{label}</Text>
 
-          <Text style={textStyles.h1.regular}>{title}</Text>
+          <Text style={textStyles.h2}>{title}</Text>
 
           <View style={styles.divider}>
             <Image src="/assets/card-divider.svg" width={637} height={5} />

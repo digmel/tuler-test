@@ -1,47 +1,38 @@
 import { colors } from "./colors";
 
 export const textStyles = {
-  headline: {
-    fontSize: 80,
-    fontWeight: 600,
+  h1: {
+    fontSize: 48,
+    fontWeight: 700,
     color: colors.primary,
     lineHeight: "130%",
     fontFamily: "Poppins",
-  },
-  h1: {
-    regular: {
-      fontSize: 48,
-      fontWeight: 400,
-      color: colors.primary,
-      lineHeight: "130%",
-      fontFamily: "Poppins",
-    },
-    bold: {
-      fontSize: 64,
-      fontWeight: 700,
-      color: colors.primary,
-      lineHeight: "130%",
-      fontFamily: "Poppins",
-      marginBottom: 14,
-    },
+    marginBottom: 16,
   },
   h2: {
-    fontSize: 42,
+    fontSize: 48,
+    fontWeight: 400,
+    color: colors.primary,
+    lineHeight: "130%",
+    fontFamily: "Poppins",
+  },
+  h3: {
+    fontSize: 36,
     fontWeight: 600,
     color: colors.primary,
     lineHeight: "130%",
-    marginBottom: 28,
     fontFamily: "Poppins",
+    marginBottom: 16,
   },
   subtitle: {
-    fontSize: 36,
+    fontSize: 24,
     fontWeight: 300,
     color: colors.primary,
     lineHeight: "130%",
     fontFamily: "Poppins",
   },
   link: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: 700,
     color: colors.link,
     lineHeight: "130%",
@@ -63,7 +54,7 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   body: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 300,
     letterSpacing: "1%",
     color: colors.primary,
@@ -78,7 +69,7 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   card: {
-    fontSize: 24,
+    fontSize: 32,
     fontWeight: 300,
     color: colors.primary,
     lineHeight: "130%",

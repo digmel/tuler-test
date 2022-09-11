@@ -21,10 +21,10 @@ export const ProjectHero = ({
   return (
     <View style={styles.container}>
       <View style={styles.containerStart}>
-        <Text style={textStyles.h1.bold}>{title}</Text>
+        <Text style={textStyles.h1}>{title}</Text>
         <Text style={textStyles.card}>{description}</Text>
 
-        <Button label="View Prototype" onPress={_openURL} topSpace={50} />
+        <Button label="View Prototype" onPress={_openURL} topSpace={42} />
       </View>
 
       <View style={styles.containerEnd}>

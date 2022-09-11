@@ -12,9 +12,9 @@ export const HomeHero = () => {
       </View>
 
       <View style={styles.contentEnd}>
-        <Text style={textStyles.h2}>Hi, I’m Elene 👋</Text>
-        <Text style={textStyles.body}>
-          Google certified UX/UI Designer with the mission to create delightful
+        <Text style={textStyles.h3}>Hi, I’m Elene 👋</Text>
+        <Text style={textStyles.subtitle}>
+          Google certified UX/UI Designer with a mission to create delightful
           experiences and lovable products for people!
         </Text>
       </View>
