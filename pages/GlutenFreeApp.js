@@ -6,7 +6,7 @@ export default function GlutenFreeApp() {
     <Screen isProject={true}>
       <ProjectHero
         link="https://eleneux.com/"
-        imagePath="/assets/gluten-hero.svg"
+        imagePath="/assets/gluten-hero-large.jpg"
         imageWidth={662}
         imageHeight={525}
         title="Gluten-Free Restaurant Finder"

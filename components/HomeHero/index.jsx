@@ -8,7 +8,7 @@ export const HomeHero = () => {
   return (
     <View style={styles.container}>
       <View style={styles.contentStart}>
-        <Image src="/assets/hero.svg" width={150} height={150} />
+        <Image src="/assets/author.png" width={150} height={150} />
       </View>
 
       <View style={styles.contentEnd}>

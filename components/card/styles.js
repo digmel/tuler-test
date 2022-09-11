@@ -3,25 +3,29 @@ import { colors } from "../../components";
 
 export const styles = StyleSheet.create({
   container: {
-    marginBottom: 25,
     backgroundColor: colors.light,
-    height: 570,
+    height: 489,
     shadowColor: colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,
     borderRadius: 24,
     flexDirection: "row",
+    marginBottom: 24,
+    paddingVertical: 48,
+    paddingEnd: 100,
+    paddingStart: 50,
   },
-  leftContainer: {
-    flexBasis: "55%",
+  containerStart: {
+    flex: 1,
     justifyContent: "center",
-    paddingHorizontal: 36,
+    alignItems: "center",
   },
-  rightContainer: {
+  containerEnd: {
+    flex: 1,
     justifyContent: "center",
-    flexBasis: "45%",
-    paddingEnd: 80,
+    alignItems: "flex-start",
+    marginStart: 70,
   },
   link: {
     paddingTop: 100,

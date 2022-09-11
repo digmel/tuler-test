@@ -6,7 +6,7 @@ export default function FoodWasteApp() {
     <Screen isProject={true}>
       <ProjectHero
         link="https://eleneux.com/"
-        imagePath="/assets/waste-hero.svg"
+        imagePath="/assets/waste-hero-large.jpg"
         imageWidth={534}
         imageHeight={525}
         title="Reduce Food Waste by Sharing It"

@@ -16,11 +16,11 @@ export const Card = ({
   return (
     <>
       <View style={styles.container} accessibilityRole="link" href={link}>
-        <View style={styles.leftContainer}>
+        <View style={styles.containerStart}>
           <Image src={imagePath} width={imageWidth} height={imageHeight} />
         </View>
 
-        <View style={styles.rightContainer}>
+        <View style={styles.containerEnd}>
           <Text style={textStyles.label}>{label}</Text>
 
           <Text style={textStyles.h1.regular}>{title}</Text>

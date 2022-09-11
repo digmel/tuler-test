@@ -6,7 +6,7 @@ export default function FirstAidApp() {
     <Screen isProject={true}>
       <ProjectHero
         link="https://eleneux.com/"
-        imagePath="/assets/first-aid-hero.svg"
+        imagePath="/assets/first-aid-hero-large.jpg"
         imageWidth={826}
         imageHeight={525}
         title="First Aid App"
