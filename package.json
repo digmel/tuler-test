@@ -14,7 +14,8 @@
     "next": "12.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native-web": "^0.18.9"
+    "react-native-web": "^0.18.9",
+    "react-spring": "^9.5.3"
   },
   "devDependencies": {
     "babel-plugin-react-native-web": "^0.13.14"

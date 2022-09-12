@@ -3,6 +3,7 @@ import { View, Text, Pressable, Clipboard } from "react-native";
 import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
 import Image from "next/image";
+import { ActionButton } from "./actionButton";
 
 const contactEmail = "elene.uxdesign@gmail.com";
 
@@ -18,12 +19,10 @@ export const Header = ({ isHome, isProject, isAbout }) => {
     : textStyles.menuItem.default;
 
   const [isEmailVisible, setIsEmailVisible] = useState(false);
-  const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   const onContact = () => {
     Clipboard.setString(contactEmail);
     setIsEmailVisible(true);
-    setIsButtonVisible(false);
   };
 
   return (
@@ -69,12 +68,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
       {/* Contact */}
       <View style={styles.contentEnd}>
-        {isButtonVisible && (
-          <Pressable style={styles.button} onPress={onContact}>
-            <Text style={textStyles.menuItem.default}>Contact</Text>
-          </Pressable>
-        )}
-        {isEmailVisible && <Text style={textStyles.label}>{contactEmail}</Text>}
+        <ActionButton title="Contact" content={contactEmail} />
       </View>
     </View>
   );
