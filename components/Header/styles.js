@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     zIndex: 1,
     alignItems: "center",
     flexDirection: "row",
-    height: 100,
+    height: 74,
     backgroundColor: colors.light,
     shadowColor: colors.shadow,
     shadowOffset: { width: 1, height: 1 },
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   contentStart: {
-    paddingTop: 34,
+    paddingTop: 24,
     flexDirection: "row",
     alignSelf: "flex-start",
   },

@@ -76,9 +76,18 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   menuItem: {
-    fontSize: 24,
-    fontWeight: 300,
-    color: colors.primary,
-    fontFamily: "Poppins",
+    default: {
+      fontSize: 20,
+      fontWeight: 300,
+      color: colors.primary,
+      fontFamily: "Poppins",
+    },
+    active: {
+      fontSize: 20,
+      fontWeight: 500,
+      color: colors.primary,
+      fontFamily: "Poppins",
+      letterSpacing: "1%",
+    },
   },
 };

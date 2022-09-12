@@ -7,11 +7,15 @@ import Image from "next/image";
 const contactEmail = "elene.uxdesign@gmail.com";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
-  const homeActiveStyle = isHome ? { paddingBottom: 4, fontWeight: 500 } : {};
-  const projectActiveStyle = isProject
-    ? { paddingBottom: 4, fontWeight: 500 }
-    : {};
-  const aboutActiveStyle = isAbout ? { paddingBottom: 4, fontWeight: 500 } : {};
+  const textStyleHome = isHome
+    ? textStyles.menuItem.active
+    : textStyles.menuItem.default;
+  const textStyleProject = isProject
+    ? textStyles.menuItem.active
+    : textStyles.menuItem.default;
+  const textStyleAbout = isAbout
+    ? textStyles.menuItem.active
+    : textStyles.menuItem.default;
 
   const [isEmailVisible, setIsEmailVisible] = useState(false);
   const [isButtonVisible, setIsButtonVisible] = useState(true);
@@ -27,7 +31,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
       <View style={styles.contentStart}>
         {/* Home */}
         <Pressable style={styles.menuItem} accessibilityRole="link" href={`/`}>
-          <Text style={[textStyles.menuItem, homeActiveStyle]}>Home</Text>
+          <Text style={textStyleHome}>Home</Text>
 
           {isHome && (
             <View style={{ alignItems: "center" }}>
@@ -38,9 +42,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
 
         {/* Projects */}
         <Pressable style={styles.menuItem}>
-          <Text style={[textStyles.menuItem, projectActiveStyle]}>
-            Projects
-          </Text>
+          <Text style={textStyleProject}>Projects</Text>
 
           {isProject && (
             <View style={{ alignItems: "center" }}>
@@ -55,7 +57,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           accessibilityRole="link"
           href={`/about`}
         >
-          <Text style={[textStyles.menuItem, aboutActiveStyle]}>About</Text>
+          <Text style={textStyleAbout}>About</Text>
 
           {isAbout && (
             <View style={{ alignItems: "center" }}>
@@ -69,7 +71,7 @@ export const Header = ({ isHome, isProject, isAbout }) => {
       <View style={styles.contentEnd}>
         {isButtonVisible && (
           <Pressable style={styles.button} onPress={onContact}>
-            <Text style={textStyles.menuItem}>Contact</Text>
+            <Text style={textStyles.menuItem.default}>Contact</Text>
           </Pressable>
         )}
         {isEmailVisible && <Text style={textStyles.label}>{contactEmail}</Text>}

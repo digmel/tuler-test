@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     marginBottom: 32,
   },
   underline: {
-    marginTop: 8,
-    marginBottom: 24,
+    marginTop: 4,
+    marginBottom: 20,
   },
 });
