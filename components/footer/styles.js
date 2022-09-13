@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     height: 104,
     backgroundColor: colors.grayLight,
-    paddingHorizontal: 160,
+    paddingHorizontal: 120,
     justifyContent: "space-between",
     borderTopColor: colors.gray,
     borderWidth: 1,
@@ -28,6 +28,6 @@ export const styles = StyleSheet.create({
     marginHorizontal: 44,
   },
   icon: {
-    paddingHorizontal: 16,
+    paddingEnd: 28,
   },
 });
