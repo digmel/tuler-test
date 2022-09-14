@@ -8,11 +8,10 @@ export const styles = StyleSheet.create({
   containerStart: {
     flexBasis: "55%",
     justifyContent: "center",
-    paddingHorizontal: 36,
+    paddingEnd: 36,
   },
   containerEnd: {
     justifyContent: "center",
     flexBasis: "45%",
-    paddingEnd: 80,
   },
 });
