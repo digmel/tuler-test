@@ -23,6 +23,7 @@ export const textStyles = {
     lineHeight: "130%",
     fontFamily: "Poppins",
     marginBottom: 16,
+    marginTop: 32,
   },
   subtitle: {
     fontSize: 24,

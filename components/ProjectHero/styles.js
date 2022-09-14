@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginBottom: 80,
+    marginBottom: 64,
   },
   containerStart: {
     flexBasis: "55%",
