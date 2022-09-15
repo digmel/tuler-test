@@ -174,7 +174,7 @@ export default function FoodWasteApp() {
         ]}
 // "In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
       />
-            <Section
+      <Section
 // "When the user has an ongoing donation along with the donation history, the ongoing donation should stand out to draw the users' attention. To make it more prominent I’ve:"
         content={[
           {
@@ -190,6 +190,25 @@ export default function FoodWasteApp() {
             image: "food-waste-ongoing-donation.jpg",
             imageWidth: 660,
             imageHeight: 558,
+          },
+        ]}
+      />
+      <Section
+        content={[
+          {
+            image: "food-waste-donation-flow.jpeg",
+            imageWidth: 261,
+            imageHeight: 533,
+          },
+          {
+            width: 420,
+            title: "Goal of Donation",
+            body: "Donating flow should be very simple and effortless otherwise people won't use it. Keeping that in mind, I tried to make the flow as easy as possible.",
+          },
+          {
+            width: 420,
+            title: "Donating Flow",
+            body: "Users can choose different kinds of products from the categories after clicking on continue, they will be asked for different details depending on the chosen products (for ex, apple - quantity, yogurt - quantity & expiration date). Then if he/she is a first-time user they will need to fill in personal information such as phone number and address. Users might be interested in tracking the courier, so on the ‘Thank you’ screen is a secondary button ‘Follow Courier’ that opens the map.",
           },
         ]}
       />
