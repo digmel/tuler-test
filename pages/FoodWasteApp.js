@@ -111,7 +111,6 @@ export default function FoodWasteApp() {
           },
         ]}
       />
-
       <Section
         topSpace={64}
         headline="User Journey"
@@ -129,7 +128,6 @@ export default function FoodWasteApp() {
           },
         ]}
       />
-
       <Section
         topSpace={64}
         headline="Designing & Iterating Screens"
@@ -211,6 +209,37 @@ export default function FoodWasteApp() {
             body: "Users can choose different kinds of products from the categories after clicking on continue, they will be asked for different details depending on the chosen products (for ex, apple - quantity, yogurt - quantity & expiration date). Then if he/she is a first-time user they will need to fill in personal information such as phone number and address. Users might be interested in tracking the courier, so on the ‘Thank you’ screen is a secondary button ‘Follow Courier’ that opens the map.",
           },
         ]}
+      />
+      <Section
+        headline="Next Steps"
+        content={[
+          {
+            width: 458,
+            title: "What's next?",
+            body: "I believe that the overall mindset behind the intention of donation would need more exploration. Currently, there is an MVP of the community feature, where users can share their donations and see what others are sharing. If I'd continue working on this app, I would start with finding answers about the community feature, as well as conducting usability tests to discover how the existing design addresses users' pain points. There are some questions I’d consider first.",
+          },
+          {
+            width: 458,
+            title: "Research Questions",
+            listIcon: "section-error-icon.svg",
+            list: [
+              "How would people use the community?",
+              "Is it the right motivational feature?",
+              "Would they be interested in sharing and seeing others' donations?",
+              "What would be the best way to create a community in such kind of application?",
+              "What way would they prefer to measure products? How can I make this flow less time-consuming for the users?",
+              "What would be the best way to show the users how their donations are spent, who receives those products, and when?",
+            ],
+          },
+          {
+            image: 'food-waste-community.jpg',
+            imageWidth: 261,
+            imageHeight: 533,
+          },
+        ]}
+        fullImage="food-waste-screens.jpg"
+        fullImageWidth={1440}
+        fullImageHeight={975}
       />
     </Screen>
   );
