@@ -1,9 +1,8 @@
 import React from "react";
-import { View, Text, Pressable, Linking } from "react-native";
+import { View, Text, Linking } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
 import { textStyles } from "../config/textStyles";
-import { colors } from "../config/colors";
 import { Button } from "../button";
 
 export const ProjectHero = ({
