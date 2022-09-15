@@ -201,8 +201,8 @@ export default function FoodWasteApp() {
               "“users are able to click the community and see what others are donating.”",
             ],
           },
-          description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
         ]}
+        description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
       />
     </Screen>
   );
