@@ -70,7 +70,6 @@ export default function GlutenFreeApp() {
       <Section
         content={[
           {            
-            width: 136,
             title: "Persona #1",
           },
         ]}
@@ -81,7 +80,6 @@ export default function GlutenFreeApp() {
       <Section
         content={[
           {            
-            // width: 136,
             title: "Persona #2",
           },
         ]}
