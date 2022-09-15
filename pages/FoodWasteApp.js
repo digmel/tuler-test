@@ -17,24 +17,24 @@ export default function FoodWasteApp() {
         headline="Project Overview"
         content={[
           {
-            width: 486,
+            width: 425,
             title: "Project Background",
             body: "With this app, people are connected to the nonprofit organization - Katarthis which cares about homeless people by offering them daily meals. They can visit Katarthis cafe and have breakfast or dinner there.",
           },
           {
-            width: 415,
+            width: 363,
             title: "The Goal",
-            body: "The goal was to create a user-friendly application to help them find gluten-free restaurants anywhere.",
+            body: "The goal was to design a solution for people who want to reduce their food waste and help others at the same time.",
           },
           {
-            width: 118,
+            width: 139,
             title: "My Role",
-            body: "UX/UI Designer",
+            body: "Product Designer UX Researcher",
           },
           {
-            width: 191,
+            width: 157,
             title: "Duration",
-            body: "1-Week UX/UI Challenge",
+            body: "8 Weeks Self-started project",
           },
         ]}
       />
@@ -49,27 +49,28 @@ export default function FoodWasteApp() {
           },
           {
             width: 433,
-            title: "User Insights",
+            title: "Some interview questions",
             listIcon: "section-icon.svg",
             list: [
-              "“Finding gluten-free places during my travels is very painful. If I’m lucky I can find a dedicated gluten-free restaurant, otherwise it’s very hard for me to trust a place. The risk of cross-contamination in a regular kitchen is just too high.”",
-              "“Most people don’t know the difference between celiac disease and gluten intolerance. I have the former, which means when I digest gluten, my immune system will attack against my own body tissue. So I really have to be wary about where to eat.”",
-              "“It’s not just about being gluten-free, but the culinary experience. Just because I’m sensitive to gluten it doesn’t mean I don’t want to have a romantic dinner during my holidays with my partner.”",
-              "“Gluten-free bakeries and restaurants can be overly expensive, it would be great to discover those within a reasonable price range close to me.”",
-              "“I usually revisit the gluten-free places where I had a good impression, but I tried so many, that it is hard to keep track of them.”",
+              "“What kind of food becomes wasted mostly in your house?”",
+              "“How much food do your throw away in a week?”",
+              "“What motivates or encourages you to reduce food waste?”",
+              "“What challenges do you face while trying to reduce your waste?”",
+              "“Have you ever encouraged others to reduce food waste? And how?”",
+              "“Have you ever given away extra food from your house?”",
             ],
           },
           {
             width: 399,
-            title: "Solutions",
+            title: "Received Insights",
             listIcon: "section-icon.svg",
             list: [
-              "The users should be able to easily find a new restaurant with their specifications.",
-              "The users find it useful to read about restaurant reviews.",
-              "They’d love to save favorite restaurants in a list and share the list with others.",
-              "Customers would like to know how pricey the place is, so in the descriptions should be price indicators.",
-              "A big part of the users would be travelers, they might be tired and hungry, and most likely they are using the app with a low phone battery after taking lots of photos, so I thought the app should have a dark mode as well to save the battery.",
-              "The app should support several languages to be useful for travelers.",
+              "Both of the participants are worried about food waste.",
+              "Both of them are interested in teaching their children about that topic.",
+              "When everyone in the family eats different food, reducing waste becomes difficult.",
+              "Family members often buy products that become leftovers.",
+              "There are always some expired products in the fridge.",
+              "Throwing away rotten food makes them worried and ashamed.",
             ],
           },
         ]}
@@ -79,20 +80,35 @@ export default function FoodWasteApp() {
         headline="Usability Tests on Lo-Fi Prototype"
         content={[
           {
+            width: 464,
+            title: "Prototype with Axure",
+            body: "After analyzing the insights from the interviews I started creating low-fidelity wireframes and created the first prototype in Axure that was used for usability testing.",
+          },
+// here goes list - 'Scenarios for Usability Tests' (below the 'Prototype with Axure')
+          {
+            width: 452,
+            title: "Usability Test Findings",
+            listIcon: "section-icon.svg",
+            list: [
+              "The participant mentioned that he’d skip the onboarding screens in real life.",
+              "Need to explain the purpose of the app inside the application, not only on the onboarding screens.",
+
+              "One of the participants was concerned whether products will be good for consumption by the time the courier comes to pick it up.",
+              "Explain how the couriers work.",
+
+              "Not sure about the meaning of “Start saving food” and “Overall impact”.",
+              "Change the wording, for example to “Our community’s impact”",
+
+              "Adding the expiration date of the product would be interesting.",
+              "Add input for the expiration date.",
+            ],
+          },
+          {
             image: 'food-waste-usability.jpg',
             imageWidth: 261,
             imageHeight: 533,
-            
-          },
-          {
-            width: 650,
-            title: "Log In options",
-            body: "Then I decided to add different login options, with all popular social accounts as well as just email sign-ups, to make sure all users can sign in. I also added the forgot password screen in case someone needs to reset their account password.",
           },
         ]}
-        fullImage="gluten-free-intro.jpg"
-        fullImageWidth={1140}
-        fullImageHeight={533}
       />
 
       <Section
