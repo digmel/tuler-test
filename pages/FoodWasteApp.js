@@ -48,7 +48,7 @@ export default function FoodWasteApp() {
             body: "In order to gather related information from other people and understand whether it’s a problem that needs to be solved, I’ve conducted 2 interviews. During the research, it became a lot more obvious that food waste is something my interviewees also think and worry about, I should mention that at that time I wasn’t really sure what would be the final product but those interviews helped me to get some insights and come up with the ideas.",
           },
           {
-            width: 433,
+            width: 420,
             title: "Some interview questions",
             listIcon: "section-icon.svg",
             list: [
@@ -88,7 +88,7 @@ export default function FoodWasteApp() {
           {
             width: 452,
             title: "Usability Test Findings",
-            listIcon: "section-icon.svg",
+            listIcon: "section-error-icon.svg",
             list: [
               "The participant mentioned that he’d skip the onboarding screens in real life.",
               "Need to explain the purpose of the app inside the application, not only on the onboarding screens.",
