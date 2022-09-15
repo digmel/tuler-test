@@ -130,7 +130,7 @@ export default function FoodWasteApp() {
         ]}
       />
 
-      {/* <Section
+      <Section
         topSpace={64}
         headline="Designing & Iterating Screens"
         description="I shortened and simplified the registration process as much as possible and didn't include the number and address fields because:"
@@ -153,7 +153,7 @@ export default function FoodWasteApp() {
           },
         ]}
       />
-      <Section
+      {/* <Section
       topSpace={64}
       content={[
         {
