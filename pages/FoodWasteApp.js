@@ -153,35 +153,6 @@ export default function FoodWasteApp() {
           },
         ]}
       />
-      {/* <Section
-      topSpace={64}
-      content={[
-        {
-          image: "food-waste-homescreen.jpg",
-          imageWidth: 720,
-          imageHeight: 525,
-        },
-        {
-          width: 606,
-          body: "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:",
-        },       
-        {
-          width: 606,
-          title: "Homescreen",
-          listIcon: "section-icon.svg",
-          list: [
-            "“users can navigate to ‘Your Donations’, where would be all their previous donations,”",
-            "“using the action button in the middle starts the donation flow,”",
-            "“users are able to click the community and see what others are donating.”",
-          ],
-        },
-        // {
-        //   width: 606,
-        //   body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
-        // },           
-
-      ]}
-      /> */}
       <Section
         title="Homescreen"
         description="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
@@ -190,7 +161,7 @@ export default function FoodWasteApp() {
             image: "food-waste-homescreen.jpg",
             imageWidth: 720,
             imageHeight: 525,
-          }
+          },
           {
             width: 606,
             // title: "User Insights",
@@ -202,7 +173,7 @@ export default function FoodWasteApp() {
             ],
           },
         ]}
-        // description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
+        description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
       />
     </Screen>
   );
