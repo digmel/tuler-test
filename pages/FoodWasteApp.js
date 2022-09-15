@@ -140,10 +140,10 @@ export default function FoodWasteApp() {
             title: "Log In",
             listIcon: "section-icon.svg",
             list: [
-              "“Asking lots of info at the beginning bothers users.”",
-              "“They might lose interest/motivation to continue.”",
-              "“Asking that info while donating would be more relevant”",
-              "“After the first donation, those details would be saved to their profile and would be easy to use next time”",
+              "Asking lots of info at the beginning bothers users.",
+              "They might lose interest/motivation to continue.",
+              "Asking that info while donating would be more relevant",
+              "After the first donation, those details would be saved to their profile and would be easy to use next time",
             ],
           },
           {
@@ -154,13 +154,8 @@ export default function FoodWasteApp() {
         ]}
       />
       <Section
-        // title="Homescreen"
-        // "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
+// "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
         content={[
-          // {
-          //   width=606,
-          //   body="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:",
-          // },
           {
             image: "food-waste-homescreen.jpg",
             imageWidth: 720,
@@ -171,13 +166,32 @@ export default function FoodWasteApp() {
             title: "User Insights",
             listIcon: "section-icon.svg",
             list: [
-              "“users can navigate to ‘Your Donations’, where would be all their previous donations,”",
-              "“using the action button in the middle starts the donation flow,”",
-              "“users are able to click the community and see what others are donating.”",
+              "users can navigate to ‘Your Donations’, where would be all their previous donations,",
+              "using the action button in the middle starts the donation flow,",
+              "users are able to click the community and see what others are donating.",
             ],
           },
         ]}
-        // "In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
+// "In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
+      />
+            <Section
+// "When the user has an ongoing donation along with the donation history, the ongoing donation should stand out to draw the users' attention. To make it more prominent I’ve:"
+        content={[
+          {
+            width: 482,
+            title: "Ongoing Donation",
+            listIcon: "section-icon.svg",
+            list: [
+              "created an extended version of the card where the most important info, such as courier details and arrival time is shown ",
+              "added notification indication on the nav bar ",
+            ],
+          },
+          {
+            image: "food-waste-ongoing-donation.jpg",
+            imageWidth: 660,
+            imageHeight: 558,
+          },
+        ]}
       />
     </Screen>
   );
