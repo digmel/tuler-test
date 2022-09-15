@@ -161,7 +161,10 @@ export default function FoodWasteApp() {
           imageWidth: 720,
           imageHeight: 525,
         },
-        body="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:",
+        {
+          width: 606,
+          body: "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:",
+        },       
         {
           width: 606,
           title: "Homescreen",
@@ -171,8 +174,12 @@ export default function FoodWasteApp() {
             "“using the action button in the middle starts the donation flow,”",
             "“users are able to click the community and see what others are donating.”",
           ],
-          // body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
         },
+        {
+          width: 606,
+          body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
+        },           
+
       ]}
       />
     </Screen>
