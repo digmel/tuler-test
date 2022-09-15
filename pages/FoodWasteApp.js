@@ -6,7 +6,7 @@ export default function FoodWasteApp() {
     <Screen isProject={true}>
       <ProjectHero
         link="https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1"
-        imagePath="/assets/food-waste-large.jpg"
+        imagePath="/assets/food-waste-hero-large.jpg"
         imageWidth={534}
         imageHeight={525}
         title="Reduce Food Waste by Sharing It"
@@ -122,7 +122,7 @@ export default function FoodWasteApp() {
             body: "After usability testing, I created the user journey for the scenario where the person is worried about her food waste and the friend suggests downloading this application.",
           },
           {
-            image: "user-journey.svg",
+            image: "food-waste-user-journey.svg",
             imageWidth: 904,
             imageHeight: 366,
           },
@@ -221,7 +221,7 @@ export default function FoodWasteApp() {
           {
             width: 458,
             title: "Research Questions",
-            listIcon: "section-error-icon.svg",
+            listIcon: "section-icon.svg",
             list: [
               "How would people use the community?",
               "Is it the right motivational feature?",
