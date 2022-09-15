@@ -76,12 +76,13 @@ export default function FoodWasteApp() {
       />
 
       <Section
-        headline="Design and Reasoning"
+        headline="Usability Tests on Lo-Fi Prototype"
         content={[
           {
-            width: 650,
-            title: "Introduction Screens",
-            body: "I think for a better experience, every app should have some introduction page to communicate with the users what the app is about before they ask to create an account or log in. So I added 3 introduction screens.",
+            image: 'food-waste-usability.jpg',
+            imageWidth: 261,
+            imageHeight: 533,
+            
           },
           {
             width: 650,
