@@ -153,7 +153,7 @@ export default function FoodWasteApp() {
           },
         ]}
       />
-      <Section
+      {/* <Section
       topSpace={64}
       content={[
         {
@@ -181,6 +181,22 @@ export default function FoodWasteApp() {
         // },           
 
       ]}
+      /> */}
+      <Section
+        title="Homescreen"
+        description="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
+        content={[
+          {
+            width: 606,
+            // title: "User Insights",
+            listIcon: "section-icon.svg",
+            list: [
+              "“users can navigate to ‘Your Donations’, where would be all their previous donations,”",
+              "“using the action button in the middle starts the donation flow,”",
+              "“users are able to click the community and see what others are donating.”",
+            ],
+          },
+        ]}
       />
     </Screen>
   );
