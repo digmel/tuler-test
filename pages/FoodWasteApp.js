@@ -175,10 +175,10 @@ export default function FoodWasteApp() {
             "“users are able to click the community and see what others are donating.”",
           ],
         },
-        {
-          width: 606,
-          body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
-        },           
+        // {
+        //   width: 606,
+        //   body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
+        // },           
 
       ]}
       />
