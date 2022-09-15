@@ -7,7 +7,7 @@ export default function FoodWasteApp() {
       <ProjectHero
         link="https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1"
         imagePath="/assets/food-waste-hero-large.jpg"
-        imageWidth={648}
+        imageWidth={534}
         imageHeight={525}
         title="Reduce Food Waste by Sharing It"
         description="Using the app people reduce food waste while helping others as well."
