@@ -147,7 +147,7 @@ export default function FoodWasteApp() {
             ],
           },
           {
-            image: "food-waste-login.jpg",
+            image: "food-waste-login.jpeg",
             imageWidth: 622,
             imageHeight: 533,
           },
