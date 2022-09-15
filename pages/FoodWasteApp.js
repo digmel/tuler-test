@@ -183,6 +183,11 @@ export default function FoodWasteApp() {
       ]}
       /> */}
       <Section
+              {
+                image: "food-waste-homescreen.jpg",
+                imageWidth: 720,
+                imageHeight: 525,
+              }
         title="Homescreen"
         description="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
         content={[
