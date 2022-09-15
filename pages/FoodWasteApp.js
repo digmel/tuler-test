@@ -118,7 +118,7 @@ export default function FoodWasteApp() {
         content={[
           {
             width: 457,
-            // marginTop: 40,
+            marginTop: 40,
             title: "Created the UJ",
             body: "After usability testing, I created the user journey for the scenario where the person is worried about her food waste and the friend suggests downloading this application.",
           },
