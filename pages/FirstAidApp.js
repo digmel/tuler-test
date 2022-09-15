@@ -86,7 +86,7 @@ export default function GlutenFreeApp() {
           },
         ]}
         fullImage="first-aid-persona2.svg"
-        fullImageWidth={1440}
+        fullImageWidth={1140}
         fullImageHeight={549}
       />
       <Section
@@ -129,7 +129,7 @@ export default function GlutenFreeApp() {
           },
           {
             image: "first-aid-test.jpg",
-            imageWidth: 260,
+            imageWidth: 728,
             imageHeight: 525,
           },
         ]}
@@ -178,7 +178,7 @@ export default function GlutenFreeApp() {
       />   
       <Section
          fullImage="first-aid-screens.jpg"
-         fullImageWidth={1140}
+         fullImageWidth={1440}
          fullImageHeight={969}     
       />
     </Screen>
