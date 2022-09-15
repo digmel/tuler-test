@@ -83,11 +83,9 @@ export default function GlutenFreeApp() {
             title: "Persona #2",
           },
         ]}
-      />
-      <Section
-           fullImage="first-aid-persona2.svg"
-           fullImageWidth={1140}
-           fullImageHeight={549}   
+        fullImage="first-aid-persona2.svg"
+        fullImageWidth={1140}
+        fullImageHeight={549}   
       />
       <Section
         headline="Usability Tests on Lo-Fi Prototype"
