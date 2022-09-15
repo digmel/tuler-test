@@ -164,7 +164,7 @@ export default function FoodWasteApp() {
           },
           {
             width: 606,
-            // title: "User Insights",
+            title: "User Insights",
             listIcon: "section-icon.svg",
             list: [
               "“users can navigate to ‘Your Donations’, where would be all their previous donations,”",
