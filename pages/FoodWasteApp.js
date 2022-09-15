@@ -183,14 +183,14 @@ export default function FoodWasteApp() {
       ]}
       /> */}
       <Section
-              {
-                image: "food-waste-homescreen.jpg",
-                imageWidth: 720,
-                imageHeight: 525,
-              }
         title="Homescreen"
         description="Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
         content={[
+          {
+            image: "food-waste-homescreen.jpg",
+            imageWidth: 720,
+            imageHeight: 525,
+          }
           {
             width: 606,
             // title: "User Insights",
@@ -201,6 +201,7 @@ export default function FoodWasteApp() {
               "“users are able to click the community and see what others are donating.”",
             ],
           },
+          description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
         ]}
       />
     </Screen>
