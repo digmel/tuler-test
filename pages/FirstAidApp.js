@@ -31,12 +31,12 @@ export default function GlutenFreeApp() {
             title: "Duration",
             body: "6 Weeks",
           },
+//  "Product Designer & UX Researcher",
           {
             width: 354,
             title: "My Role & Responsibilities",
             listIcon: "section-icon.svg",
             list: [
-              "Product Designer & UX Researcher",
               "Conducting interviews & usability studies,",
               "Digital wireframing,",
               "Accounting for accessibility,",
@@ -67,39 +67,70 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
-
       <Section
-        headline="Design and Reasoning"
         content={[
-          {
-            width: 650,
-            title: "Introduction Screens",
-            body: "I think for a better experience, every app should have some introduction page to communicate with the users what the app is about before they ask to create an account or log in. So I added 3 introduction screens.",
-          },
-          {
-            width: 650,
-            title: "Log In options",
-            body: "Then I decided to add different login options, with all popular social accounts as well as just email sign-ups, to make sure all users can sign in. I also added the forgot password screen in case someone needs to reset their account password.",
+          {            
+            width: 136,
+            title: "Persona #1",
           },
         ]}
-        fullImage="gluten-free-intro.jpg"
+        fullImage="first-aid-persona1.svg"
+        fullImageWidth={1440}
+        fullImageHeight={549}
+      />
+      <Section
+        content={[
+          {            
+            width: 136,
+            title: "Persona #2",
+          },
+        ]}
+        fullImage="first-aid-persona2.svg"
+        fullImageWidth={1440}
+        fullImageHeight={549}
+      />
+      <Section
+        headline="Usability Tests on Lo-Fi Prototype"
+        content={[
+          {
+            width: 458,
+            title: "Digital Wireframes",
+            body: "After ideating and drafting digital wireframes, I created the initial designs for the First aid app. These designs focus on delivering personalized guidance to users to help them learn to handle emergencies.",
+          },
+// Low-fidelity prototype were used for moderated usability study. Main findings:
+          {
+            width: 395,
+            title: "Usability Study Findings",
+            listIcon: "section-icon.svg",
+            list: [
+              "People would like to read illustrated articles,",
+              "Just reading topics won't be interesting,",
+              "Users need the motivation to use this application.",
+            ],
+          },
+          {
+            width: 412,
+            title: "Insights-based Changes",
+            body: "Based on the insights from the usability studies, I applied some changes, I’ve added tests section because of the users’ needs. Illustrations make the article interesting and visually appealing. Texts are simplified and easy to read even for the children.",
+          },
+        ]}
+        fullImage="first-aid-usability.jpg"
         fullImageWidth={1140}
         fullImageHeight={533}
       />
-
       <Section
         topSpace={64}
         content={[
           {
-            width: 355,
+            width: 568,
             marginTop: 40,
-            title: "Home",
-            body: "After the user is logged in, the app should be easy to navigate so I chose a taskbar for navigation, they can just scroll up or down list view on the map easily.",
+            title: "Test Feature",
+            body: "Research made clear that just reading the articles won't be enough to learn about first aid. That's why I have incorporated tests on the app, users can learn easily by doing quizzes. There are 10 random questions in the test and after answering them explanation will appear, if they give the wrong answer there will be a hint, and questions won't go to the next until the correct answer is selected.",
           },
           {
-            image: "gluten-free-home.jpg",
-            imageWidth: 1047,
-            imageHeight: 533,
+            image: "first-aid-test.jpg",
+            imageWidth: 260,
+            imageHeight: 525,
           },
         ]}
       />
@@ -107,86 +138,48 @@ export default function GlutenFreeApp() {
         topSpace={64}
         content={[
           {
-            image: "gluten-free-profile.jpg",
-            imageWidth: 566,
-            imageHeight: 664,
+            image: "first-aid-articles.jpg",
+            imageWidth: 576,
+            imageHeight: 629,
           },
           {
-            width: 650,
+            width: 580,
             marginTop: 80,
-            title: "Profile",
-            body: "From the Task Bar user are able to navigate to the profile screen where they can choose the language or theme of the app, log out and get help.",
+            title: "Articles",
+            body: "Users of the First Aid App can access lots of useful articles about ways to handle dangerous situations, including floods, earthquakes, and other natural disasters. The second important topic is Injuries, where people will be introduced to different kinds of emergencies such as Anaphylaxis, Asthma or Heart attacks, Fractures, and Diabetes.",
           },
         ]}
       />
       <Section
-        topSpace={64}
+        headline="Result & Next Steps"
         content={[
           {
-            width: 628,
-            marginTop: 80,
-            title: "Favorites & Share",
-            body: "From the Task Bar users can navigate to the favorites list where all the saved restaurants are. Users can read more about them, remove restaurants from the list, or share the entire list.",
+            width: 466,
+            title: "Accessibility Consideration",
+            listIcon: "section-icon.svg",
+            list: [
+// This app is designed to be accessible to everyone using:
+              "Clear labels for interactive elements that can be read by screen readers,",
+              "The colors that are specially selected, and the contrast is checked,",
+              "Headings with different sized text for clear visual hierarchy.",
+            ],
           },
           {
-            image: "gluten-free-favorites.jpg",
-            imageWidth: 571,
-            imageHeight: 664,
+            width: 395,
+            title: "Next Steps",
+            listIcon: "section-icon.svg",
+            list: [
+              "Conduct another round of usability studies to get how successful it is,",
+              "Add more educational resources for users to learn about first aid,",
+              "Conduct more research to integrate new useful features.",
+            ],
           },
         ]}
-      />
-       <Section
-        topSpace={64}
-        content={[
-          {
-            image: "gluten-free-filter.png",
-            imageWidth: 622,
-            imageHeight: 533,
-          },
-          {
-            width: 544,
-            marginTop: 80,
-            title: "Filter",
-            body: "Using the filter users are able to easily find a restaurant with their specifications. For eg, they can filter by food category, restaurant type, opening hours etc. That feature makes the app much more convenient and easy to use.",
-          },
-        ]}
-      />
+      />   
       <Section
-        topSpace={64}
-        content={[
-          {
-            width: 622,
-            marginTop: 80,
-            title: "Reviews & Price indicators",
-            body: "Gluten-free bakeries and restaurants are often overly expensive. So, before visiting the place would be great to have an overall idea of how pricey it is. Price indicators and customer reviews would be helpful for this. Hence, there is a restaurant info page where users can read their descriptions and reviews, make a call to reserve, get restaurants' locations to navigate, write reviews after visiting and add them to their favorite list.",
-          },
-          {
-            image: "gluten-free-reviews.png",
-            imageWidth: 622,
-            imageHeight: 533,
-          },
-        ]}
-        fullImage="gluten-free-screens.jpg"
-        fullImageWidth={1140}
-        fullImageHeight={533}
-      />
-      <Section
-        headline="Design System"
-        content={[
-          {
-            width: 650,
-            title: "Colors",
-            body: "I chose a white background and metallic silver as a primary color. There is a lot of reading in the app, so I needed color which would not be annoying for users' eyes, which would be solid and clean. Also, the white and silver color is kind of kitchen colors, like a white dining table with white dishes, silver spoons, and forks, a white chef's uniform with silver pots and pans. So that is how I got the idea.",
-          },
-          {
-            width: 650,
-            title: "Typeface & Icons",
-            body: "Used typeface - Cera Pro is very clean and easy to read. The letters are based on pure geometry, and it has almost all language support so when the app is multilingual it will be easy to read for everyone around the world. Also, chosen tiny icons because of the minimalistic design approach.",
-          },
-        ]}
-        fullImage="gluten-free-ds.svg"
-        fullImageWidth={1140}
-        fullImageHeight={963}
+         fullImage="first-aid-screens.jpg"
+         fullImageWidth={1140}
+         fullImageHeight={969}     
       />
     </Screen>
   );
