@@ -202,7 +202,7 @@ export default function FoodWasteApp() {
             ],
           },
         ]}
-        description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
+        // description="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
       />
     </Screen>
   );
