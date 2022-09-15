@@ -106,7 +106,6 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
-
       <Section
         topSpace={64}
         content={[
@@ -122,6 +121,80 @@ export default function GlutenFreeApp() {
             body: "From the Task Bar user are able to navigate to the profile screen where they can choose the language or theme of the app, log out and get help.",
           },
         ]}
+      />
+      <Section
+        topSpace={64}
+        content={[
+          {
+            width: 628,
+            marginTop: 80,
+            title: "Favorites & Share",
+            body: "From the Task Bar users can navigate to the favorites list where all the saved restaurants are. Users can read more about them, remove restaurants from the list, or share the entire list.",
+          },
+          {
+            image: "gluten-free-favorites.jpg",
+            imageWidth: 571,
+            imageHeight: 664,
+          },
+        ]}
+      />
+       <Section
+        topSpace={64}
+        content={[
+          {
+            image: "gluten-free-filter.jpg",
+            imageWidth: 622,
+            imageHeight: 533,
+          },
+          {
+            width: 544,
+            marginTop: 80,
+            title: "Filter",
+            body: "Using the filter users are able to easily find a restaurant with their specifications. For eg, they can filter by food category, restaurant type, opening hours etc. That feature makes the app much more convenient and easy to use.",
+          },
+        ]}
+      />
+      <Section
+        topSpace={64}
+        content={[
+          {
+            width: 622,
+            marginTop: 80,
+            title: "Reviews & Price indicators",
+            body: "Gluten-free bakeries and restaurants are often overly expensive. So, before visiting the place would be great to have an overall idea of how pricey it is. Price indicators and customer reviews would be helpful for this. Hence, there is a restaurant info page where users can read their descriptions and reviews, make a call to reserve, get restaurants' locations to navigate, write reviews after visiting and add them to their favorite list.",
+          },
+          {
+            image: "gluten-free-reviews.jpg",
+            imageWidth: 622,
+            imageHeight: 533,
+          },
+        ]}
+      />
+      <Section
+        title="Light and Dark Themes"
+        imagePath="/assets/gluten-free-screens.jpg"
+        imageWidth={1440}
+        imageHeight={958}
+      />
+      <Section
+        headline="Design System"
+        content={[
+          {
+            width: 650,
+            title: "Colors",
+            body: "I chose a white background and metallic silver as a primary color. There is a lot of reading in the app, so I needed color which would not be annoying for users' eyes, which would be solid and clean. Also, the white and silver color is kind of kitchen colors, like a white dining table with white dishes, silver spoons, and forks, a white chef's uniform with silver pots and pans. So that is how I got the idea.",
+          },
+          {
+            width: 650,
+            title: "Typeface & Icons",
+            body: "Used typeface - Cera Pro is very clean and easy to read. The letters are based on pure geometry, and it has almost all language support so when the app is multilingual it will be easy to read for everyone around the world. Also, chosen tiny icons because of the minimalistic design approach.",
+          },
+        ]}
+      />
+      <Section
+        imagePath="/assets/gluten-free-ds.svg"
+        imageWidth={1440}
+        imageHeight={963}
       />
     </Screen>
   );
