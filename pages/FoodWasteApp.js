@@ -130,7 +130,7 @@ export default function FoodWasteApp() {
         ]}
       />
 
-      <Section
+      {/* <Section
         topSpace={64}
         headline="Designing & Iterating Screens"
         description="I shortened and simplified the registration process as much as possible and didn't include the number and address fields because:"
@@ -174,7 +174,7 @@ export default function FoodWasteApp() {
           body="In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
         },
       ]}
-      />
+      /> */}
     </Screen>
   );
 }
