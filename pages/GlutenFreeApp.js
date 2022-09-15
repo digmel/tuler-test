@@ -142,7 +142,7 @@ export default function GlutenFreeApp() {
         topSpace={64}
         content={[
           {
-            image: "gluten-free-filter.jpg",
+            image: "gluten-free-filter.png",
             imageWidth: 622,
             imageHeight: 533,
           },
@@ -164,17 +164,14 @@ export default function GlutenFreeApp() {
             body: "Gluten-free bakeries and restaurants are often overly expensive. So, before visiting the place would be great to have an overall idea of how pricey it is. Price indicators and customer reviews would be helpful for this. Hence, there is a restaurant info page where users can read their descriptions and reviews, make a call to reserve, get restaurants' locations to navigate, write reviews after visiting and add them to their favorite list.",
           },
           {
-            image: "gluten-free-reviews.jpg",
+            image: "gluten-free-reviews.png",
             imageWidth: 622,
             imageHeight: 533,
           },
         ]}
-      />
-      <Section
-        title="Light and Dark Themes"
-        imagePath="/assets/gluten-free-screens.jpg"
-        imageWidth={1440}
-        imageHeight={958}
+        fullImage="gluten-free-screens.jpg"
+        fullImageWidth={1140}
+        fullImageHeight={533}
       />
       <Section
         headline="Design System"
@@ -190,11 +187,9 @@ export default function GlutenFreeApp() {
             body: "Used typeface - Cera Pro is very clean and easy to read. The letters are based on pure geometry, and it has almost all language support so when the app is multilingual it will be easy to read for everyone around the world. Also, chosen tiny icons because of the minimalistic design approach.",
           },
         ]}
-      />
-      <Section
-        imagePath="/assets/gluten-free-ds.svg"
-        imageWidth={1440}
-        imageHeight={963}
+        fullImage="gluten-free-ds.svg"
+        fullImageWidth={1140}
+        fullImageHeight={963}
       />
     </Screen>
   );
