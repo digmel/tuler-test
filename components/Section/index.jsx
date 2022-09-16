@@ -11,6 +11,8 @@ export const Section = ({
   fullImage,
   fullImageHeight,
   fullImageWidth,
+  fullImageTopSpace,
+  fullImageBottomSpace,
   topSpace,
 }) => {
   return (
@@ -77,11 +79,18 @@ export const Section = ({
       </View>
 
       {fullImage && (
-        <Image
-          src={`/assets/${fullImage}`}
-          width={fullImageWidth}
-          height={fullImageHeight}
-        />
+        <View
+          style={{
+            marginTop: fullImageTopSpace,
+            marginBottom: fullImageBottomSpace,
+          }}
+        >
+          <Image
+            src={`/assets/${fullImage}`}
+            width={fullImageWidth}
+            height={fullImageHeight}
+          />
+        </View>
       )}
     </View>
   );

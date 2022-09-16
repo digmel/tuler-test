@@ -1,5 +1,4 @@
 import { ProjectHero, Screen, Section } from "../components";
-import Image from "next/image";
 
 export default function GlutenFreeApp() {
   return (
@@ -17,37 +16,45 @@ export default function GlutenFreeApp() {
         headline="Project Overview"
         content={[
           {
-            width: 466,
+            width: 425,
             title: "Project Background",
             body: "The app is designed for people who are interested in first-aid. The First Aid app will teach you how to handle yourself and injured people and how to behave during floods, earthquakes, and other natural disasters. The app aims to provide useful information and make the learning process easier and pleasurable.",
           },
           {
-            width: 363,
+            width: 350,
+            title: "My Role & Responsibilities",
+            list: [
+              {
+                text: "Product Designer & UX Researcher",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Conducting interviews & usability studies,",
+              },
+              { icon: "section-icon.svg", text: "Digital wireframing," },
+              {
+                icon: "section-icon.svg",
+                text: "Accounting for accessibility,",
+              },
+              { icon: "section-icon.svg", text: "Iterating on designs," },
+              { icon: "section-icon.svg", text: "Information architecture." },
+            ],
+          },
+          {
+            width: 300,
             title: "The Goal",
             body: "Develop a solution that helps people learn how to handle injuries or natural disasters.",
           },
           {
-            width: 363,
+            width: 120,
             title: "Duration",
             body: "6 Weeks",
-          },
-//  "Product Designer & UX Researcher",
-          {
-            width: 354,
-            title: "My Role & Responsibilities",
-            listIcon: "section-icon.svg",
-            list: [
-              "Conducting interviews & usability studies,",
-              "Digital wireframing,",
-              "Accounting for accessibility,",
-              "Iterating on designs,",
-              "Information architecture.",
-            ],
           },
         ]}
       />
 
       <Section
+        topSpace={64}
         headline="Understanding the User"
         content={[
           {
@@ -67,27 +74,33 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
+
       <Section
         content={[
-          {            
+          {
             title: "Persona #1",
           },
         ]}
         fullImage="first-aid-persona1.svg"
-        fullImageWidth={1440}
+        fullImageWidth={1292}
         fullImageHeight={549}
+        fullImageTopSpace={-50}
       />
+
       <Section
         content={[
-          {            
+          {
             title: "Persona #2",
           },
         ]}
         fullImage="first-aid-persona2.svg"
-        fullImageWidth={1140}
-        fullImageHeight={549}   
+        fullImageWidth={1292}
+        fullImageHeight={549}
+        fullImageTopSpace={-50}
       />
+
       <Section
+        topSpace={64}
         headline="Usability Tests on Lo-Fi Prototype"
         content={[
           {
@@ -95,15 +108,26 @@ export default function GlutenFreeApp() {
             title: "Digital Wireframes",
             body: "After ideating and drafting digital wireframes, I created the initial designs for the First aid app. These designs focus on delivering personalized guidance to users to help them learn to handle emergencies.",
           },
-// Low-fidelity prototype were used for moderated usability study. Main findings:
           {
             width: 395,
             title: "Usability Study Findings",
-            listIcon: "section-icon.svg",
+
             list: [
-              "People would like to read illustrated articles,",
-              "Just reading topics won't be interesting,",
-              "Users need the motivation to use this application.",
+              {
+                text: "Low-fidelity prototype were used for moderated usability study. Main findings:",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "People would like to read illustrated articles,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Just reading topics won't be interesting,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Users need the motivation to use this application.",
+              },
             ],
           },
           {
@@ -116,6 +140,7 @@ export default function GlutenFreeApp() {
         fullImageWidth={1140}
         fullImageHeight={533}
       />
+
       <Section
         topSpace={64}
         content={[
@@ -132,6 +157,7 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
+
       <Section
         topSpace={64}
         content={[
@@ -148,18 +174,30 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
+
       <Section
         headline="Result & Next Steps"
         content={[
           {
             width: 466,
             title: "Accessibility Consideration",
-            listIcon: "section-icon.svg",
             list: [
-// This app is designed to be accessible to everyone using:
-              "Clear labels for interactive elements that can be read by screen readers,",
-              "The colors that are specially selected, and the contrast is checked,",
-              "Headings with different sized text for clear visual hierarchy.",
+              {
+                icon: "section-icon.svg",
+                text: "This app is designed to be accessible to everyone using:",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Clear labels for interactive elements that can be read by screen readers,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "The colors that are specially selected, and the contrast is checked,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Headings with different sized text for clear visual hierarchy.",
+              },
             ],
           },
           {
@@ -167,17 +205,26 @@ export default function GlutenFreeApp() {
             title: "Next Steps",
             listIcon: "section-icon.svg",
             list: [
-              "Conduct another round of usability studies to get how successful it is,",
-              "Add more educational resources for users to learn about first aid,",
-              "Conduct more research to integrate new useful features.",
+              {
+                icon: "section-icon.svg",
+                text: "Conduct another round of usability studies to get how successful it is,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Add more educational resources for users to learn about first aid,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Conduct more research to integrate new useful features.",
+              },
             ],
           },
         ]}
-      />   
+      />
       <Section
-         fullImage="first-aid-screens.jpg"
-         fullImageWidth={1440}
-         fullImageHeight={969}     
+        fullImage="first-aid-screens.jpg"
+        fullImageWidth={1440}
+        fullImageHeight={969}
       />
     </Screen>
   );
