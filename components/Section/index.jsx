@@ -30,7 +30,6 @@ export const Section = ({
               title,
               body,
               width,
-              marginTop,
               list,
               listIcon,
               image,
@@ -40,7 +39,7 @@ export const Section = ({
               const _underlineWidth = title ? title.length * 15 : 100;
               const _underlineHeight = 6;
               return (
-                <View style={[styles.content, { width, marginTop }]}>
+                <View style={[styles.content, { width }]}>
                   {title && (
                     <>
                       <Text style={textStyles.title}>{title}</Text>

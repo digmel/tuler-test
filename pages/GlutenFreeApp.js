@@ -1,5 +1,4 @@
 import { ProjectHero, Screen, Section } from "../components";
-import Image from "next/image";
 
 export default function GlutenFreeApp() {
   return (
@@ -95,7 +94,6 @@ export default function GlutenFreeApp() {
         content={[
           {
             width: 355,
-            marginTop: 40,
             title: "Home",
             body: "After the user is logged in, the app should be easy to navigate so I chose a taskbar for navigation, they can just scroll up or down list view on the map easily.",
           },
@@ -115,19 +113,17 @@ export default function GlutenFreeApp() {
             imageHeight: 664,
           },
           {
-            width: 650,
-            marginTop: 80,
+            width: 450,
             title: "Profile",
             body: "From the Task Bar user are able to navigate to the profile screen where they can choose the language or theme of the app, log out and get help.",
           },
         ]}
       />
       <Section
-        topSpace={64}
+        topSpace={32}
         content={[
           {
             width: 628,
-            marginTop: 80,
             title: "Favorites & Share",
             body: "From the Task Bar users can navigate to the favorites list where all the saved restaurants are. Users can read more about them, remove restaurants from the list, or share the entire list.",
           },
@@ -138,7 +134,7 @@ export default function GlutenFreeApp() {
           },
         ]}
       />
-       <Section
+      <Section
         topSpace={64}
         content={[
           {
@@ -148,18 +144,17 @@ export default function GlutenFreeApp() {
           },
           {
             width: 544,
-            marginTop: 80,
             title: "Filter",
             body: "Using the filter users are able to easily find a restaurant with their specifications. For eg, they can filter by food category, restaurant type, opening hours etc. That feature makes the app much more convenient and easy to use.",
           },
         ]}
       />
+
       <Section
         topSpace={64}
         content={[
           {
             width: 622,
-            marginTop: 80,
             title: "Reviews & Price indicators",
             body: "Gluten-free bakeries and restaurants are often overly expensive. So, before visiting the place would be great to have an overall idea of how pricey it is. Price indicators and customer reviews would be helpful for this. Hence, there is a restaurant info page where users can read their descriptions and reviews, make a call to reserve, get restaurants' locations to navigate, write reviews after visiting and add them to their favorite list.",
           },
@@ -169,11 +164,17 @@ export default function GlutenFreeApp() {
             imageHeight: 533,
           },
         ]}
+      />
+
+      <Section
+        content={[{ title: "Light and Dark Themes" }]}
         fullImage="gluten-free-screens.jpg"
         fullImageWidth={1140}
-        fullImageHeight={533}
+        fullImageHeight={957}
       />
+
       <Section
+        topSpace={100}
         headline="Design System"
         content={[
           {

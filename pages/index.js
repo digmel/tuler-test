@@ -6,7 +6,7 @@ export default function App() {
     <Screen isHome={true}>
       <HomeHero />
       <View>
-        <Text style={textStyles.h1}>Case Studies</Text>
+        <Text style={textStyles.h1}>Projects</Text>
       </View>
 
       <Card
