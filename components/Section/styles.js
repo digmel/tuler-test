@@ -6,13 +6,16 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-start",
-    marginTop: 32,
-    marginBottom: 64,
+    marginBottom: 32,
   },
   underline: {
     marginTop: 4,
     marginBottom: 20,
     alignItems: "flex-start",
+  },
+  headline: {
+    marginTop: 4,
+    marginBottom: 32,
   },
   content: {
     marginEnd: 77,
@@ -27,7 +30,6 @@ export const styles = StyleSheet.create({
     marginTop: 4,
   },
   description: {
-    paddingTop: 32,
     paddingBottom: 24,
     width: 940,
   },

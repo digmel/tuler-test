@@ -17,7 +17,11 @@ export const Section = ({
 }) => {
   return (
     <View style={[styles.wrapper, { marginTop: topSpace }]}>
-      {headline && <Text style={textStyles.h3}>{headline}</Text>}
+      {headline && (
+        <View style={styles.headline}>
+          <Text style={textStyles.h3}>{headline}</Text>
+        </View>
+      )}
 
       {description && (
         <View style={styles.description}>
