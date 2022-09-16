@@ -51,11 +51,13 @@ export const Section = ({
                     list?.map(({ text, icon }) => (
                       <View style={styles.list}>
                         <View style={styles.icon}>
-                          <Image
-                            src={`/assets/${icon}`}
-                            width={15}
-                            height={12}
-                          />
+                          {icon && (
+                            <Image
+                              src={`/assets/${icon}`}
+                              width={15}
+                              height={12}
+                            />
+                          )}
                         </View>
                         <Text style={textStyles.body}>{text}</Text>
                       </View>

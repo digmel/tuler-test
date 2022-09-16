@@ -111,13 +111,30 @@ export default function FoodWasteApp() {
 
       <Section
         headline="Usability Tests on Lo-Fi Prototype"
+        description="After analyzing the insights from the interviews I started creating low-fidelity wireframes and created the first prototype in Axure that was used for usability testing."
         content={[
           {
             width: 464,
-            title: "Prototype with Axure",
-            body: "After analyzing the insights from the interviews I started creating low-fidelity wireframes and created the first prototype in Axure that was used for usability testing.",
+            title: "Scenarios for Usability Tests",
+            list: [
+              {
+                icon: "section-icon.svg",
+                text: "What do we see here? Please walk me through your options. What kind of information does the app provide at this point?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Imagine you have some leftovers from the birthday party that you would like to share. Use our application to donate that food.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Let’s say you want to see what you have sent already. Where could you find it?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Imagine that you want to share some milk and yogurts. Use the app to submit your request.",
+              },
+            ],
           },
-          // here goes list - 'Scenarios for Usability Tests' (below the 'Prototype with Axure')
           {
             width: 452,
             title: "Usability Test Findings",
@@ -163,13 +180,13 @@ export default function FoodWasteApp() {
           },
         ]}
       />
+
       <Section
-        topSpace={64}
+        topSpace={32}
         headline="User Journey"
         content={[
           {
             width: 457,
-            marginTop: 40,
             title: "Created the UJ",
             body: "After usability testing, I created the user journey for the scenario where the person is worried about her food waste and the friend suggests downloading this application.",
           },
@@ -180,20 +197,34 @@ export default function FoodWasteApp() {
           },
         ]}
       />
+
       <Section
         topSpace={64}
         headline="Designing & Iterating Screens"
-        description="I shortened and simplified the registration process as much as possible and didn't include the number and address fields because:"
         content={[
           {
             width: 460,
             title: "Log In",
-            listIcon: "section-icon.svg",
             list: [
-              "Asking lots of info at the beginning bothers users.",
-              "They might lose interest/motivation to continue.",
-              "Asking that info while donating would be more relevant",
-              "After the first donation, those details would be saved to their profile and would be easy to use next time",
+              {
+                text: "I shortened and simplified the registration process as much as possible and didn't include the number and address fields because:",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Asking lots of info at the beginning bothers users.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "They might lose interest/motivation to continue.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Asking that info while donating would be more relevant",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "After the first donation, those details would be saved to their profile and would be easy to use next time",
+              },
             ],
           },
           {
@@ -203,8 +234,8 @@ export default function FoodWasteApp() {
           },
         ]}
       />
+
       <Section
-        // "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:"
         content={[
           {
             image: "food-waste-homescreen.jpg",
@@ -214,26 +245,48 @@ export default function FoodWasteApp() {
           {
             width: 606,
             title: "User Insights",
-            listIcon: "section-icon.svg",
             list: [
-              "users can navigate to ‘Your Donations’, where would be all their previous donations,",
-              "using the action button in the middle starts the donation flow,",
-              "users are able to click the community and see what others are donating.",
+              {
+                text: "Using the nav bar helped in avoiding the cluttered design and made the navigation easier. From the nav bar:",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "users can navigate to ‘Your Donations’, where would be all their previous donations,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "using the action button in the middle starts the donation flow,",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "users are able to click the community and see what others are donating.",
+              },
+              {
+                text: "In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state.",
+              },
             ],
           },
         ]}
-        // "In order to encourage first-time users to take action, I've added a microcopy with an arrow and instructions for them to start donating, that’s an empty state."
       />
+
       <Section
-        // "When the user has an ongoing donation along with the donation history, the ongoing donation should stand out to draw the users' attention. To make it more prominent I’ve:"
         content={[
           {
             width: 482,
             title: "Ongoing Donation",
             listIcon: "section-icon.svg",
             list: [
-              "created an extended version of the card where the most important info, such as courier details and arrival time is shown ",
-              "added notification indication on the nav bar ",
+              {
+                text: "When the user has an ongoing donation along with the donation history, the ongoing donation should stand out to draw the users' attention. To make it more prominent I’ve:",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "created an extended version of the card where the most important info, such as courier details and arrival time is shown ",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "added notification indication on the nav bar ",
+              },
             ],
           },
           {
@@ -243,6 +296,7 @@ export default function FoodWasteApp() {
           },
         ]}
       />
+
       <Section
         content={[
           {
@@ -262,6 +316,7 @@ export default function FoodWasteApp() {
           },
         ]}
       />
+
       <Section
         headline="Next Steps"
         content={[
@@ -273,14 +328,31 @@ export default function FoodWasteApp() {
           {
             width: 458,
             title: "Research Questions",
-            listIcon: "section-icon.svg",
             list: [
-              "How would people use the community?",
-              "Is it the right motivational feature?",
-              "Would they be interested in sharing and seeing others' donations?",
-              "What would be the best way to create a community in such kind of application?",
-              "What way would they prefer to measure products? How can I make this flow less time-consuming for the users?",
-              "What would be the best way to show the users how their donations are spent, who receives those products, and when?",
+              {
+                icon: "section-icon.svg",
+                text: "How would people use the community?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Is it the right motivational feature?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Would they be interested in sharing and seeing others' donations?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "What would be the best way to create a community in such kind of application?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "What way would they prefer to measure products? How can I make this flow less time-consuming for the users?",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "What would be the best way to show the users how their donations are spent, who receives those products, and when?",
+              },
             ],
           },
           {
