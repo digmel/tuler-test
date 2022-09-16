@@ -45,26 +45,57 @@ export default function GlutenFreeApp() {
           {
             width: 650,
             title: "User Insights",
-            listIcon: "section-icon.svg",
             list: [
-              "“Finding gluten-free places during my travels is very painful. If I’m lucky I can find a dedicated gluten-free restaurant, otherwise it’s very hard for me to trust a place. The risk of cross-contamination in a regular kitchen is just too high.”",
-              "“Most people don’t know the difference between celiac disease and gluten intolerance. I have the former, which means when I digest gluten, my immune system will attack against my own body tissue. So I really have to be wary about where to eat.”",
-              "“It’s not just about being gluten-free, but the culinary experience. Just because I’m sensitive to gluten it doesn’t mean I don’t want to have a romantic dinner during my holidays with my partner.”",
-              "“Gluten-free bakeries and restaurants can be overly expensive, it would be great to discover those within a reasonable price range close to me.”",
-              "“I usually revisit the gluten-free places where I had a good impression, but I tried so many, that it is hard to keep track of them.”",
+              {
+                icon: "section-icon.svg",
+                text: "“Finding gluten-free places during my travels is very painful. If I’m lucky I can find a dedicated gluten-free restaurant, otherwise it’s very hard for me to trust a place. The risk of cross-contamination in a regular kitchen is just too high.”",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "“Most people don’t know the difference between celiac disease and gluten intolerance. I have the former, which means when I digest gluten, my immune system will attack against my own body tissue. So I really have to be wary about where to eat.”",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "“It’s not just about being gluten-free, but the culinary experience. Just because I’m sensitive to gluten it doesn’t mean I don’t want to have a romantic dinner during my holidays with my partner.”",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "“Gluten-free bakeries and restaurants can be overly expensive, it would be great to discover those within a reasonable price range close to me.”",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "“I usually revisit the gluten-free places where I had a good impression, but I tried so many, that it is hard to keep track of them.”",
+              },
             ],
           },
           {
             width: 650,
             title: "Solutions",
-            listIcon: "section-icon.svg",
             list: [
-              "The users should be able to easily find a new restaurant with their specifications.",
-              "The users find it useful to read about restaurant reviews.",
-              "They’d love to save favorite restaurants in a list and share the list with others.",
-              "Customers would like to know how pricey the place is, so in the descriptions should be price indicators.",
-              "A big part of the users would be travelers, they might be tired and hungry, and most likely they are using the app with a low phone battery after taking lots of photos, so I thought the app should have a dark mode as well to save the battery.",
-              "The app should support several languages to be useful for travelers.",
+              {
+                icon: "section-icon.svg",
+                text: "The users should be able to easily find a new restaurant with their specifications.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "The users find it useful to read about restaurant reviews.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "They’d love to save favorite restaurants in a list and share the list with others.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "Customers would like to know how pricey the place is, so in the descriptions should be price indicators.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "A big part of the users would be travelers, they might be tired and hungry, and most likely they are using the app with a low phone battery after taking lots of photos, so I thought the app should have a dark mode as well to save the battery.",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "The app should support several languages to be useful for travelers.",
+              },
             ],
           },
         ]}

@@ -26,16 +26,7 @@ export const Section = ({
       <View style={styles.container}>
         {content &&
           content?.map(
-            ({
-              title,
-              body,
-              width,
-              list,
-              listIcon,
-              image,
-              imageWidth,
-              imageHeight,
-            }) => {
+            ({ title, body, width, list, image, imageWidth, imageHeight }) => {
               const _underlineWidth = title ? title.length * 15 : 100;
               const _underlineHeight = 6;
               return (
@@ -57,16 +48,16 @@ export const Section = ({
                   {body && <Text style={textStyles.body}>{body}</Text>}
 
                   {list &&
-                    list?.map((listItem) => (
+                    list?.map(({ text, icon }) => (
                       <View style={styles.list}>
                         <View style={styles.icon}>
                           <Image
-                            src={`/assets/${listIcon}`}
+                            src={`/assets/${icon}`}
                             width={15}
                             height={12}
                           />
                         </View>
-                        <Text style={textStyles.body}>{listItem}</Text>
+                        <Text style={textStyles.body}>{text}</Text>
                       </View>
                     ))}
 
