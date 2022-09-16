@@ -5,6 +5,7 @@ export * from "./Header";
 export * from "./footer";
 export * from "./HomeHero";
 export * from "./ProjectHero";
+export * from "./ProjectFinal";
 export * from "./card";
 export * from "./Section";
 export * from "./button";

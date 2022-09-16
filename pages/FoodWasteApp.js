@@ -1,11 +1,14 @@
-import { ProjectHero, Screen, Section } from "../components";
+import { Screen, Section, ProjectHero, ProjectFinal } from "../components";
+
+const prototypeLink =
+  "https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1";
 
 export default function FoodWasteApp() {
   return (
     <Screen isProject={true}>
       <ProjectHero
-        link="https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1"
-        imagePath="/assets/food-waste-hero-large.jpg"
+        link={prototypeLink}
+        image="food-waste-hero-large.jpg"
         imageWidth={534}
         imageHeight={525}
         title="Reduce Food Waste by Sharing It"
@@ -365,6 +368,8 @@ export default function FoodWasteApp() {
         fullImageWidth={1440}
         fullImageHeight={975}
       />
+
+      <ProjectFinal link={prototypeLink} />
     </Screen>
   );
 }

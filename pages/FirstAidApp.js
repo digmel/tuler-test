@@ -1,11 +1,14 @@
-import { ProjectHero, Screen, Section } from "../components";
+import { Screen, Section, ProjectHero, ProjectFinal } from "../components";
+
+const prototypeLink =
+  "https://www.figma.com/proto/xei0Knh7PfE4V0X4m92J33/First-Aid-App?node-id=21%3A452&scaling=scale-down&page-id=0%3A1&starting-point-node-id=21%3A452";
 
 export default function GlutenFreeApp() {
   return (
     <Screen isProject={true}>
       <ProjectHero
-        link="https://www.figma.com/proto/xei0Knh7PfE4V0X4m92J33/First-Aid-App?node-id=21%3A452&scaling=scale-down&page-id=0%3A1&starting-point-node-id=21%3A452"
-        imagePath="/assets/first-aid-hero-large.jpg"
+        link={prototypeLink}
+        image="first-aid-hero-large.jpg"
         imageWidth={826}
         imageHeight={525}
         title="First Aid App"
@@ -226,6 +229,8 @@ export default function GlutenFreeApp() {
         fullImageWidth={1440}
         fullImageHeight={969}
       />
+
+      <ProjectFinal link={prototypeLink} />
     </Screen>
   );
 }

@@ -7,7 +7,7 @@ import { Button } from "../button";
 
 export const ProjectHero = ({
   link,
-  imagePath,
+  image,
   imageWidth,
   imageHeight,
   title,
@@ -27,7 +27,11 @@ export const ProjectHero = ({
       </View>
 
       <View style={styles.containerEnd}>
-        <Image src={imagePath} width={imageWidth} height={imageHeight} />
+        <Image
+          src={`/assets/${image}`}
+          width={imageWidth}
+          height={imageHeight}
+        />
       </View>
     </View>
   );

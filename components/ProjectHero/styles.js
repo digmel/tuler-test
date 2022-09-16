@@ -9,9 +9,11 @@ export const styles = StyleSheet.create({
     flexBasis: "55%",
     justifyContent: "center",
     paddingEnd: 36,
+    alignItems: "flex-start",
   },
   containerEnd: {
     justifyContent: "center",
     flexBasis: "45%",
+    alignItems: "flex-end",
   },
 });

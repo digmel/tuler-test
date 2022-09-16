@@ -1,11 +1,14 @@
-import { ProjectHero, Screen, Section } from "../components";
+import { Screen, Section, ProjectHero, ProjectFinal } from "../components";
+
+const prototypeLink =
+  "https://www.figma.com/proto/RMGOoiFKZlpysEcjEb6BFu/Gluten-Free-Restaurant-Finder-(Copy)?node-id=103%3A8632&scaling=scale-down&page-id=0%3A1&starting-point-node-id=103%3A8632&show-proto-sidebar=1";
 
 export default function GlutenFreeApp() {
   return (
     <Screen isProject={true}>
       <ProjectHero
-        link="https://www.figma.com/proto/RMGOoiFKZlpysEcjEb6BFu/Gluten-Free-Restaurant-Finder-(Copy)?node-id=103%3A8632&scaling=scale-down&page-id=0%3A1&starting-point-node-id=103%3A8632&show-proto-sidebar=1"
-        imagePath="/assets/gluten-hero-large.jpg"
+        link={prototypeLink}
+        image="gluten-hero-large.jpg"
         imageWidth={662}
         imageHeight={525}
         title="Gluten-Free Restaurant Finder"
@@ -223,6 +226,8 @@ export default function GlutenFreeApp() {
         fullImageWidth={1140}
         fullImageHeight={963}
       />
+
+      <ProjectFinal link={prototypeLink} />
     </Screen>
   );
 }
