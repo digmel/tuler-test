@@ -10,7 +10,7 @@ export default function App() {
       </View>
 
       <Card
-        link={`/GlutenFreeApp`}
+        link="/GlutenFreeApp"
         imagePath="/assets/gluten-hero.png"
         imageWidth={502}
         imageHeight={393}
@@ -19,7 +19,7 @@ export default function App() {
         description="The app allows users to find restaurant based on their preferences."
       />
       <Card
-        link={`/FoodWasteApp`}
+        link="/FoodWasteApp"
         imagePath="/assets/waste-hero.png"
         imageWidth={398}
         imageHeight={393}
@@ -28,7 +28,7 @@ export default function App() {
         description="Using the app people reduce food waste while helping others as well."
       />
       <Card
-        link={`/FirstAidApp`}
+        link="/FirstAidApp"
         imagePath="/assets/first-aid-hero.png"
         imageWidth={605}
         imageHeight={393}

@@ -4,10 +4,19 @@ import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
 import Image from "next/image";
 import { ActionButton } from "./actionButton";
+import { DropdownMenu } from "./DropdownMenu";
 
 const contactEmail = "elene.uxdesign@gmail.com";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  const handleHover = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  };
+
+  const dropdownMenuStyle = isProject ? { marginTop: 10 } : { marginTop: 22 };
+
   const textStyleHome = isHome
     ? textStyles.menuItem.active
     : textStyles.menuItem.default;
@@ -17,13 +26,6 @@ export const Header = ({ isHome, isProject, isAbout }) => {
   const textStyleAbout = isAbout
     ? textStyles.menuItem.active
     : textStyles.menuItem.default;
-
-  const [isEmailVisible, setIsEmailVisible] = useState(false);
-
-  const onContact = () => {
-    Clipboard.setString(contactEmail);
-    setIsEmailVisible(true);
-  };
 
   return (
     <View style={styles.container}>
@@ -40,12 +42,28 @@ export const Header = ({ isHome, isProject, isAbout }) => {
         </Pressable>
 
         {/* Projects */}
-        <Pressable style={styles.menuItem}>
-          <Text style={textStyleProject}>Projects</Text>
+        <Pressable
+          style={styles.menuItem}
+          onHoverIn={handleHover}
+          onHoverOut={handleHover}
+        >
+          <View style={{ flexDirection: "row" }}>
+            <Text style={textStyleProject}>Projects</Text>
+
+            <View style={{ marginStart: 8, alignSelf: "center" }}>
+              <Image src="/assets/dropdown.svg" width={17} height={11} />
+            </View>
+          </View>
 
           {isProject && (
             <View style={{ alignItems: "center" }}>
               <Image src="/assets/active-menu.svg" width={131} height={16} />
+            </View>
+          )}
+
+          {isDropdownVisible && (
+            <View style={dropdownMenuStyle}>
+              <DropdownMenu />
             </View>
           )}
         </Pressable>

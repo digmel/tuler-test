@@ -37,4 +37,27 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 4,
   },
+  dropdownMenuContainer: {
+    flex: 1,
+    zIndex: 10,
+    width: 180,
+    backgroundColor: colors.light,
+    borderRadius: 4,
+    shadowColor: colors.shadow,
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 7,
+  },
+  dropdownMenuItem: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 24,
+    paddingVertical: 16,
+    alignItems: "flex-start",
+    borderBottomWidth: 1,
+    borderBottomColor: colors.accent,
+  },
+  dropdownMenuItemHover: {
+    backgroundColor: colors.grayHover,
+  },
 });

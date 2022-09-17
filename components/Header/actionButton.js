@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Clipboard } from "react-native";
 import { styles } from "./styles";
 import { textStyles } from "../config/textStyles";
 
@@ -19,6 +19,7 @@ export const ActionButton = ({ title, content }) => {
   const _onPress = () => {
     setState(!state);
     setIsEmailVisible(!isEmailVisible);
+    Clipboard.setString(content);
   };
 
   return (
