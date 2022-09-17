@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Pressable, Clipboard } from "react-native";
 import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
 import Image from "next/image";
 import { ActionButton } from "./actionButton";
 import { DropdownMenu } from "./DropdownMenu";
+import { useSpring, animated } from "@react-spring/web";
 
 const contactEmail = "elene.uxdesign@gmail.com";
 
@@ -27,6 +28,13 @@ export const Header = ({ isHome, isProject, isAbout }) => {
     ? textStyles.menuItem.active
     : textStyles.menuItem.default;
 
+  const AnimatedView = animated(View);
+  const transitionStyles = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 1100 },
+  });
+
   return (
     <View style={styles.container}>
       <View style={styles.contentStart}>
@@ -35,9 +43,11 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           <Text style={textStyleHome}>Home</Text>
 
           {isHome && (
-            <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
-            </View>
+            <AnimatedView style={transitionStyles}>
+              <View style={{ alignItems: "center" }}>
+                <Image src="/assets/active-menu.svg" width={131} height={16} />
+              </View>
+            </AnimatedView>
           )}
         </Pressable>
 
@@ -51,14 +61,18 @@ export const Header = ({ isHome, isProject, isAbout }) => {
             <Text style={textStyleProject}>Projects</Text>
 
             <View style={{ marginStart: 8, alignSelf: "center" }}>
-              <Image src="/assets/dropdown.svg" width={17} height={11} />
+              <AnimatedView style={transitionStyles}>
+                <Image src="/assets/dropdown.svg" width={17} height={11} />
+              </AnimatedView>
             </View>
           </View>
 
           {isProject && (
-            <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
-            </View>
+            <AnimatedView style={transitionStyles}>
+              <View style={{ alignItems: "center" }}>
+                <Image src="/assets/active-menu.svg" width={131} height={16} />
+              </View>
+            </AnimatedView>
           )}
 
           {isDropdownVisible && (
@@ -77,9 +91,11 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           <Text style={textStyleAbout}>About</Text>
 
           {isAbout && (
-            <View style={{ alignItems: "center" }}>
-              <Image src="/assets/active-menu.svg" width={131} height={16} />
-            </View>
+            <AnimatedView style={transitionStyles}>
+              <View style={{ alignItems: "center" }}>
+                <Image src="/assets/active-menu.svg" width={131} height={16} />
+              </View>
+            </AnimatedView>
           )}
         </Pressable>
       </View>
