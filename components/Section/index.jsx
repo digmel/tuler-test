@@ -35,8 +35,9 @@ export const Section = ({
             ({ title, body, width, list, image, imageWidth, imageHeight }) => {
               const _underlineWidth = title ? title.length * 15 : 100;
               const _underlineHeight = 6;
+              const key = `${title}` + 1;
               return (
-                <View style={[styles.content, { width }]}>
+                <View style={[styles.content, { width }]} key={key}>
                   {title && (
                     <>
                       <Text style={textStyles.title}>{title}</Text>
