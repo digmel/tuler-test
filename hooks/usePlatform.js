@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useWindowDimensions } from "react-native";
 
 export const usePlatform = () => {
@@ -13,5 +13,5 @@ export const usePlatform = () => {
     }
   }, []);
 
-  return [isMobile];
+  return { isMobile };
 };

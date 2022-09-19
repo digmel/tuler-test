@@ -3,11 +3,29 @@ import { View, Text } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
 import { textStyles } from "../config/textStyles";
+import { usePlatform } from "../../hooks";
 
 export const Card = ({ link, image, imageWidth, title, description }) => {
+  const { isMobile } = usePlatform();
   return (
     <>
-      <View style={styles.container} accessibilityRole="link" href={link}>
+      <View
+        style={[
+          styles.container,
+          {
+            alignSelf: "center",
+            marginEnd: isMobile ? 0 : 29,
+            marginVertical: isMobile ? -36 : 0,
+            transform: [
+              {
+                scale: isMobile ? 0.8 : 1,
+              },
+            ],
+          },
+        ]}
+        accessibilityRole="link"
+        href={link}
+      >
         <View style={styles.containerImage}>
           <Image src={`/assets/${image}`} width={imageWidth} height={250} />
         </View>

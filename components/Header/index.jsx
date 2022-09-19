@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { View, Text, Pressable, Clipboard } from "react-native";
 import { textStyles } from "../config/textStyles";
 import { styles } from "./styles";
@@ -13,7 +13,7 @@ const contactEmail = "elene.uxdesign@gmail.com";
 export const Header = ({ isHome, isProject, isAbout }) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
-  const [isMobile] = usePlatform();
+  const { isMobile } = usePlatform();
 
   const handleHover = () => {
     setIsDropdownVisible(!isDropdownVisible);
@@ -41,7 +41,9 @@ export const Header = ({ isHome, isProject, isAbout }) => {
   return (
     <>
       {isMobile ? (
-        <Text>hehe</Text>
+        <View style={{ alignSelf: "flex-end", paddingTop: 8, marginEnd: 8 }}>
+          <Image src="/assets/mobile-menu.svg" width={45} height={45} />
+        </View>
       ) : (
         <View style={styles.container}>
           <View style={styles.contentStart}>
