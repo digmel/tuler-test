@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { Screen, Section } from "../components";
+import { colors, Screen, Section } from "../components";
 import Image from "next/image";
 
 export default function About() {
@@ -59,6 +59,7 @@ export default function About() {
             width={404}
             height={390}
             alt="Author Image"
+            style={{ borderRadius: 8 }}
           />
         </View>
       </View>
@@ -77,5 +78,6 @@ const styles = StyleSheet.create({
   contentEnd: {
     marginLeft: 90,
     marginTop: 20,
+    borderRadius: 4,
   },
 });

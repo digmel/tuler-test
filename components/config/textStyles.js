@@ -7,7 +7,6 @@ export const textStyles = {
     fontWeight: 700,
     color: colors.primary,
     fontFamily: "Poppins",
-    marginBottom: 16,
   },
   h2: {
     fontSize: 36,

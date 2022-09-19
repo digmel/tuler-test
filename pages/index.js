@@ -4,9 +4,13 @@ import { Text, View } from "react-native";
 export default function App() {
   return (
     <Screen isHome={true}>
+      <View style={{ marginBottom: 20 }}>
+        <Text style={textStyles.h3}>Overview</Text>
+      </View>
+
       <HomeHero />
-      <View>
-        <Text style={textStyles.h1}>Projects</Text>
+      <View style={{ marginBottom: 20 }}>
+        <Text style={textStyles.h3}>Projects</Text>
       </View>
 
       <Card
