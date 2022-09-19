@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   underline: {
     marginTop: 4,
-    marginBottom: 20,
+    marginBottom: 12,
     alignItems: "flex-start",
   },
   headline: {

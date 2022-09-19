@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { colors, Screen, Section } from "../components";
+import { Screen, Section } from "../components";
 import Image from "next/image";
 
 export default function About() {

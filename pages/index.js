@@ -1,7 +1,9 @@
 import { Card, textStyles, Screen, HomeHero } from "../components";
 import { Text, View } from "react-native";
+import { Platform } from "react-native";
 
 export default function App() {
+  console.log("platform", Platform.OS);
   return (
     <Screen isHome={true}>
       <View style={{ marginBottom: 20 }}>
