@@ -9,12 +9,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 48,
     paddingStart: 32,
-    marginBottom: 32,
     shadowColor: colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,
     borderRadius: 24,
+    marginBottom: 48,
   },
   contentStart: {
     alignItems: "flex-start",

@@ -67,7 +67,7 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   card: {
-    fontSize: 32,
+    fontSize: 20,
     lineHeight: "130%",
     fontWeight: 300,
     color: colors.primary,

@@ -9,37 +9,34 @@ export default function App() {
       </View>
 
       <HomeHero />
+
       <View style={{ marginBottom: 20 }}>
         <Text style={textStyles.h3}>Projects</Text>
       </View>
 
-      <Card
-        link="/GlutenFreeApp"
-        imagePath="/assets/gluten-hero.png"
-        imageWidth={502}
-        imageHeight={393}
-        label="1-WEEK UX/UI CHALLENGE"
-        title="Gluten-Free Restaurant Finder"
-        description="The app allows users to find restaurant based on their preferences."
-      />
-      <Card
-        link="/FoodWasteApp"
-        imagePath="/assets/waste-hero.png"
-        imageWidth={398}
-        imageHeight={393}
-        label="RESEARCH / PRODUCT DESIGN"
-        title="Reduce Food Waste by Sharing It"
-        description="Using the app people reduce food waste while helping others as well."
-      />
-      <Card
-        link="/FirstAidApp"
-        imagePath="/assets/first-aid-hero.png"
-        imageWidth={605}
-        imageHeight={393}
-        label="RESEARCH / PRODUCT DESIGN"
-        title="First Aid App"
-        description="Learn how to handle yourself and casualties during an emergency."
-      />
+      <View style={{ flexDirection: "row" }}>
+        <Card
+          link="/GlutenFreeApp"
+          image="gluten-hero.png"
+          imageWidth={319}
+          title="Gluten-Free Finder"
+          description="The app guides people to Find & Save Gluten-Free restaurants worldwide"
+        />
+        <Card
+          link="/FoodWasteApp"
+          image="waste-hero.png"
+          imageWidth={250}
+          title="Reduce Food Waste"
+          description="The app allows people to share Food & Grocery products to NGO communities"
+        />
+        <Card
+          link="/FirstAidApp"
+          image="first-aid-hero.png"
+          imageWidth={385}
+          title="Learn First Aid"
+          description="The app provides basic information to Learn First Aid & Test your knowledge"
+        />
+      </View>
     </Screen>
   );
 }

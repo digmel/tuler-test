@@ -6,7 +6,6 @@ import Image from "next/image";
 
 const linkedinLink = "https://www.linkedin.com/in/elene-zed/";
 const twitterLink = "https://twitter.com/EleneZed";
-const facebookLink = "https://www.facebook.com/elene.zed/";
 
 export const Footer = () => {
   const _openLinkedin = async () => {
@@ -15,10 +14,6 @@ export const Footer = () => {
 
   const _openTwitter = async () => {
     await Linking.openURL(twitterLink);
-  };
-
-  const _openFacebook = async () => {
-    await Linking.openURL(facebookLink);
   };
 
   return (
@@ -39,15 +34,6 @@ export const Footer = () => {
             width={40}
             height={40}
             alt="Twitter icon"
-          />
-        </Pressable>
-
-        <Pressable style={styles.icon} onPress={_openFacebook}>
-          <Image
-            src="/assets/facebook.svg"
-            width={40}
-            height={40}
-            alt="Facebook icon"
           />
         </Pressable>
       </View>
