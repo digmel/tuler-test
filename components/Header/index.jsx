@@ -6,11 +6,14 @@ import Image from "next/image";
 import { ActionButton } from "./actionButton";
 import { DropdownMenu } from "./DropdownMenu";
 import { useSpring, animated } from "@react-spring/web";
+import { usePlatform } from "../../hooks";
 
 const contactEmail = "elene.uxdesign@gmail.com";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  const [isMobile] = usePlatform();
 
   const handleHover = () => {
     setIsDropdownVisible(!isDropdownVisible);
@@ -36,74 +39,96 @@ export const Header = ({ isHome, isProject, isAbout }) => {
   });
 
   return (
-    <View style={styles.container}>
-      <View style={styles.contentStart}>
-        {/* Home */}
-        <Pressable style={styles.menuItem} accessibilityRole="link" href={`/`}>
-          <Text style={textStyleHome}>Home</Text>
+    <>
+      {isMobile ? (
+        <Text>hehe</Text>
+      ) : (
+        <View style={styles.container}>
+          <View style={styles.contentStart}>
+            {/* Home */}
+            <Pressable
+              style={styles.menuItem}
+              accessibilityRole="link"
+              href={`/`}
+            >
+              <Text style={textStyleHome}>Home</Text>
 
-          {isHome && (
-            <AnimatedView style={transitionStyles}>
-              <View style={{ alignItems: "center" }}>
-                <Image src="/assets/active-menu.svg" width={131} height={16} />
+              {isHome && (
+                <AnimatedView style={transitionStyles}>
+                  <View style={{ alignItems: "center" }}>
+                    <Image
+                      src="/assets/active-menu.svg"
+                      width={131}
+                      height={16}
+                    />
+                  </View>
+                </AnimatedView>
+              )}
+            </Pressable>
+
+            {/* Projects */}
+            <Pressable
+              style={styles.menuItem}
+              onHoverIn={handleHover}
+              onHoverOut={handleHover}
+            >
+              <View style={{ flexDirection: "row" }}>
+                <Text style={textStyleProject}>Projects</Text>
+
+                <View style={{ marginStart: 8, alignSelf: "center" }}>
+                  <AnimatedView style={transitionStyles}>
+                    <Image src="/assets/dropdown.svg" width={17} height={11} />
+                  </AnimatedView>
+                </View>
               </View>
-            </AnimatedView>
-          )}
-        </Pressable>
 
-        {/* Projects */}
-        <Pressable
-          style={styles.menuItem}
-          onHoverIn={handleHover}
-          onHoverOut={handleHover}
-        >
-          <View style={{ flexDirection: "row" }}>
-            <Text style={textStyleProject}>Projects</Text>
+              {isProject && (
+                <AnimatedView style={transitionStyles}>
+                  <View style={{ alignItems: "center" }}>
+                    <Image
+                      src="/assets/active-menu.svg"
+                      width={131}
+                      height={16}
+                    />
+                  </View>
+                </AnimatedView>
+              )}
 
-            <View style={{ marginStart: 8, alignSelf: "center" }}>
-              <AnimatedView style={transitionStyles}>
-                <Image src="/assets/dropdown.svg" width={17} height={11} />
-              </AnimatedView>
-            </View>
+              {isDropdownVisible && (
+                <View style={dropdownMenuStyle}>
+                  <DropdownMenu />
+                </View>
+              )}
+            </Pressable>
+
+            {/* About */}
+            <Pressable
+              style={styles.menuItem}
+              accessibilityRole="link"
+              href={`/about`}
+            >
+              <Text style={textStyleAbout}>About</Text>
+
+              {isAbout && (
+                <AnimatedView style={transitionStyles}>
+                  <View style={{ alignItems: "center" }}>
+                    <Image
+                      src="/assets/active-menu.svg"
+                      width={131}
+                      height={16}
+                    />
+                  </View>
+                </AnimatedView>
+              )}
+            </Pressable>
           </View>
 
-          {isProject && (
-            <AnimatedView style={transitionStyles}>
-              <View style={{ alignItems: "center" }}>
-                <Image src="/assets/active-menu.svg" width={131} height={16} />
-              </View>
-            </AnimatedView>
-          )}
-
-          {isDropdownVisible && (
-            <View style={dropdownMenuStyle}>
-              <DropdownMenu />
-            </View>
-          )}
-        </Pressable>
-
-        {/* About */}
-        <Pressable
-          style={styles.menuItem}
-          accessibilityRole="link"
-          href={`/about`}
-        >
-          <Text style={textStyleAbout}>About</Text>
-
-          {isAbout && (
-            <AnimatedView style={transitionStyles}>
-              <View style={{ alignItems: "center" }}>
-                <Image src="/assets/active-menu.svg" width={131} height={16} />
-              </View>
-            </AnimatedView>
-          )}
-        </Pressable>
-      </View>
-
-      {/* Contact */}
-      <View style={styles.contentEnd}>
-        <ActionButton title="Contact" content={contactEmail} />
-      </View>
-    </View>
+          {/* Contact */}
+          <View style={styles.contentEnd}>
+            <ActionButton title="Contact" content={contactEmail} />
+          </View>
+        </View>
+      )}
+    </>
   );
 };

@@ -1,20 +1,14 @@
 import { Card, textStyles, Screen, HomeHero } from "../components";
 import { Text, View } from "react-native";
-import { Platform } from "react-native";
-import { useWindowDimensions } from "react-native";
 
 export default function App() {
-  console.log("platform", Platform.OS);
-  const { height, scale, width } = useWindowDimensions();
-
-  console.log("dim: ", height, scale, width);
   return (
     <Screen isHome={true}>
       <View style={{ marginBottom: 20 }}>
         <Text style={textStyles.h3}>Overview</Text>
       </View>
 
-      {Platform.OS === "web" ? <HomeHero /> : <Text>Hi mobile</Text>}
+      <HomeHero />
 
       <View style={{ marginBottom: 20 }}>
         <Text style={textStyles.h3}>Projects</Text>
