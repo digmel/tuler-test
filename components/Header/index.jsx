@@ -7,11 +7,13 @@ import { ActionButton } from "./actionButton";
 import { DropdownMenu } from "./DropdownMenu";
 import { useSpring, animated } from "@react-spring/web";
 import { usePlatform } from "../../hooks";
+import { MobileMenu } from "./MobileMenu";
 
 const contactEmail = "elene.uxdesign@gmail.com";
 
 export const Header = ({ isHome, isProject, isAbout }) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
 
   const { isMobile } = usePlatform();
 
@@ -41,9 +43,15 @@ export const Header = ({ isHome, isProject, isAbout }) => {
   return (
     <>
       {isMobile ? (
-        <View style={{ alignSelf: "flex-end", paddingTop: 8, marginEnd: 8 }}>
+        <Pressable
+          style={{ alignSelf: "flex-end", paddingTop: 8, marginEnd: 8 }}
+          onPress={() => {
+            setIsMobileMenuVisible(!isMobileMenuVisible);
+          }}
+        >
           <Image src="/assets/mobile-menu.svg" width={45} height={45} />
-        </View>
+          {isMobileMenuVisible && <MobileMenu />}
+        </Pressable>
       ) : (
         <View style={styles.container}>
           <View style={styles.contentStart}>
