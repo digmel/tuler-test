@@ -6,28 +6,15 @@ export const styles = StyleSheet.create({
     zIndex: 1,
     alignItems: "center",
     flexDirection: "row",
-    height: 104,
     backgroundColor: colors.grayLight,
-    paddingHorizontal: 120,
-    justifyContent: "space-between",
     borderTopColor: colors.gray,
     borderWidth: 1,
+    height: 100,
   },
-  leftContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
-  },
-  rightContainer: {
-    width: "357",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-  },
-  title: {
-    fontSize: 16,
-    marginHorizontal: 44,
-  },
-  icon: {
-    paddingEnd: 28,
+  copyrights: {
+    marginStart: 16,
+    paddingStart: 16,
+    borderLeftColor: colors.grayDark,
+    borderLeftWidth: 1.5,
   },
 });

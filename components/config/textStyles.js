@@ -30,9 +30,9 @@ export const textStyles = {
     fontFamily: "Poppins",
   },
   link: {
-    fontSize: 24,
+    fontSize: 14,
     lineHeight: "130%",
-    fontWeight: 700,
+    fontWeight: 500,
     color: colors.link,
     fontFamily: "Poppins",
   },
