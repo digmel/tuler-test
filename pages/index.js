@@ -40,6 +40,28 @@ export default function App() {
           description="The app provides basic information to Learn First Aid & Test your knowledge"
         />
       </View>
+
+      <View
+        style={{
+          flexDirection: isMobile ? "column" : "row",
+          marginTop: isMobile ? 0 : 32,
+        }}
+      >
+        <Card
+          link="/"
+          image="marikone-hero.png"
+          imageWidth={415}
+          title="Fashion Designer’s Portfolio"
+          description="People can find Marikone’s collections and contact information on the website."
+        />
+        <Card
+          link="/"
+          image="hand4help-hero.png"
+          imageWidth={350}
+          title="Startup Info Website"
+          description="Hand4help is an organization that produces high-tech hand prostheses."
+        />
+      </View>
     </Screen>
   );
 }
