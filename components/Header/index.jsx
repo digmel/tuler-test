@@ -50,7 +50,13 @@ export const Header = ({ isHome, isProject, isAbout }) => {
           }}
         >
           <Image src="/assets/mobile-menu.svg" width={45} height={45} />
-          {isMobileMenuVisible && <MobileMenu />}
+          {isMobileMenuVisible && (
+            <MobileMenu
+              isHome={isHome}
+              isProject={isProject}
+              isAbout={isAbout}
+            />
+          )}
         </Pressable>
       ) : (
         <View style={styles.container}>
