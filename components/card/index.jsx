@@ -1,12 +1,28 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Linking } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
 import { textStyles } from "../config/textStyles";
+import { shadowStyle } from "../config/shadowStyle";
 import { usePlatform } from "../../hooks";
+import { Button } from "../button";
 
-export const Card = ({ link, image, imageWidth, title, description }) => {
+export const Card = ({
+  link,
+  image,
+  imageWidth,
+  title,
+  description,
+  isProject,
+  cardStyle,
+}) => {
   const { isMobile } = usePlatform();
+
+  const _shadowStyle = isProject ? {} : shadowStyle;
+
+  const _openURL = async () => {
+    await Linking.openURL(link);
+  };
   return (
     <>
       <View
@@ -22,6 +38,8 @@ export const Card = ({ link, image, imageWidth, title, description }) => {
               },
             ],
           },
+          _shadowStyle,
+          cardStyle,
         ]}
         accessibilityRole="link"
         href={link}
@@ -37,6 +55,12 @@ export const Card = ({ link, image, imageWidth, title, description }) => {
         </View>
 
         <Text style={textStyles.card}>{description}</Text>
+
+        {isMobile && isProject && (
+          <View style={{ marginTop: 24 }}>
+            <Button label="Prototype" onPress={_openURL} />
+          </View>
+        )}
       </View>
     </>
   );

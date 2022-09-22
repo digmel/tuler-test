@@ -1,19 +1,45 @@
-import { Screen, Section, ProjectHero, ProjectFinal } from "../components";
+import {
+  Screen,
+  Section,
+  ProjectHero,
+  ProjectFinal,
+  Card,
+} from "../components";
+import { usePlatform } from "../hooks";
 
 const prototypeLink =
   "https://www.figma.com/proto/xei0Knh7PfE4V0X4m92J33/First-Aid-App?node-id=21%3A452&scaling=scale-down&page-id=0%3A1&starting-point-node-id=21%3A452";
 
 export default function GlutenFreeApp() {
+  const { isMobile } = usePlatform();
   return (
     <Screen isProject={true}>
-      <ProjectHero
-        link={prototypeLink}
-        image="first-aid-hero-large.jpg"
-        imageWidth={826}
-        imageHeight={525}
-        title="First Aid App"
-        description="Learn how to handle yourself and casualties during an emergency."
-      />
+      {isMobile ? (
+        <Card
+          isProject
+          link={prototypeLink}
+          image="first-aid-hero.png"
+          imageWidth={385}
+          title="Learn First Aid"
+          description="The app provides basic information to Learn First Aid & Test your knowledge"
+          cardStyle={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: -32,
+            marginBottom: 48,
+          }}
+        />
+      ) : (
+        <ProjectHero
+          link={prototypeLink}
+          image="first-aid-hero-large.jpg"
+          imageWidth={826}
+          imageHeight={525}
+          title="First Aid App"
+          description="Learn how to handle yourself and casualties during an emergency."
+        />
+      )}
 
       <Section
         headline="Project Overview"

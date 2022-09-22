@@ -1,20 +1,45 @@
-import { Screen, Section, ProjectHero, ProjectFinal } from "../components";
+import {
+  Screen,
+  Section,
+  ProjectHero,
+  ProjectFinal,
+  Card,
+} from "../components";
+import { usePlatform } from "../hooks";
 
 const prototypeLink =
   "https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1";
 
 export default function FoodWasteApp() {
+  const { isMobile } = usePlatform();
   return (
     <Screen isProject={true}>
-      <ProjectHero
-        link={prototypeLink}
-        image="food-waste-hero-large.jpg"
-        imageWidth={534}
-        imageHeight={525}
-        title="Reduce Food Waste by Sharing It"
-        description="Using the app people reduce food waste while helping others as well."
-      />
-
+      {isMobile ? (
+        <Card
+          isProject
+          link={prototypeLink}
+          image="waste-hero.png"
+          imageWidth={250}
+          title="Reduce Food Waste"
+          description="The app allows people to share Food & Grocery products to NGO communities"
+          cardStyle={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: -32,
+            marginBottom: 48,
+          }}
+        />
+      ) : (
+        <ProjectHero
+          link={prototypeLink}
+          image="food-waste-hero-large.jpg"
+          imageWidth={534}
+          imageHeight={525}
+          title="Reduce Food Waste by Sharing It"
+          description="Using the app people reduce food waste while helping others as well."
+        />
+      )}
       <Section
         headline="Project Overview"
         content={[
