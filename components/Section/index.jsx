@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import { styles } from "./styles";
 import { textStyles } from "../config/textStyles";
 import Image from "next/image";
+import { usePlatform } from "../../hooks";
 
 export const Section = ({
   headline,
@@ -15,10 +16,27 @@ export const Section = ({
   fullImageBottomSpace,
   topSpace,
 }) => {
+  const { isMobile } = usePlatform();
+
+  const containerStyle = {
+    flexDirection: isMobile ? "column" : "row",
+    alignItems: "flex-start",
+    justifyContent: "space-start",
+    marginBottom: 32,
+  };
+
+  const contentStyle = {
+    marginTop: isMobile ? 16 : 0,
+  };
+
+  const headlineStyle = {
+    marginTop: isMobile ? 0 : 4,
+    marginBottom: isMobile ? 20 : 32,
+  };
   return (
     <View style={[styles.wrapper, { marginTop: topSpace }]}>
       {headline && (
-        <View style={styles.headline}>
+        <View style={headlineStyle}>
           <Text style={textStyles.h3}>{headline}</Text>
         </View>
       )}
@@ -29,7 +47,7 @@ export const Section = ({
         </View>
       )}
 
-      <View style={styles.container}>
+      <View style={containerStyle}>
         {content &&
           content?.map(
             ({ title, body, width, list, image, imageWidth, imageHeight }) => {
@@ -37,7 +55,10 @@ export const Section = ({
               const _underlineHeight = 6;
               const key = `${title}` + 1;
               return (
-                <View style={[styles.content, { width }]} key={key}>
+                <View
+                  style={[styles.content, { width }, contentStyle]}
+                  key={key}
+                >
                   {title && (
                     <>
                       <Text style={textStyles.title}>{title}</Text>

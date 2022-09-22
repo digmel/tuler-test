@@ -13,10 +13,6 @@ export const styles = StyleSheet.create({
     marginBottom: 12,
     alignItems: "flex-start",
   },
-  headline: {
-    marginTop: 4,
-    marginBottom: 32,
-  },
   content: {
     marginEnd: 77,
   },
