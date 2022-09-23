@@ -5,13 +5,11 @@ import {
   ProjectFinal,
   Card,
 } from "../components";
-import { usePlatform } from "../hooks";
 
 const prototypeLink =
   "https://www.figma.com/proto/RMGOoiFKZlpysEcjEb6BFu/Gluten-Free-Restaurant-Finder-(Copy)?node-id=103%3A8632&scaling=scale-down&page-id=0%3A1&starting-point-node-id=103%3A8632&show-proto-sidebar=1";
 
-export default function GlutenFreeApp() {
-  const { isMobile } = usePlatform();
+export default function GlutenFreeApp({ isMobile }) {
   return (
     <>
       <Screen isProject={true}>

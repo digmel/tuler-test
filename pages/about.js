@@ -1,11 +1,8 @@
 import { StyleSheet, View } from "react-native";
 import { Screen, Section } from "../components";
 import Image from "next/image";
-import { usePlatform } from "../hooks";
 
-export default function About() {
-  const { isMobile } = usePlatform();
-
+export default function About({ isMobile }) {
   return (
     <Screen isAbout={true}>
       <View style={{ flexDirection: isMobile ? "column" : "row" }}>

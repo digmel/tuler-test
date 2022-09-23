@@ -5,13 +5,11 @@ import {
   ProjectFinal,
   Card,
 } from "../components";
-import { usePlatform } from "../hooks";
 
 const prototypeLink =
   "https://www.figma.com/proto/xei0Knh7PfE4V0X4m92J33/First-Aid-App?node-id=21%3A452&scaling=scale-down&page-id=0%3A1&starting-point-node-id=21%3A452";
 
-export default function GlutenFreeApp() {
-  const { isMobile } = usePlatform();
+export default function GlutenFreeApp({ isMobile }) {
   return (
     <Screen isProject={true}>
       {isMobile ? (

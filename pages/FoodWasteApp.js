@@ -5,13 +5,11 @@ import {
   ProjectFinal,
   Card,
 } from "../components";
-import { usePlatform } from "../hooks";
 
 const prototypeLink =
   "https://www.figma.com/proto/8TO0dOLUqk4w3P8vTMIrHK/Reduce-Food-Waste?node-id=523%3A8757&scaling=scale-down&page-id=519%3A6123&starting-point-node-id=523%3A8757&show-proto-sidebar=1";
 
-export default function FoodWasteApp() {
-  const { isMobile } = usePlatform();
+export default function FoodWasteApp({ isMobile }) {
   return (
     <Screen isProject={true}>
       {isMobile ? (
