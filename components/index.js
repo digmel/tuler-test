@@ -9,3 +9,4 @@ export * from "./ProjectFinal";
 export * from "./card";
 export * from "./Section";
 export * from "./button";
+export * from "./animatedView";

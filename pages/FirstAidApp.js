@@ -11,7 +11,7 @@ const prototypeLink =
 
 export default function GlutenFreeApp({ isMobile }) {
   return (
-    <Screen isProject={true}>
+    <Screen isProject={true} isMobile={isMobile}>
       {isMobile ? (
         <Card
           isProject

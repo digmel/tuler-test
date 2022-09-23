@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 export default function App({ isMobile }) {
   return (
-    <Screen isHome={true}>
+    <Screen isHome={true} isMobile={isMobile}>
       <View style={{ marginBottom: 20 }}>
         {!isMobile && <Text style={textStyles.h3}>Overview</Text>}
       </View>

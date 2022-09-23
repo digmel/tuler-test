@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function About({ isMobile }) {
   return (
-    <Screen isAbout={true}>
+    <Screen isAbout={true} isMobile={isMobile}>
       <View style={{ flexDirection: isMobile ? "column" : "row" }}>
         {isMobile && (
           <View
