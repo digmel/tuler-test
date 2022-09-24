@@ -10,7 +10,7 @@ export * from "./sectionHero";
 
 export * from "./footer";
 
-export * from "./Header";
+export * from "./header";
 export * from "./textStyles";
 export * from "./shadowStyle";
 export * from "./HomeHero";
