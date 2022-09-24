@@ -1,123 +1,141 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { styles } from "./styles";
-import { textStyles } from "..";
+import { Colors } from "..";
 import Image from "next/image";
-import { usePlatform } from "../../hooks";
 
-export const Section = ({
-  headline,
-  description,
-  content,
-  fullImage,
-  fullImageHeight,
-  fullImageWidth,
-  fullImageTopSpace,
-  fullImageBottomSpace,
-  topSpace,
-}) => {
-  const { isMobile } = usePlatform();
-
+export const Section = ({ isMobile, description, title, content }) => {
   const containerStyle = {
     flexDirection: isMobile ? "column" : "row",
-    alignItems: "flex-start",
-    justifyContent: "space-start",
-    marginBottom: 32,
+    marginBottom: isMobile ? 48 : 100,
+    marginHorizontal: -36,
   };
 
   const contentStyle = {
-    marginTop: isMobile ? 16 : 0,
+    flex: isMobile ? "auto" : 1,
+    marginHorizontal: 36,
+    marginBottom: isMobile && 24,
   };
 
-  const headlineStyle = {
-    marginTop: isMobile ? 0 : 4,
+  const titleStyle = {
+    fontSize: isMobile ? 20 : 28,
+    lineHeight: "130%",
+    fontWeight: isMobile ? 600 : 500,
+    color: Colors.primary,
+    fontFamily: "Poppins",
+  };
+
+  const subtitleStyle = {
+    fontSize: isMobile ? 16 : 20,
+    lineHeight: "130%",
+    fontWeight: 500,
+    color: Colors.primary,
+    fontFamily: "Poppins",
+  };
+
+  const bodyStyle = {
+    fontSize: isMobile ? 14 : 16,
+    lineHeight: "130%",
+    fontWeight: 300,
+    color: Colors.primary,
+    fontFamily: "Poppins",
+  };
+
+  const iconStyle = {
+    marginTop: 4,
+    marginBottom: 8,
+    alignItems: "flex-start",
+  };
+
+  const listStyle = {
+    flexDirection: "row",
+    marginBottom: 10,
+  };
+
+  const listIconStyle = {
+    marginEnd: 8,
+    marginTop: 4,
+  };
+
+  const titleContainer = {
     marginBottom: isMobile ? 20 : 32,
   };
+
+  const descriptionContainer = {
+    paddingBottom: isMobile ? 16 : 32,
+  };
+
   return (
-    <View style={[styles.wrapper, { marginTop: topSpace }]}>
-      {headline && (
-        <View style={headlineStyle}>
-          <Text style={textStyles.h3}>{headline}</Text>
+    <>
+      {title && (
+        <View style={titleContainer}>
+          <Text style={titleStyle}>{title}</Text>
         </View>
       )}
 
       {description && (
-        <View style={styles.description}>
-          <Text style={textStyles.body}>{description}</Text>
+        <View style={descriptionContainer}>
+          <Text style={bodyStyle}>{description}</Text>
         </View>
       )}
 
       <View style={containerStyle}>
-        {content &&
-          content?.map(
-            ({ title, body, width, list, image, imageWidth, imageHeight }) => {
-              const _underlineWidth = title ? title.length * 15 : 100;
-              const _underlineHeight = 6;
-              const key = `${title}` + 1;
-              return (
-                <View
-                  style={[styles.content, { width }, contentStyle]}
-                  key={key}
-                >
-                  {title && (
-                    <>
-                      <Text style={textStyles.title}>{title}</Text>
+        {content?.map(({ subtitle, text, list, image }) => {
+          const key = `${subtitle?.length}` + 1;
+          let iconWidth = subtitle ? subtitle?.length * 13 : 100;
 
-                      <View style={styles.underline}>
-                        <Image
-                          src="/assets/underline.svg"
-                          width={_underlineWidth}
-                          height={_underlineHeight}
-                        />
-                      </View>
-                    </>
-                  )}
+          return (
+            <View style={contentStyle} key={key}>
+              {subtitle && (
+                <>
+                  <Text style={subtitleStyle}>{subtitle}</Text>
 
-                  {body && <Text style={textStyles.body}>{body}</Text>}
-
-                  {list &&
-                    list?.map(({ text, icon }) => (
-                      <View style={styles.list}>
-                        <View style={styles.icon}>
-                          {icon && (
-                            <Image
-                              src={`/assets/${icon}`}
-                              width={15}
-                              height={12}
-                            />
-                          )}
-                        </View>
-                        <Text style={textStyles.body}>{text}</Text>
-                      </View>
-                    ))}
-
-                  {image && (
+                  <View style={iconStyle}>
                     <Image
-                      src={`/assets/${image}`}
-                      width={imageWidth}
-                      height={imageHeight}
+                      src="/assets/underline.svg"
+                      width={iconWidth}
+                      height={6}
                     />
-                  )}
-                </View>
-              );
-            }
-          )}
-      </View>
+                  </View>
+                </>
+              )}
 
-      {fullImage && (
-        <View
-          style={{
-            marginTop: fullImageTopSpace,
-            marginBottom: fullImageBottomSpace,
-          }}
-        >
-          <Image
-            src={`/assets/${fullImage}`}
-            width={fullImageWidth}
-            height={fullImageHeight}
-          />
-        </View>
-      )}
-    </View>
+              {text && <Text style={bodyStyle}>{text}</Text>}
+
+              {list &&
+                list?.map(({ text, icon }) => {
+                  const key = `${text?.length}` + 1;
+                  return (
+                    <View style={listStyle} key={key}>
+                      <View style={listIconStyle}>
+                        {icon && (
+                          <Image
+                            src={`/assets/${icon}`}
+                            width={15}
+                            height={12}
+                          />
+                        )}
+                      </View>
+                      <Text style={bodyStyle}>{text}</Text>
+                    </View>
+                  );
+                })}
+
+              {image && (
+                <View
+                  style={{
+                    backgroundColor: "gray",
+                    width: isMobile ? 320 : 600,
+                    height: isMobile ? 250 : 600,
+                    alignSelf: isMobile ? "center" : "auto",
+                  }}
+                >
+                  {/* <Image src={`/assets/${image}`} width={600} height={600} /> */}
+                </View>
+              )}
+            </View>
+          );
+        })}
+      </View>
+    </>
   );
 };

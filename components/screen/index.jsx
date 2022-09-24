@@ -9,6 +9,7 @@ export const Screen = ({ children, isHome, isProject, isAbout, isMobile }) => {
   };
 
   const contentStyle = {
+    flex: 1,
     paddingHorizontal: isMobile ? 32 : 120,
     paddingBottom: isMobile ? 100 : 300,
     paddingTop: isMobile ? 32 : 50,
