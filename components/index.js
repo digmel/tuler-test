@@ -1,5 +1,5 @@
 export * from "./constants";
-export * from "./Colors";
+export * from "./colors";
 export * from "./screen";
 export * from "./button";
 export * from "./animatedView";
