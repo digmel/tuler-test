@@ -1,4 +1,4 @@
-import { Card, textStyles, Screen, HomeHero } from "../components";
+import { textStyles, Screen, HomeHero, SectionCard } from "../components";
 import { Text, View } from "react-native";
 
 export default function App({ isMobile }) {
@@ -10,55 +10,48 @@ export default function App({ isMobile }) {
 
       <HomeHero />
 
-      <View style={{ marginBottom: 20 }}>
-        <Text style={textStyles.h3}>Projects</Text>
-      </View>
+      <SectionCard
+        isMobile={isMobile}
+        title="Projects"
+        content={[
+          {
+            title: "Gluten Free Finder",
+            text: "App guides people to Find & Save Gluten-Free restaurants worldwide.",
+            // image: "gluten-hero.png",
+            link: "/GlutenFreeApp",
+          },
+          {
+            title: "Reduce Food Waste",
+            text: "App allows people to share Food & Grocery products to NGO communities.",
+            // image: "gluten-hero.png",
+            link: "/GlutenFreeApp",
+          },
+          {
+            title: "Learn First Aid",
+            text: "App allows people to refresh their First Aid knowledge with simple illustrated fun Exams.",
+            // image: "gluten-hero.png",
+            link: "/GlutenFreeApp",
+          },
+        ]}
+      />
 
-      <View style={{ flexDirection: isMobile ? "column" : "row" }}>
-        <Card
-          link="/GlutenFreeApp"
-          image="gluten-hero.png"
-          imageWidth={319}
-          title="Gluten-Free Finder"
-          description="The app guides people to Find & Save Gluten-Free restaurants worldwide"
-        />
-        <Card
-          link="/FoodWasteApp"
-          image="waste-hero.png"
-          imageWidth={250}
-          title="Reduce Food Waste"
-          description="The app allows people to share Food & Grocery products to NGO communities"
-        />
-        <Card
-          link="/FirstAidApp"
-          image="first-aid-hero.png"
-          imageWidth={385}
-          title="Learn First Aid"
-          description="The app provides basic information to Learn First Aid & Test your knowledge"
-        />
-      </View>
-
-      <View
-        style={{
-          flexDirection: isMobile ? "column" : "row",
-          marginTop: isMobile ? 0 : 32,
-        }}
-      >
-        <Card
-          link="/"
-          image="marikone-hero.png"
-          imageWidth={415}
-          title="Fashion Designer’s Portfolio"
-          description="People can find Marikone’s collections and contact information on the website."
-        />
-        <Card
-          link="/"
-          image="hand4help-hero.png"
-          imageWidth={350}
-          title="Startup Info Website"
-          description="Hand4help is an organization that produces high-tech hand prostheses."
-        />
-      </View>
+      {/* <SectionCard
+        isMobile={isMobile}
+        content={[
+          {
+            title: "Fashion Designer’s Portfolio",
+            text: "People can find Marikone’s collections and contact information on the website.",
+            // image: "gluten-hero.png",
+            link: "/GlutenFreeApp",
+          },
+          {
+            title: "Startup Info Website",
+            text: "Hand4help is an organization that produces high-tech hand prostheses.",
+            // image: "gluten-hero.png",
+            link: "/GlutenFreeApp",
+          },
+        ]}
+      /> */}
     </Screen>
   );
 }

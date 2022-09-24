@@ -7,6 +7,7 @@ export * from "./animatedView";
 export * from "./section";
 export * from "./sectionFinal";
 export * from "./sectionHero";
+export * from "./sectionCard";
 
 export * from "./footer";
 
