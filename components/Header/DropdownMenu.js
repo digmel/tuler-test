@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Pressable } from "react-native";
-import { textStyles } from "../config/textStyles";
+import { textStyles } from "..";
 import { styles } from "./styles";
 
 export const DropdownMenu = () => {

@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, Linking } from "react-native";
 import { styles } from "./styles";
-import { textStyles } from "../config/textStyles";
-import { Button } from "../button";
+import { textStyles, Button } from "..";
 
 export const ProjectFinal = ({ link }) => {
   const _openURL = async () => {

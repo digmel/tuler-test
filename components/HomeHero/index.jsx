@@ -1,10 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { textStyles } from "../config/textStyles";
-import { shadowStyle as _shadowStyle } from "../config/shadowStyle";
+import { shadowStyle as _shadowStyle, Colors, textStyles } from "..";
 import Image from "next/image";
 import { usePlatform } from "../../hooks";
-import { colors } from "..";
 
 export const HomeHero = () => {
   const { isMobile } = usePlatform();
@@ -24,7 +22,7 @@ export const HomeHero = () => {
     ? {
         fontSize: 20,
         fontWeight: 300,
-        color: colors.primary,
+        color: Colors.primary,
         lineHeight: "130%",
         fontFamily: "Poppins",
         paddingTop: 16,

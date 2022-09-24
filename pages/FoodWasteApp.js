@@ -1,7 +1,7 @@
 import {
   Screen,
   Section,
-  ProjectHero,
+  SectionHero,
   ProjectFinal,
   Card,
 } from "../components";
@@ -29,7 +29,7 @@ export default function FoodWasteApp({ isMobile }) {
           }}
         />
       ) : (
-        <ProjectHero
+        <SectionHero
           link={prototypeLink}
           image="food-waste-hero-large.jpg"
           imageWidth={534}

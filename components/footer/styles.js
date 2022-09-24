@@ -1,20 +1,20 @@
 import { StyleSheet } from "react-native";
-import { colors } from "..";
+import { Colors } from "..";
 
 export const styles = StyleSheet.create({
   container: {
     zIndex: 1,
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: colors.grayLight,
-    borderTopColor: colors.gray,
+    backgroundColor: Colors.grayLight,
+    borderTopColor: Colors.gray,
     borderWidth: 1,
     height: 100,
   },
   copyrights: {
     marginStart: 16,
     paddingStart: 16,
-    borderLeftColor: colors.grayDark,
+    borderLeftColor: Colors.grayDark,
     borderLeftWidth: 1.5,
   },
 });

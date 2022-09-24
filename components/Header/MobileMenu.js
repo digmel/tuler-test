@@ -1,7 +1,6 @@
 import { View, Text, Modal } from "react-native";
 import React from "react";
-import { textStyles } from "../config/textStyles";
-import { colors } from "../config/colors";
+import { textStyles, Colors } from "..";
 import Image from "next/image";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -20,11 +19,11 @@ export const MobileMenu = ({ isHome, isProject, isAbout }) => {
           style={{
             zIndex: 10,
             flex: 1,
-            backgroundColor: colors.grayHover,
+            backgroundColor: Colors.grayHover,
             marginStart: 64,
             paddingVertical: 64,
             paddingStart: 32,
-            borderLeftColor: colors.gray,
+            borderLeftColor: Colors.gray,
             borderLeftWidth: 1,
           }}
         >
@@ -175,7 +174,7 @@ export const MobileMenu = ({ isHome, isProject, isAbout }) => {
           <View
             style={{
               marginTop: 200,
-              borderBottomColor: colors.grayDark,
+              borderBottomColor: Colors.grayDark,
               borderBottomWidth: 0.5,
               marginEnd: 32,
               paddingBottom: 4,

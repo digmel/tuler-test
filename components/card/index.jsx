@@ -2,10 +2,8 @@ import React from "react";
 import { View, Text, Linking } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
-import { textStyles } from "../config/textStyles";
-import { shadowStyle } from "../config/shadowStyle";
+import { textStyles, shadowStyle, Button } from "..";
 import { usePlatform } from "../../hooks";
-import { Button } from "../button";
 
 export const Card = ({
   link,

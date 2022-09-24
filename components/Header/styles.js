@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors } from "..";
+import { Colors } from "..";
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     height: 74,
-    backgroundColor: colors.light,
-    shadowColor: colors.shadow,
+    backgroundColor: Colors.light,
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: colors.accent,
+    backgroundColor: Colors.accent,
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 4,
@@ -41,9 +41,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     zIndex: 10,
     width: 180,
-    backgroundColor: colors.light,
+    backgroundColor: Colors.light,
     borderRadius: 4,
-    shadowColor: colors.shadow,
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 7,
@@ -55,9 +55,9 @@ export const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: "flex-start",
     borderBottomWidth: 1,
-    borderBottomColor: colors.accent,
+    borderBottomColor: Colors.accent,
   },
   dropdownMenuItemHover: {
-    backgroundColor: colors.grayHover,
+    backgroundColor: Colors.grayHover,
   },
 });

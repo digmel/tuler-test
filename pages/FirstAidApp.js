@@ -1,7 +1,7 @@
 import {
   Screen,
   Section,
-  ProjectHero,
+  SectionHero,
   ProjectFinal,
   Card,
 } from "../components";
@@ -29,7 +29,7 @@ export default function GlutenFreeApp({ isMobile }) {
           }}
         />
       ) : (
-        <ProjectHero
+        <SectionHero
           link={prototypeLink}
           image="first-aid-hero-large.jpg"
           imageWidth={826}

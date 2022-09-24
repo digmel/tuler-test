@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { View, Text, Pressable, Clipboard } from "react-native";
 import { styles } from "./styles";
-import { textStyles } from "../config/textStyles";
+import { textStyles } from "..";
 
 export const ActionButton = ({ title, content }) => {
   const [state, setState] = useState(true);

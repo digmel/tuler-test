@@ -1,11 +1,11 @@
 import React from "react";
 import { View, ScrollView } from "react-native";
-import { Header, Footer, AnimatedView, colors } from "..";
+import { Header, Footer, AnimatedView, Colors } from "..";
 
 export const Screen = ({ children, isHome, isProject, isAbout, isMobile }) => {
   const containerStyle = {
     flex: 1,
-    backgroundColor: colors.light,
+    backgroundColor: Colors.light,
   };
 
   const contentStyle = {

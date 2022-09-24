@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Pressable } from "react-native";
 import { usePlatform } from "../../hooks";
-import { colors } from "../config/colors";
+import { Colors } from "..";
 
 export const Button = ({ label, onPress, topSpace, bottomSpace }) => {
   const { isMobile } = usePlatform();
@@ -9,7 +9,7 @@ export const Button = ({ label, onPress, topSpace, bottomSpace }) => {
   const containerStyle = {
     paddingHorizontal: isMobile ? 16 : 32,
     paddingVertical: isMobile ? 8 : 16,
-    backgroundColor: colors.accent,
+    backgroundColor: Colors.accent,
     borderRadius: 8,
     justifyContent: "center",
   };
@@ -18,7 +18,7 @@ export const Button = ({ label, onPress, topSpace, bottomSpace }) => {
     fontSize: isMobile ? 24 : 32,
     lineHeight: "130%",
     fontWeight: 300,
-    color: colors.primary,
+    color: Colors.primary,
     fontFamily: "Poppins",
   };
 

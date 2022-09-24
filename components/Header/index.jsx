@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Pressable, Clipboard } from "react-native";
-import { textStyles } from "../config/textStyles";
+import { textStyles } from "..";
 import { styles } from "./styles";
 import Image from "next/image";
 import { ActionButton } from "./actionButton";

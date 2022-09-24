@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "./styles";
-import { textStyles } from "../config/textStyles";
+import { textStyles } from "..";
 import Image from "next/image";
 import { usePlatform } from "../../hooks";
 
