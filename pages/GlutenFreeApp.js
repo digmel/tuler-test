@@ -6,16 +6,13 @@ import {
   Card,
 } from "../components";
 
-const prototypeLink =
-  "https://www.figma.com/proto/RMGOoiFKZlpysEcjEb6BFu/Gluten-Free-Restaurant-Finder-(Copy)?node-id=103%3A8632&scaling=scale-down&page-id=0%3A1&starting-point-node-id=103%3A8632&show-proto-sidebar=1";
-
-export default function GlutenFreeApp({ isMobile }) {
+export default function GlutenFreeApp({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
       {isMobile ? (
         <Card
           isProject
-          link={prototypeLink}
+          link={constants.links.GlutenFreeApp}
           image="gluten-hero.png"
           imageWidth={319}
           title="Gluten-Free Finder"
@@ -30,7 +27,7 @@ export default function GlutenFreeApp({ isMobile }) {
         />
       ) : (
         <SectionHero
-          link={prototypeLink}
+          link={constants.links.GlutenFreeApp}
           image="gluten-hero-large.jpg"
           imageWidth={662}
           imageHeight={525}
@@ -253,7 +250,7 @@ export default function GlutenFreeApp({ isMobile }) {
             fullImageHeight={963}
           />
 
-          <ProjectFinal link={prototypeLink} />
+          <ProjectFinal link={constants.links.GlutenFreeApp} />
         </>
       )}
     </Screen>

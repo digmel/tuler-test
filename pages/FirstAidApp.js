@@ -6,16 +6,13 @@ import {
   Card,
 } from "../components";
 
-const prototypeLink =
-  "https://www.figma.com/proto/xei0Knh7PfE4V0X4m92J33/First-Aid-App?node-id=21%3A452&scaling=scale-down&page-id=0%3A1&starting-point-node-id=21%3A452";
-
-export default function GlutenFreeApp({ isMobile }) {
+export default function FirstAidApp({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
       {isMobile ? (
         <Card
           isProject
-          link={prototypeLink}
+          link={constants.link.FirstAidApp}
           image="first-aid-hero.png"
           imageWidth={385}
           title="Learn First Aid"
@@ -30,7 +27,7 @@ export default function GlutenFreeApp({ isMobile }) {
         />
       ) : (
         <SectionHero
-          link={prototypeLink}
+          link={constants.link.FirstAidApp}
           image="first-aid-hero-large.jpg"
           imageWidth={826}
           imageHeight={525}
@@ -256,7 +253,7 @@ export default function GlutenFreeApp({ isMobile }) {
             fullImageHeight={969}
           />
 
-          <ProjectFinal link={prototypeLink} />
+          <ProjectFinal link={constants.link.FirstAidApp} />
         </>
       )}
     </Screen>

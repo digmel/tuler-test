@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { usePlatform } from "../hooks";
+import { constants } from "../components";
 
 function MyApp({ Component, pageProps }) {
   const [_isMobile, _setIsMobile] = useState();
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
 
-      <Component {...pageProps} isMobile={isMobile} />
+      <Component {...pageProps} isMobile={isMobile} constants={constants} />
     </>
   );
 }
