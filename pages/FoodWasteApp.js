@@ -6,7 +6,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
       <SectionHero
         isMobile={isMobile}
         link={constants.links.FoodWasteApp}
-        // image="food-waste-hero-large.jpg"
+        image="food-waste-hero-large.png"
         headline="Reduce Food Waste"
         label="App allows people to share unused Grocery Products & Foods to NGOs."
       />
@@ -245,7 +245,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
           <Section
             content={[
               {
-                image: "food-waste-homescreen.jpg",
+                image: "food-waste-home.png",
                 imageWidth: 720,
                 imageHeight: 525,
               },
