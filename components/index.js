@@ -8,10 +8,11 @@ export * from "./section";
 export * from "./sectionFinal";
 export * from "./sectionHero";
 
+export * from "./footer";
+
+export * from "./Header";
 export * from "./textStyles";
 export * from "./shadowStyle";
-export * from "./Header";
-export * from "./footer";
 export * from "./HomeHero";
 export * from "./card";
 export * from "./image";
