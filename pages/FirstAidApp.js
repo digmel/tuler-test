@@ -1,4 +1,4 @@
-import { Screen, Section, SectionHero, ProjectFinal } from "../components";
+import { Screen, Section, SectionHero, SectionFinal } from "../components";
 
 export default function FirstAidApp({ isMobile, constants }) {
   return (
@@ -222,9 +222,10 @@ export default function FirstAidApp({ isMobile, constants }) {
             fullImageHeight={969}
           />
 
-          <ProjectFinal link={constants.links.FirstAidApp} />
         </>
       )} */}
+
+      <SectionFinal isMobile={isMobile} link={constants.links.FirstAidApp} />
     </Screen>
   );
 }

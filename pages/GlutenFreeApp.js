@@ -1,10 +1,4 @@
-import {
-  Screen,
-  Section,
-  SectionHero,
-  ProjectFinal,
-  Image,
-} from "../components";
+import { Screen, Section, SectionHero, SectionFinal } from "../components";
 
 export default function GlutenFreeApp({ isMobile, constants }) {
   return (
@@ -212,7 +206,7 @@ export default function GlutenFreeApp({ isMobile, constants }) {
         ]}
       />
 
-      {/* <ProjectFinal link={constants.links.GlutenFreeApp} />  */}
+      <SectionFinal isMobile={isMobile} link={constants.links.GlutenFreeApp} />
     </Screen>
   );
 }
