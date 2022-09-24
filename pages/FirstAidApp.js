@@ -12,16 +12,19 @@ export default function FirstAidApp({ isMobile, constants }) {
       />
 
       <Section
-        headline="Project Overview"
+        isMobile={isMobile}
+        title="Project Overview"
         content={[
           {
-            width: isMobile ? 326 : 425,
-            title: "Project Background",
-            body: "The app is designed for people who are interested in first-aid. The First Aid app will teach you how to handle yourself and injured people and how to behave during floods, earthquakes, and other natural disasters. The app aims to provide useful information and make the learning process easier and pleasurable.",
+            subtitle: "Background",
+            text: "The app is designed for people who are interested in first-aid. The First Aid app will teach you how to handle yourself and injured people and how to behave during floods, earthquakes, and other natural disasters. The app aims to provide useful information and make the learning process easier and pleasurable.",
           },
           {
-            width: isMobile ? 326 : 350,
-            title: "My Role & Responsibilities",
+            subtitle: "The Goal",
+            text: "Develop a solution that helps people learn how to handle injuries or natural disasters.",
+          },
+          {
+            subtitle: "My Role & Responsibilities",
             list: [
               {
                 text: "Product Designer & UX Researcher",
@@ -39,19 +42,10 @@ export default function FirstAidApp({ isMobile, constants }) {
               { icon: "section-icon.svg", text: "Information architecture." },
             ],
           },
-          {
-            width: isMobile ? 326 : 300,
-            title: "The Goal",
-            body: "Develop a solution that helps people learn how to handle injuries or natural disasters.",
-          },
-          {
-            width: isMobile ? 326 : 120,
-            title: "Duration",
-            body: "6 Weeks",
-          },
         ]}
       />
 
+      {/* 
       {!isMobile && (
         <>
           <Section
@@ -230,7 +224,7 @@ export default function FirstAidApp({ isMobile, constants }) {
 
           <ProjectFinal link={constants.links.FirstAidApp} />
         </>
-      )}
+      )} */}
     </Screen>
   );
 }

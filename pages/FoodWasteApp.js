@@ -12,31 +12,37 @@ export default function FoodWasteApp({ isMobile, constants }) {
       />
 
       <Section
-        headline="Project Overview"
+        isMobile={isMobile}
+        title="Project Overview"
         content={[
           {
-            width: isMobile ? 326 : 425,
-            title: "Project Background",
-            body: "With this app, people are connected to the nonprofit organization - Katarthis which cares about homeless people by offering them daily meals. They can visit Katarthis cafe and have breakfast or dinner there.",
+            subtitle: "Background",
+            text: "With this app, people are connected to the nonprofit organization - Katarthis which cares about homeless people by offering them daily meals. They can visit Katarthis cafe and have breakfast or dinner there.",
           },
           {
-            width: isMobile ? 326 : 363,
-            title: "The Goal",
-            body: "The goal was to design a solution for people who want to reduce their food waste and help others at the same time.",
+            subtitle: "The Goal",
+            text: "The goal was to design a solution for people who want to reduce their food waste and help others at the same time.",
           },
           {
-            width: isMobile ? 326 : 139,
-            title: "My Role",
-            body: "Product Designer UX Researcher",
-          },
-          {
-            width: isMobile ? 326 : 200,
-            title: "Duration",
-            body: "8 Weeks\nSelf-started project",
+            subtitle: "My Role & Project Duration",
+            list: [
+              {
+                icon: "section-icon.svg",
+                text: "Product Designer",
+              },
+              {
+                icon: "section-icon.svg",
+                text: "UX Researcher",
+              },
+              {
+                text: "8 Weeks (Self-started project)",
+              },
+            ],
           },
         ]}
       />
 
+      {/* 
       {!isMobile && (
         <>
           <Section
@@ -369,7 +375,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
 
           <ProjectFinal link={constants.links.FoodWasteApp} />
         </>
-      )}
+      )} */}
     </Screen>
   );
 }
