@@ -1,40 +1,15 @@
-import {
-  Screen,
-  Section,
-  SectionHero,
-  ProjectFinal,
-  Card,
-} from "../components";
+import { Screen, Section, SectionHero, ProjectFinal } from "../components";
 
 export default function GlutenFreeApp({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
-      {isMobile ? (
-        <Card
-          isProject
-          link={constants.links.GlutenFreeApp}
-          image="gluten-hero.png"
-          imageWidth={319}
-          title="Gluten-Free Finder"
-          description="The app guides people to Find & Save Gluten-Free restaurants worldwide"
-          cardStyle={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: -32,
-            marginBottom: 48,
-          }}
-        />
-      ) : (
-        <SectionHero
-          link={constants.links.GlutenFreeApp}
-          image="gluten-hero-large.jpg"
-          imageWidth={662}
-          imageHeight={525}
-          title="Gluten-Free Restaurant Finder"
-          description="The app allows users to find restaurant based on their preferences."
-        />
-      )}
+      <SectionHero
+        isMobile={isMobile}
+        link={constants.links.GlutenFreeApp}
+        // image="gluten-hero-large.jpg"
+        headline="Gluten Free Finder"
+        label="App guides people to discover Gluten Free restaurants worldwide."
+      />
 
       <Section
         headline="Project Overview"

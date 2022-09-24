@@ -1,40 +1,16 @@
-import {
-  Screen,
-  Section,
-  SectionHero,
-  ProjectFinal,
-  Card,
-} from "../components";
+import { Screen, Section, SectionHero, ProjectFinal } from "../components";
 
 export default function FoodWasteApp({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
-      {isMobile ? (
-        <Card
-          isProject
-          link={constants.links.FoodWasteApp}
-          image="waste-hero.png"
-          imageWidth={250}
-          title="Reduce Food Waste"
-          description="The app allows people to share Food & Grocery products to NGO communities"
-          cardStyle={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: -32,
-            marginBottom: 48,
-          }}
-        />
-      ) : (
-        <SectionHero
-          link={constants.links.FoodWasteApp}
-          image="food-waste-hero-large.jpg"
-          imageWidth={534}
-          imageHeight={525}
-          title="Reduce Food Waste by Sharing It"
-          description="Using the app people reduce food waste while helping others as well."
-        />
-      )}
+      <SectionHero
+        isMobile={isMobile}
+        link={constants.links.FoodWasteApp}
+        // image="food-waste-hero-large.jpg"
+        headline="Reduce Food Waste"
+        label="App allows people to share unused Grocery Products & Foods to NGOs."
+      />
+
       <Section
         headline="Project Overview"
         content={[

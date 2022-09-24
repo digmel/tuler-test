@@ -1,40 +1,15 @@
-import {
-  Screen,
-  Section,
-  SectionHero,
-  ProjectFinal,
-  Card,
-} from "../components";
+import { Screen, Section, SectionHero, ProjectFinal } from "../components";
 
 export default function FirstAidApp({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
-      {isMobile ? (
-        <Card
-          isProject
-          link={constants.link.FirstAidApp}
-          image="first-aid-hero.png"
-          imageWidth={385}
-          title="Learn First Aid"
-          description="The app provides basic information to Learn First Aid & Test your knowledge"
-          cardStyle={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: -32,
-            marginBottom: 48,
-          }}
-        />
-      ) : (
-        <SectionHero
-          link={constants.link.FirstAidApp}
-          image="first-aid-hero-large.jpg"
-          imageWidth={826}
-          imageHeight={525}
-          title="First Aid App"
-          description="Learn how to handle yourself and casualties during an emergency."
-        />
-      )}
+      <SectionHero
+        isMobile={isMobile}
+        link={constants.links.FirstAidApp}
+        // image="first-aid-hero-large.jpg"
+        headline="Learn First Aid"
+        label="App allows people to refresh their First Aid knowledge with simple illustrated fun Exams"
+      />
 
       <Section
         headline="Project Overview"
@@ -253,7 +228,7 @@ export default function FirstAidApp({ isMobile, constants }) {
             fullImageHeight={969}
           />
 
-          <ProjectFinal link={constants.link.FirstAidApp} />
+          <ProjectFinal link={constants.links.FirstAidApp} />
         </>
       )}
     </Screen>

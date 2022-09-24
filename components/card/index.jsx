@@ -3,7 +3,6 @@ import { View, Text, Linking } from "react-native";
 import { styles } from "./styles";
 import Image from "next/image";
 import { textStyles, shadowStyle, Button } from "..";
-import { usePlatform } from "../../hooks";
 
 export const Card = ({
   link,
@@ -13,9 +12,8 @@ export const Card = ({
   description,
   isProject,
   cardStyle,
+  isMobile,
 }) => {
-  const { isMobile } = usePlatform();
-
   const _shadowStyle = isProject ? {} : shadowStyle;
 
   const _openURL = async () => {
@@ -56,7 +54,7 @@ export const Card = ({
 
         {isMobile && isProject && (
           <View style={{ marginTop: 24 }}>
-            <Button label="Prototype" onPress={_openURL} />
+            <Button label="Prototype" onPress={_openURL} isMobile={isMobile} />
           </View>
         )}
       </View>
