@@ -245,7 +245,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
           <Section
             content={[
               {
-                image: "food-waste-homescreen.jpg",
+                image: "food-waste-home.png",
                 imageWidth: 720,
                 imageHeight: 525,
               },
