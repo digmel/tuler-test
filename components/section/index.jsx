@@ -3,11 +3,18 @@ import { View, Text } from "react-native";
 import { Colors } from "..";
 import Image from "next/image";
 
-export const Section = ({ isMobile, description, title, content }) => {
+export const Section = ({
+  isMobile,
+  description,
+  title,
+  content,
+  topSpace,
+}) => {
   const containerStyle = {
     flexDirection: isMobile ? "column" : "row",
     marginBottom: isMobile ? 48 : 100,
     marginHorizontal: -36,
+    marginTop: topSpace,
   };
 
   const contentStyle = {
