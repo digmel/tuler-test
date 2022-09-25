@@ -94,10 +94,10 @@ export const Hero = ({ isMobile, title }) => {
                   height={iconHeight}
                 />
               </View>
-              <Text style={bodyStyle}>Designer with a mission </Text>
+              <Text style={bodyStyle}>Designer with </Text>
             </View>
             <Text style={bodyStyle}>
-              to create delightful experiences and lovable products!
+              a mission to create delightful experiences and lovable products!
             </Text>
           </View>
         </View>
