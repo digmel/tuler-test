@@ -68,7 +68,7 @@ export const MenuMobile = ({ isHome, isProject, isAbout }) => {
               <Text style={menuItemTextStyle}>Home</Text>
             </View>
 
-            <View>
+            <View style={{ marginBottom: 12 }}>
               <Text style={menuItemTextStyle}>Projects</Text>
             </View>
 
