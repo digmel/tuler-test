@@ -17,7 +17,7 @@ export const Card = ({ link, image, title, text, isMobile }) => {
     justifyContent: "center",
     alignItems: "center",
     marginBottom: isMobile ? 12 : 24,
-    backgroundColor: "gray",
+    // backgroundColor: "gray",
   };
 
   const iconStyle = {
