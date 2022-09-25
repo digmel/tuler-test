@@ -24,8 +24,7 @@ export const SectionHero = ({ isMobile, link, image, headline, label }) => {
   const imageContainer = {
     flex: 1,
     justifyContent: "center",
-    alignItems: "flex-end",
-    backgroundColor: "gray",
+    // alignItems: "flex-end",
   };
 
   const headlineStyle = {
@@ -46,6 +45,8 @@ export const SectionHero = ({ isMobile, link, image, headline, label }) => {
     textAlign: isMobile ? "center" : "auto",
   };
 
+  const mobileFlag = isMobile ? "" : "-large";
+
   return (
     <View style={containerStyle}>
       <View style={contentStyle}>
@@ -62,7 +63,7 @@ export const SectionHero = ({ isMobile, link, image, headline, label }) => {
 
       <View style={imageContainer}>
         <Image
-          src={`/assets/${image}`}
+          src={`/assets/${image}${mobileFlag}.png`}
           width={imageWidth}
           height={imageHeight}
         />

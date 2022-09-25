@@ -19,13 +19,13 @@ export default function App({ isMobile }) {
             title: "Reduce Food Waste",
             text: "App allows people to share Food & Grocery products to NGO communities.",
             image: "food-waste-hero.png",
-            link: "/GlutenFreeApp",
+            link: "/FoodWasteApp",
           },
           {
             title: "Learn First Aid",
             text: "App allows people to refresh their First Aid knowledge with simple illustrated fun Exams.",
             image: "first-aid-hero.png",
-            link: "/GlutenFreeApp",
+            link: "/FirstAidApp",
           },
         ]}
       />

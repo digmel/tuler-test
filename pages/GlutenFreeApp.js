@@ -6,7 +6,7 @@ export default function GlutenFreeApp({ isMobile, constants }) {
       <SectionHero
         isMobile={isMobile}
         link={constants.links.GlutenFreeApp}
-        image="gluten-free-hero-large.png"
+        image="gluten-free-hero"
         headline="Gluten Free Finder"
         label="App guides people to discover Gluten Free restaurants worldwide."
       />
