@@ -1,4 +1,5 @@
 import { Screen, Hero, SectionCard } from "../components";
+//add comments
 
 export default function App({ isMobile }) {
   return (
