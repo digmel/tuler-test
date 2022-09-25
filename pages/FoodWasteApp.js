@@ -1,4 +1,4 @@
-import { Screen, Section, SectionHero, ProjectFinal } from "../components";
+import { Screen, Section, SectionHero, SectionFinal } from "../components";
 
 export default function FoodWasteApp({ isMobile, constants }) {
   return (
@@ -373,9 +373,9 @@ export default function FoodWasteApp({ isMobile, constants }) {
             fullImageHeight={975}
           />
 
-          <ProjectFinal link={constants.links.FoodWasteApp} />
         </>
       )} */}
+      <SectionFinal isMobile={isMobile} link={constants.links.FoodWasteApp} />
     </Screen>
   );
 }

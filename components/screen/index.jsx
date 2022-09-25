@@ -17,13 +17,18 @@ export const Screen = ({ children, isHome, isProject, isAbout, isMobile }) => {
 
   return (
     <ScrollView style={containerStyle} stickyHeaderIndices={[0]}>
-      <Header isHome={isHome} isProject={isProject} isAbout={isAbout} />
+      <Header
+        isHome={isHome}
+        isProject={isProject}
+        isAbout={isAbout}
+        isMobile={isMobile}
+      />
 
       <AnimatedView>
         <View style={contentStyle}>{children}</View>
       </AnimatedView>
 
-      <Footer />
+      <Footer isMobile={isMobile} />
     </ScrollView>
   );
 };

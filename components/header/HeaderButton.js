@@ -4,7 +4,7 @@ import { View, Text, Pressable, Clipboard } from "react-native";
 import { styles } from "./styles";
 import { textStyles } from "..";
 
-export const ActionButton = ({ title, content }) => {
+export const HeaderButton = ({ title, content }) => {
   const [state, setState] = useState(true);
   const [isEmailVisible, setIsEmailVisible] = useState(false);
 

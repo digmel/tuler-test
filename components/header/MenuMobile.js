@@ -1,20 +1,12 @@
 import { View, Text, Modal } from "react-native";
 import React from "react";
-import { textStyles, Colors } from "..";
+import { textStyles, Colors, AnimatedView } from "..";
 import Image from "next/image";
-import { useSpring, animated } from "@react-spring/web";
 
-export const MobileMenu = ({ isHome, isProject, isAbout }) => {
-  const AnimatedView = animated(View);
-  const transitionStyles = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    config: { duration: 700 },
-  });
-
+export const MenuMobile = ({ isHome, isProject, isAbout }) => {
   return (
     <Modal transparent>
-      <AnimatedView style={transitionStyles}>
+      <AnimatedView>
         <View
           style={{
             zIndex: 10,
@@ -45,7 +37,7 @@ export const MobileMenu = ({ isHome, isProject, isAbout }) => {
             <Text style={[textStyles.h3, { fontSize: 20 }]}>Home</Text>
 
             {isHome && (
-              <AnimatedView style={transitionStyles}>
+              <AnimatedView>
                 <View
                   style={{
                     alignItems: "flex-start",
@@ -67,7 +59,7 @@ export const MobileMenu = ({ isHome, isProject, isAbout }) => {
             <Text style={[textStyles.h3, { fontSize: 22 }]}>Projects</Text>
 
             {isProject && (
-              <AnimatedView style={transitionStyles}>
+              <AnimatedView>
                 <View
                   style={{
                     alignItems: "flex-start",
@@ -153,7 +145,7 @@ export const MobileMenu = ({ isHome, isProject, isAbout }) => {
             <Text style={[textStyles.h3, { fontSize: 20 }]}>About me</Text>
 
             {isAbout && (
-              <AnimatedView style={transitionStyles}>
+              <AnimatedView>
                 <View
                   style={{
                     alignItems: "flex-start",

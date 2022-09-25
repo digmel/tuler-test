@@ -3,7 +3,7 @@ import { View, Text, Pressable } from "react-native";
 import { textStyles } from "..";
 import { styles } from "./styles";
 
-export const DropdownMenu = () => {
+export const MenuWeb = () => {
   const [isHover1, setIsHover1] = useState(false);
   const [isHover2, setIsHover2] = useState(false);
   const [isHover3, setIsHover3] = useState(false);
