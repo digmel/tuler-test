@@ -111,22 +111,12 @@ export default function GlutenFreeApp({ isMobile, constants }) {
         ]}
       />
 
-      {/* <Image
-        isMobile={isMobile}
-        // name="gluten-free-intro.jpg"
-        variant="fullSection"
-        bottomSpace={100}
-      /> */}
-
       <Section
         isMobile={isMobile}
         content={[
           {
-            subtitle: "Home",
-            text: "After the user is logged in, the app should be easy to navigate so I chose a taskbar for navigation, they can just scroll up or down list view on the map easily.",
-          },
-          {
-            image: "gluten-free-home.jpg",
+            image: "gluten-free-intro",
+            style: "full",
           },
         ]}
       />
@@ -135,11 +125,29 @@ export default function GlutenFreeApp({ isMobile, constants }) {
         isMobile={isMobile}
         content={[
           {
-            image: "gluten-free-profile.jpg",
+            subtitle: "Home",
+            text: "After the user is logged in, the app should be easy to navigate so I chose a taskbar for navigation, they can just scroll up or down list view on the map easily.",
+            style: "center",
+          },
+          {
+            image: "gluten-free-home",
+            style: "end",
+          },
+        ]}
+      />
+
+      <Section
+        isMobile={isMobile}
+        content={[
+          {
+            image: "gluten-free-profile",
+            // image: "gluten-free-home",
+            style: "start",
           },
           {
             subtitle: "Profile",
             text: "From the Task Bar user are able to navigate to the profile screen where they can choose the language or theme of the app, log out and get help.",
+            style: "center",
           },
         ]}
       />
@@ -150,9 +158,11 @@ export default function GlutenFreeApp({ isMobile, constants }) {
           {
             subtitle: "Favorites & Share",
             text: "From the Task Bar users can navigate to the favorites list where all the saved restaurants are. Users can read more about them, remove restaurants from the list, or share the entire list.",
+            style: "center",
           },
           {
-            image: "gluten-free-favorites.jpg",
+            image: "gluten-free-favorites-share",
+            style: "end",
           },
         ]}
       />
@@ -161,11 +171,12 @@ export default function GlutenFreeApp({ isMobile, constants }) {
         isMobile={isMobile}
         content={[
           {
-            image: "gluten-free-filter.png",
+            image: "gluten-free-filter",
           },
           {
             subtitle: "Filter",
             text: "Using the filter users are able to easily find a restaurant with their specifications. For eg, they can filter by food category, restaurant type, opening hours etc. That feature makes the app much more convenient and easy to use.",
+            style: "center",
           },
         ]}
       />
@@ -176,20 +187,25 @@ export default function GlutenFreeApp({ isMobile, constants }) {
           {
             subtitle: "Reviews & Price indicators",
             text: "Gluten-free bakeries and restaurants are often overly expensive. So, before visiting the place would be great to have an overall idea of how pricey it is. Price indicators and customer reviews would be helpful for this. Hence, there is a restaurant info page where users can read their descriptions and reviews, make a call to reserve, get restaurants' locations to navigate, write reviews after visiting and add them to their favorite list.",
+            style: "center",
           },
           {
-            image: "gluten-free-reviews.png",
+            image: "gluten-free-reviews-indicators",
+            style: "end",
           },
         ]}
       />
 
-      {/* 
       <Section
-        content={[{ title: "Light and Dark Themes" }]}
-        fullImage="gluten-free-screens.jpg"
-        fullImageWidth={1140}
-        fullImageHeight={957}
-      /> */}
+        isMobile={isMobile}
+        content={[
+          {
+            subtitle: "Light and Dark Themes",
+            image: "gluten-free-screens",
+            style: "full",
+          },
+        ]}
+      />
 
       <Section
         isMobile={isMobile}
@@ -202,6 +218,16 @@ export default function GlutenFreeApp({ isMobile, constants }) {
           {
             subtitle: "Typeface & Icons",
             text: "Used typeface - Cera Pro is very clean and easy to read. The letters are based on pure geometry, and it has almost all language support so when the app is multilingual it will be easy to read for everyone around the world. Also, chosen tiny icons because of the minimalistic design approach.",
+          },
+        ]}
+      />
+
+      <Section
+        isMobile={isMobile}
+        content={[
+          {
+            image: "gluten-free-design-system",
+            style: "full",
           },
         ]}
       />

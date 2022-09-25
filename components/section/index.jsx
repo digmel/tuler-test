@@ -71,6 +71,10 @@ export const Section = ({
     paddingBottom: isMobile ? 16 : 32,
   };
 
+  let imageWidth = isMobile ? 320 : 600;
+  let imageHeight = isMobile ? 250 : 600;
+  let mobileFlag = isMobile ? "-mobile" : "";
+
   return (
     <>
       {title && (
@@ -86,12 +90,30 @@ export const Section = ({
       )}
 
       <View style={containerStyle}>
-        {content?.map(({ subtitle, text, list, image }) => {
+        {content?.map(({ subtitle, text, list, image, style }) => {
           const key = `${subtitle?.length}` + 1;
-          let iconWidth = subtitle ? subtitle?.length * 13 : 100;
+          const iconWidth = subtitle ? subtitle?.length * 13 : 100;
+          let dynamicImageStyle;
+          let dynamicContentStyle;
+
+          switch (style) {
+            case "center":
+              dynamicContentStyle = { justifyContent: "center" };
+              break;
+            case "end":
+              dynamicImageStyle = { alignSelf: "flex-end" };
+              break;
+            case "start":
+              dynamicImageStyle = { alignSelf: "flex-start" };
+              break;
+            case "full":
+              imageWidth = isMobile ? 370 : 1440;
+              imageHeight = isMobile ? 250 : 1000;
+              break;
+          }
 
           return (
-            <View style={contentStyle} key={key}>
+            <View style={[contentStyle, dynamicContentStyle]} key={key}>
               {subtitle && (
                 <>
                   <Text style={subtitleStyle}>{subtitle}</Text>
@@ -129,14 +151,20 @@ export const Section = ({
 
               {image && (
                 <View
-                  style={{
-                    backgroundColor: "gray",
-                    width: isMobile ? 320 : 600,
-                    height: isMobile ? 250 : 600,
-                    alignSelf: isMobile ? "center" : "auto",
-                  }}
+                  style={[
+                    {
+                      width: imageWidth,
+                      height: imageHeight,
+                      alignSelf: isMobile ? "center" : "auto",
+                    },
+                    dynamicImageStyle,
+                  ]}
                 >
-                  {/* <Image src={`/assets/${image}`} width={600} height={600} /> */}
+                  <Image
+                    src={`/assets/${image}${mobileFlag}.png`}
+                    width={imageWidth}
+                    height={imageHeight}
+                  />
                 </View>
               )}
             </View>

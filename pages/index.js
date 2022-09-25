@@ -1,5 +1,4 @@
 import { Screen, Hero, SectionCard } from "../components";
-//add comments
 
 export default function App({ isMobile }) {
   return (
@@ -13,19 +12,19 @@ export default function App({ isMobile }) {
           {
             title: "Gluten Free Finder",
             text: "App guides people to Find & Save Gluten-Free restaurants worldwide.",
-            image: "gluten-free-hero.png",
+            image: "gluten-free-hero",
             link: "/GlutenFreeApp",
           },
           {
             title: "Reduce Food Waste",
             text: "App allows people to share Food & Grocery products to NGO communities.",
-            image: "food-waste-hero.png",
+            image: "food-waste-hero",
             link: "/FoodWasteApp",
           },
           {
             title: "Learn First Aid",
             text: "App allows people to refresh their First Aid knowledge with simple illustrated fun Exams.",
-            image: "first-aid-hero.png",
+            image: "first-aid-hero",
             link: "/FirstAidApp",
           },
         ]}

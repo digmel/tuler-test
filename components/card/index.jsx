@@ -17,7 +17,6 @@ export const Card = ({ link, image, title, text, isMobile }) => {
     justifyContent: "center",
     alignItems: "center",
     marginBottom: isMobile ? 12 : 24,
-    // backgroundColor: "gray",
   };
 
   const iconStyle = {
@@ -51,7 +50,7 @@ export const Card = ({ link, image, title, text, isMobile }) => {
       <View style={containerStyle} accessibilityRole="link" href={link}>
         <View style={imageStyle}>
           <Image
-            src={`/assets/${image}`}
+            src={`/assets/${image}.png`}
             width={imageWith}
             height={imageHeight}
           />
