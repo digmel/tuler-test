@@ -1,14 +1,9 @@
-import { textStyles, Screen, HomeHero, SectionCard } from "../components";
-import { Text, View } from "react-native";
+import { Screen, Hero, SectionCard } from "../components";
 
 export default function App({ isMobile }) {
   return (
     <Screen isHome={true} isMobile={isMobile}>
-      <View style={{ marginBottom: 20 }}>
-        {!isMobile && <Text style={textStyles.h3}>Overview</Text>}
-      </View>
-
-      <HomeHero />
+      <Hero isMobile={isMobile} title="Overview" />
 
       <SectionCard
         isMobile={isMobile}
