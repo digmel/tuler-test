@@ -10,6 +10,7 @@ export const Card = ({ link, image, title, text, isMobile }) => {
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 24,
+    paddingHorizontal: 12,
     ...shadowStyle,
   };
 

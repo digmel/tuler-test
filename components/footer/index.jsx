@@ -35,13 +35,16 @@ export const Footer = ({ isMobile }) => {
     fontFamily: "Poppins",
   };
 
+  const iconWidth = isMobile ? 25 : 40;
+  const iconHeight = isMobile ? 25 : 40;
+
   return (
     <View style={containerStyle}>
       <Pressable onPress={openLinkedin}>
         <Image
           src="/assets/linkedin-icon.svg"
-          width={40}
-          height={40}
+          width={iconWidth}
+          height={iconHeight}
           alt="Linkedin icon"
         />
       </Pressable>

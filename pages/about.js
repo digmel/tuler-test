@@ -42,7 +42,7 @@ export default function About({ isMobile }) {
 
           <Section
             isMobile={isMobile}
-            topSpace={-50}
+            topSpace={-32}
             content={[
               {
                 subtitle: "Background & BA Degree",
@@ -53,7 +53,7 @@ export default function About({ isMobile }) {
 
           <Section
             isMobile={isMobile}
-            topSpace={-50}
+            topSpace={-32}
             content={[
               {
                 subtitle: "Elene in UX Field",
@@ -64,7 +64,7 @@ export default function About({ isMobile }) {
 
           <Section
             isMobile={isMobile}
-            topSpace={-50}
+            topSpace={-32}
             content={[
               {
                 subtitle: "Outside the Work",
