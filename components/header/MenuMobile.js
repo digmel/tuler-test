@@ -12,17 +12,24 @@ export const MenuMobile = ({ isHome, isProject, isAbout }) => {
     paddingHorizontal: 32,
     borderLeftColor: Colors.gray,
     borderLeftWidth: 1,
+    justifyContent: "space-between",
+  };
+
+  const menuItemContainer = {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+  };
+
+  const contactContainerStyle = {
+    flex: 1,
+    justifyContent: "flex-end",
   };
 
   const menuCloseIconStyle = {
     marginTop: -15,
     marginEnd: -22,
     alignSelf: "flex-end",
-  };
-
-  const contactContainerStyle = {
-    flex: 1,
-    marginTop: 400,
   };
 
   const menuItemTextStyle = {
@@ -46,24 +53,29 @@ export const MenuMobile = ({ isHome, isProject, isAbout }) => {
   };
 
   const projectItemStyle = {
-    flex: 1,
     paddingVertical: 20,
     paddingStart: 32,
-    justifyContent: "center",
-    alignItems: "flex-start",
     borderBottomWidth: 1,
     borderBottomColor: Colors.accent,
+    alignSelf: "stretch",
+  };
+
+  const fullScreenModalStyle = {
+    backgroundColor: Colors.grayHover,
+    margin: 0,
+    alignItems: undefined,
+    justifyContent: undefined,
   };
 
   return (
-    <Modal transparent>
-      <AnimatedView>
-        <View style={containerStyle}>
+    <Modal transparent style={fullScreenModalStyle}>
+      <View style={containerStyle}>
+        <AnimatedView>
           <View style={menuCloseIconStyle}>
             <Image src="/assets/mobile-menu-close.svg" width={45} height={45} />
           </View>
 
-          <View style={{ flex: 1 }}>
+          <View style={menuItemContainer}>
             <View style={menuItemStyle} accessibilityRole="link" href={`/`}>
               <Text style={menuItemTextStyle}>Home</Text>
             </View>
@@ -124,13 +136,14 @@ export const MenuMobile = ({ isHome, isProject, isAbout }) => {
               <Text style={menuItemTextStyle}>About me</Text>
             </View>
           </View>
-
+        </AnimatedView>
+        <AnimatedView>
           <View style={contactContainerStyle}>
             <Text style={menuItemTextStyle}>Contact</Text>
             <Text style={textStyles.link}>{constants.socials.Email}</Text>
           </View>
-        </View>
-      </AnimatedView>
+        </AnimatedView>
+      </View>
     </Modal>
   );
 };
