@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, Pressable, Clipboard } from "react-native";
-import { constants, AnimatedView, Colors } from "..";
+import { View, Text, Pressable } from "react-native";
+import { AnimatedView, Colors } from "..";
 import { styles } from "./styles";
 import Image from "next/image";
 import { HeaderButton } from "./HeaderButton";
@@ -115,7 +115,7 @@ export const HeaderWeb = ({ isHome, isProject, isAbout, isMobile }) => {
         </View>
 
         <View style={styles.contentEnd}>
-          <HeaderButton title="Contact" content={constants.socials.Email} />
+          <HeaderButton />
         </View>
       </View>
     </>

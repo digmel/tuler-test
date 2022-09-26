@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { View, Text, Pressable, Clipboard } from "react-native";
 import { styles } from "./styles";
-import { textStyles } from "..";
+import { textStyles, constants } from "..";
+import Image from "next/image";
+import { TouchableOpacity } from "react-native-web";
 
-export const HeaderButton = ({ title, content }) => {
+export const HeaderButton = () => {
   const [state, setState] = useState(true);
   const [isEmailVisible, setIsEmailVisible] = useState(false);
 
@@ -19,7 +21,7 @@ export const HeaderButton = ({ title, content }) => {
   const _onPress = () => {
     setState(!state);
     setIsEmailVisible(!isEmailVisible);
-    Clipboard.setString(content);
+    Clipboard.setString(constants.socials.Email);
   };
 
   return (
@@ -34,11 +36,18 @@ export const HeaderButton = ({ title, content }) => {
             }),
           }}
         >
-          <Text style={textStyles.menuItem.default}>{content}</Text>
+          <TouchableOpacity style={{ flexDirection: "row" }} onPress={_onPress}>
+            <Text style={textStyles.menuItem.default}>
+              {constants.socials.Email}
+            </Text>
+            <View style={{ marginStart: 4, marginBottom: 4 }}>
+              <Image src="/assets/clipboard-icon.svg" width={15} height={18} />
+            </View>
+          </TouchableOpacity>
         </AnimatedView>
       ) : (
         <Pressable style={styles.button} onPress={_onPress}>
-          <Text style={textStyles.menuItem.default}>{title}</Text>
+          <Text style={textStyles.menuItem.default}>Contact</Text>
         </Pressable>
       )}
     </>
