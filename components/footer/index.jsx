@@ -14,7 +14,7 @@ export const Footer = ({ isMobile }) => {
     flexDirection: "row",
     backgroundColor: Colors.grayLight,
     borderTopColor: Colors.gray,
-    borderWidth: 1,
+    borderTopWidth: 1,
     justifyContent: isMobile ? "center" : "flex-start",
     paddingHorizontal: isMobile ? 35 : 120,
     paddingVertical: isMobile ? 36 : 24,
