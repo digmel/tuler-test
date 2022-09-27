@@ -203,6 +203,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
       <Section
         headline="Designing & Iterating Screens"
         isMobile={isMobile}
+        topSpace={isMobile ? -190 : -300}
         content={[
           {
             subtitle: "Log In",
@@ -237,6 +238,8 @@ export default function FoodWasteApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        variant="isMobile-reverse"
+        topSpace={isMobile ? -20 : -150}
         content={[
           {
             image: "food-waste-home",
@@ -271,6 +274,7 @@ export default function FoodWasteApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        topSpace={isMobile ? -80 : -100}
         content={[
           {
             style: "center",

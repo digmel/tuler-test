@@ -61,6 +61,7 @@ export default function FirstAidApp({ isMobile, constants }) {
           },
         ]}
       />
+
       <Section
         isMobile={isMobile}
         content={[
@@ -71,8 +72,10 @@ export default function FirstAidApp({ isMobile, constants }) {
           },
         ]}
       />
+
       <Section
         isMobile={isMobile}
+        topSpace={isMobile ? -200 : -500}
         content={[
           {
             subtitle: "Persona #2",
@@ -81,8 +84,10 @@ export default function FirstAidApp({ isMobile, constants }) {
           },
         ]}
       />
+
       <Section
         isMobile={isMobile}
+        topSpace={isMobile ? -180 : -420}
         title="Usability Tests"
         content={[
           {
@@ -118,6 +123,7 @@ export default function FirstAidApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        topSpace={-20}
         content={[
           {
             image: "first-aid-usability",
@@ -128,6 +134,7 @@ export default function FirstAidApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        topSpace={isMobile ? -80 : -500}
         content={[
           {
             subtitle: "Test Feature",
@@ -143,6 +150,8 @@ export default function FirstAidApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        variant="isMobile-reverse"
+        topSpace={isMobile ? -80 : -100}
         content={[
           {
             image: "first-aid-articles",

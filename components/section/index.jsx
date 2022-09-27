@@ -9,12 +9,16 @@ export const Section = ({
   title,
   content,
   topSpace,
+  variant,
 }) => {
+  const mobileLayout =
+    variant === "isMobile-reverse" ? "column-reverse" : "column";
+
   const containerStyle = {
-    flexDirection: isMobile ? "column" : "row",
+    flexDirection: isMobile ? mobileLayout : "row",
     marginBottom: isMobile ? 48 : 100,
     marginHorizontal: -36,
-    marginTop: topSpace,
+    // marginTop: topSpace,
   };
 
   const contentStyle = {
@@ -76,7 +80,7 @@ export const Section = ({
   let mobileFlag = isMobile ? "-mobile" : "";
 
   return (
-    <>
+    <View style={{ marginTop: topSpace }}>
       {title && (
         <View style={titleContainer}>
           <Text style={titleStyle}>{title}</Text>
@@ -171,6 +175,6 @@ export const Section = ({
           );
         })}
       </View>
-    </>
+    </View>
   );
 };

@@ -122,6 +122,7 @@ export default function GlutenFreeApp({ isMobile, constants }) {
       />
 
       <Section
+        topSpace={isMobile ? -30 : -500}
         isMobile={isMobile}
         content={[
           {
@@ -138,10 +139,11 @@ export default function GlutenFreeApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        variant="isMobile-reverse"
+        topSpace={isMobile ? -60 : -130}
         content={[
           {
             image: "gluten-free-profile",
-            // image: "gluten-free-home",
             style: "start",
           },
           {
@@ -169,6 +171,8 @@ export default function GlutenFreeApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        variant="isMobile-reverse"
+        topSpace={isMobile ? -10 : -130}
         content={[
           {
             image: "gluten-free-filter",
@@ -224,6 +228,7 @@ export default function GlutenFreeApp({ isMobile, constants }) {
 
       <Section
         isMobile={isMobile}
+        topSpace={-40}
         content={[
           {
             image: "gluten-free-design-system",
