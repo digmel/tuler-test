@@ -71,8 +71,8 @@ export const Section = ({
     paddingBottom: isMobile ? 16 : 32,
   };
 
-  let imageWidth = isMobile ? 320 : 600;
-  let imageHeight = isMobile ? 250 : 600;
+  let imageWidth = isMobile ? 326 : 600;
+  let imageHeight = isMobile ? 300 : 600;
   let mobileFlag = isMobile ? "-mobile" : "";
 
   return (
@@ -107,8 +107,8 @@ export const Section = ({
               dynamicImageStyle = { alignSelf: "flex-start" };
               break;
             case "full":
-              imageWidth = isMobile ? 370 : 1440;
-              imageHeight = isMobile ? 250 : 1000;
+              imageWidth = isMobile ? 326 : 1440;
+              imageHeight = isMobile ? 300 : 1000;
               break;
           }
 
