@@ -17,7 +17,7 @@ export default function App({ isMobile }) {
           },
           {
             title: "Reduce Food Waste",
-            text: "App allows people to share Food & Grocery products to NGO communities.",
+            text: "App allows people to share Food & Grocery products with NGO communities.",
             image: "food-waste-hero",
             link: "/FoodWasteApp",
           },
