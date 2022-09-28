@@ -97,7 +97,7 @@ export const Hero = ({ isMobile, title }) => {
               <Text style={bodyStyle}>Designer with </Text>
             </View>
             <Text style={bodyStyle}>
-              a mission to create delightful experiences and lovable products!
+              a mission to create delightful experiences and lovable products for people!
             </Text>
           </View>
         </View>
