@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import { Screen, Section } from "../components";
 import Image from "next/image";
 
-export default function About({ isMobile }) {
+export default function Page({ isMobile }) {
   return (
     <Screen isAbout={true} isMobile={isMobile}>
       <View style={{ flexDirection: isMobile ? "column" : "row" }}>

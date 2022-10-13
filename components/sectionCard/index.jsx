@@ -36,17 +36,19 @@ export const SectionCard = ({ isMobile, title, content }) => {
       )}
 
       <View style={containerStyle}>
-        {content?.map(({ title, text, image, link }) => {
+        {content?.map(({ title, text, image, link, visibility = true }) => {
           const key = `${title?.length}` + 1;
           return (
             <View style={contentStyle} key={key}>
-              <Card
-                title={title}
-                text={text}
-                image={image}
-                link={link}
-                isMobile={isMobile}
-              />
+              {visibility && (
+                <Card
+                  title={title}
+                  text={text}
+                  image={image}
+                  link={link}
+                  isMobile={isMobile}
+                />
+              )}
             </View>
           );
         })}

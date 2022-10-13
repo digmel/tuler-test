@@ -6,8 +6,8 @@ export default function Page({ isMobile, constants }) {
       <SectionHero
         isMobile={isMobile}
         link={constants.links.FirstAidApp}
-        image="first-aid-hero"
-        headline="Learn First Aid"
+        // image="marikone-hero"
+        headline="Fashion Designer’s Portfolio"
         label="App allows people to refresh their First Aid knowledge with simple illustrated fun Exams"
       />
       <Section
