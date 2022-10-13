@@ -30,29 +30,32 @@ export default function App({ isMobile }) {
         ]}
       />
 
-      {/* <SectionCard
+      <SectionCard
         isMobile={isMobile}
         content={[
           {
             title: "Fashion Designer’s Portfolio",
             text: "People can find Marikone’s collections and contact information on the website.",
-            // image: "gluten-hero.png",
-            link: "/GlutenFreeApp",
+            // image: "marikone-hero",
+            link: "/MarikoneWeb", // <--- this is for navigation to project Page when user clicks the card. It should be exact file name as it is in under "pages" folder.
+            visibility: false, // <--- change this to "true" to make it visible, or just delete this line, since the default is "true" anyways.
           },
           {
-            title: "Startup Info Website",
-            text: "Hand4help is an organization that produces high-tech hand prostheses.",
-            // image: "gluten-hero.png",
-            link: "/GlutenFreeApp",
+            title: "Headline of the project",
+            text: "description",
+            // image: "project-main-cover-hero",
+            link: "/PageName",
+            visibility: false,
           },
           {
-            title: "Startup Info Website",
-            text: "Hand4help is an organization that produces high-tech hand prostheses.",
-            // image: "gluten-hero.png",
-            link: "/GlutenFreeApp",
+            title: "Headline of the project",
+            text: "description",
+            // image: "project-main-cover-hero",
+            link: "/PageName",
+            visibility: false,
           },
         ]}
-      /> */}
+      />
     </Screen>
   );
 }

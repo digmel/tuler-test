@@ -1,6 +1,6 @@
 import { Screen, Section, SectionHero, SectionFinal } from "../components";
 
-export default function FoodWasteApp({ isMobile, constants }) {
+export default function Page({ isMobile, constants }) {
   return (
     <Screen isProject={true} isMobile={isMobile}>
       <SectionHero
