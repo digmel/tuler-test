@@ -23,7 +23,7 @@ export default function Page({ isMobile, constants }) {
             text: "The goal was to design a simple and easy-to-scan responsive website for the fashion designer, that she would use to introduce her work to the customers.",
           },
           {
-            subtitle: "My Role & Responsibilities",
+            subtitle: "My Role & Project Duration",
             list: [
 
               {
@@ -31,7 +31,7 @@ export default function Page({ isMobile, constants }) {
                 text: "UX/UI Designer",
               },
               {
-                icon: "section-icon.svg",
+                // icon: "section-icon.svg",
                 text: "1 Week",
               },
 
@@ -115,8 +115,8 @@ export default function Page({ isMobile, constants }) {
         isMobile={isMobile}
         content={[
           {
-            subtitle: "First Aid App Screens",
-            image: "first-aid-screens",
+            subtitle: "Responsive Website",
+            image: "marikone-responsive",
             style: "full",
           },
         ]}
