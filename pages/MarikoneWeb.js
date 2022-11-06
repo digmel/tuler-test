@@ -6,7 +6,7 @@ export default function Page({ isMobile, constants }) {
       <SectionHero
         isMobile={isMobile}
         link={constants.links.FirstAidApp}
-        // image="marikone-hero"
+        image="marikone-hero"
         headline="Fashion Designer’s Portfolio"
         label="Fashion designer's Responsive website, where people can find her collection and contact details."
       />
@@ -48,7 +48,7 @@ export default function Page({ isMobile, constants }) {
             text: "During the wireframing, I created multiple sketches and iterations in order to define the best possible layout for the website. The goal was to design a simple page with the most important details in mind, such as, people should immediately recognize that this is a fashion designer’s portfolio website and show the latest designs of Marikone, little information about the author, popular products, and contact form. Here you can see the best option that I chose.",
           },
           {
-            image: "marikone-wireframes",
+            image: "marikone-wireframes.gif",
             style: "end",
           },
         ]}
@@ -89,7 +89,7 @@ export default function Page({ isMobile, constants }) {
         topSpace={isMobile ? -80 : -100}
         content={[
           {
-            image: "marikone-sales",
+            image: "marikone-popular",
           },
           {
             subtitle: "Top Sales Section",
