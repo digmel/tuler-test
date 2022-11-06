@@ -36,9 +36,9 @@ export default function App({ isMobile }) {
           {
             title: "Fashion Designer’s Portfolio",
             text: "People can find Marikone’s collections and contact information on the website.",
-            // image: "marikone-hero",
+            image: "marikone-hero",
             link: "/MarikoneWeb", // <--- this is for navigation to project Page when user clicks the card. It should be exact file name as it is in under "pages" folder.
-            visibility: false, // <--- change this to "true" to make it visible, or just delete this line, since the default is "true" anyways.
+            visibility: true, // <--- change this to "true" to make it visible, or just delete this line, since the default is "true" anyways.
           },
           {
             title: "Headline of the project",
