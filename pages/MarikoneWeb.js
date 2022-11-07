@@ -6,7 +6,7 @@ export default function Page({ isMobile, constants }) {
       <SectionHero
         isMobile={isMobile}
         link={constants.links.FirstAidApp}
-        image="marikone-hero"
+        image="marikone-hero-large-gif"
         headline="Fashion Designer’s Portfolio"
         label="Fashion designer's Responsive website, where people can find her collection and contact details."
       />
