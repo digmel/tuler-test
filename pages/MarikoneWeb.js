@@ -92,7 +92,7 @@ export default function Page({ isMobile, constants }) {
             image: "marikone-popular",
           },
           {
-            subtitle: "Top Sales Section",
+            subtitle: "The Most Popular",
             text: "Marikone's niche product is a corset, which is her most popular product. For that reason, I decided that those products deserve to have a special section and offered her that idea. We ended up placing three corsets on that section.",
             style: "center",
           },
