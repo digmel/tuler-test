@@ -48,7 +48,7 @@ export default function Page({ isMobile, constants }) {
             text: "During the wireframing, I created multiple sketches and iterations in order to define the best possible layout for the website. The goal was to design a simple page with the most important details in mind, such as, people should immediately recognize that this is a fashion designer’s portfolio website and show the latest designs of Marikone, little information about the author, popular products, and contact form. Here you can see the best option that I chose.",
           },
           {
-            image: "marikone-wireframes.gif",
+            image: "marikone-basic-wireframes.gif",
             style: "end",
           },
         ]}
