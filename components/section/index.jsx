@@ -94,7 +94,7 @@ export const Section = ({
       )}
 
       <View style={containerStyle}>
-        {content?.map(({ subtitle, text, list, image, style }) => {
+        {content?.map(({ subtitle, text, list, image, imageGIF, style }) => {
           const key = `${subtitle?.length}` + 1;
           const iconWidth = subtitle ? subtitle?.length * 13 : 100;
           let dynamicImageStyle;
@@ -166,6 +166,25 @@ export const Section = ({
                 >
                   <Image
                     src={`/assets/${image}${mobileFlag}.png`}
+                    width={imageWidth}
+                    height={imageHeight}
+                  />
+                </View>
+              )}
+
+              {imageGIF && (
+                <View
+                  style={[
+                    {
+                      width: imageWidth,
+                      height: imageHeight,
+                      alignSelf: isMobile ? "center" : "auto",
+                    },
+                    dynamicImageStyle,
+                  ]}
+                >
+                  <Image
+                    src={`/assets/${imageGIF}${mobileFlag}.gif`}
                     width={imageWidth}
                     height={imageHeight}
                   />

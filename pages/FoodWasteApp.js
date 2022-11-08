@@ -8,7 +8,7 @@ export default function Page({ isMobile, constants }) {
         link={constants.links.FoodWasteApp}
         image="food-waste-hero"
         headline="Reduce Food Waste"
-        label="App allows people to share unused Grocery Products & Foods to NGOs."
+        label="App allows people to share unused Grocery Products & Foods with NGO communities."
       />
 
       <Section
