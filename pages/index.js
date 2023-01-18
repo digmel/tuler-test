@@ -27,6 +27,16 @@ export default function App() {
           <Text>Please use only phone to open the Tuler.</Text>
         </View>
       )}
+
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text>tuler.io</Text>
+      </View>
     </Screen>
   );
 }
