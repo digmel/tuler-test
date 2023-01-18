@@ -28,15 +28,17 @@ export default function App() {
         </View>
       )}
 
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text>tuler.io</Text>
-      </View>
+      {isMobile && (
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text>tuler.io</Text>
+        </View>
+      )}
     </Screen>
   );
 }
