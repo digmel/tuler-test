@@ -3,7 +3,7 @@ import { Screen } from "../components";
 import { View, Text, useWindowDimensions, Image, Button } from "react-native";
 
 const URL =
-  "https://script.google.com/macros/s/AKfycbyWA81iY-k9_UAx78vEvaMEwJEtXcpJuiqr1lh3RmvRHauPZjP7XXpl7ReJPkMT5Ujo1w/exec";
+  "https://script.google.com/macros/s/AKfycbxlqWKmRHh2lJaMnoWUYt2HMa7laYBRf5nN0-SGmUBe6jhmY3sqdBwAu3hVA8IwktIoqw/exec";
 
 export default function App() {
   const { width } = useWindowDimensions();
@@ -26,7 +26,7 @@ export default function App() {
   const handleChange = (ev) => {
     let input = document.getElementById("capture");
     setImageURL(window.URL.createObjectURL(input.files[0]));
-    setMessage(imageURL);
+    setMessage(input.files[0]);
   };
 
   const params = {
@@ -36,22 +36,26 @@ export default function App() {
   };
 
   async function sendEmail() {
-    const response = await fetch(URL, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "text/plain",
-      },
-      body: JSON.stringify(params),
-    });
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        mode: "no-cors",
+        // headers: {
+        //   "Content-Type": "text/plain",
+        // },
+        body: message,
+      });
 
-    const res = await response.json();
-    console.log("first", res);
+      // const res = await response.json();
+      // console.log("first", res);
 
-    if (res?.result?.contentLength > 0) {
-      setName("");
-      setEmail("");
-      setMessage("");
+      // if (res?.result?.contentLength > 0) {
+      //   setName("");
+      //   setEmail("");
+      //   setMessage("");
+      // }
+    } catch (error) {
+      console.log("error", error);
     }
   }
   return (
