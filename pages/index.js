@@ -36,7 +36,13 @@ export default function App() {
             alignItems: "center",
           }}
         >
-          <Text>tuler.io</Text>
+          <input
+            type="file"
+            id="capture"
+            accept="image/*,video/*,audio/*"
+            capture
+            multiple
+          />
         </View>
       )}
     </Screen>
