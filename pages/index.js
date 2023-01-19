@@ -13,7 +13,7 @@ export default function App() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState();
 
-  const [imageURL, setImageURL] = useState();
+  const [imageURL, setImageURL] = useState("");
 
   useEffect(() => {
     if (width < 1400) {
@@ -45,6 +45,8 @@ export default function App() {
         // },
         body: message,
       });
+
+      setImageURL("");
 
       // const res = await response.json();
       // console.log("first", res);
@@ -98,8 +100,6 @@ export default function App() {
               uri: imageURL,
             }}
           />
-
-          <Text>{imageURL}</Text>
 
           <Button title="send" onPress={sendEmail} />
         </View>
