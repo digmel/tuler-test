@@ -73,7 +73,12 @@ export default function App() {
           }}
         >
           <View
-            style={{ flex: 1, backgroundColor: "gray", borderRadius: "10px" }}
+            style={{
+              flex: 1,
+              borderColor: "gray",
+              borderWidth: 1,
+              borderRadius: "10px",
+            }}
           >
             <label
               style={{
