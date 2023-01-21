@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { supabase } from "./api";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +9,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <SessionContextProvider supabaseClient={supabase}>
+        <Component {...pageProps} />
+      </SessionContextProvider>
     </>
   );
 }

@@ -1,51 +1,112 @@
 import React, { useState, useEffect } from "react";
 import { Screen } from "../components";
-import { View, Text, useWindowDimensions, Image, Button } from "react-native";
+import { View, Text, Image, Button } from "react-native";
+import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { v4 as uuidv4 } from "uuid";
+import { usePlatform } from "../hooks";
 
 const URL =
-  "https://script.google.com/macros/s/AKfycbxlqWKmRHh2lJaMnoWUYt2HMa7laYBRf5nN0-SGmUBe6jhmY3sqdBwAu3hVA8IwktIoqw/exec";
+  "https://script.google.com/macros/s/AKfycbxizjvxjzwDKJK_VK14XhAD3LAf2xtr1KIxbam322vuV3LwRTbKVI4tUxWDZoaEWlCsOQ/exec";
+
+const CDNURL =
+  "https://zgtxpheizfaytyphdejc.supabase.co/storage/v1/object/public/images/";
+
+// CDNURL + user.id + "/" + image.name
 
 export default function App() {
-  const { width } = useWindowDimensions();
-  const [isMobile, setIsMobile] = useState(false);
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState();
-
-  const [imageURL, setImageURL] = useState("");
+  const { isMobile } = usePlatform();
   const [showImage, setShowImage] = useState(true);
+  const [imageURL, setImageURL] = useState("");
+  const [uploadedImage, setUploadedImage] = useState();
+  // const [images, setImages] = useState([]);
+
+  const [imageName, setImageName] = useState("");
+
+  const user = useUser();
+  const supabase = useSupabaseClient();
 
   useEffect(() => {
-    if (width < 1400) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
+    if (user) {
+      console.log("first", user);
+      // getImages();
     }
-  }, [width]);
+  }, [user]);
 
-  const handleChange = (ev) => {
+  // async function getImages() {
+  //   const { data, error } = await supabase.storage
+  //     .from("images")
+  //     .list(user?.id + "/", {
+  //       limit: 100,
+  //       offset: 0,
+  //       sortBy: { column: "name", order: "asc" },
+  //     }); // Cooper/
+  //   // data: [ image1, image2, image3 ]
+  //   // image1: { name: "subscribeToCooperCodes.png" }
+
+  //   // to load image1: CDNURL.com/subscribeToCooperCodes.png -> hosted image
+
+  //   if (data !== null) {
+  //     setImages(data);
+  //   } else {
+  //     alert("Error loading images");
+  //     console.log(error);
+  //   }
+  // }
+
+  async function uploadImage() {
+    console.log("first name: ", imageName);
+
+    const { data, error } = await supabase.storage
+      .from("images")
+      .upload(user.id + "/" + imageName, uploadedImage);
+
+    if (!data) {
+      console.log(error);
+    }
+  }
+
+  // async function login() {
+  //   const { error } = await supabase.auth.signInWithPassword({
+  //     email: "gio.digmel@gmail.com",
+  //     password: "12345678",
+  //   });
+
+  //   if (error) {
+  //     alert(
+  //       "Error communicating with supabase, make sure to use a real email address!"
+  //     );
+  //     console.log(error);
+  //   } else {
+  //     alert("Check your email for a Supabase Magic Link to log in!");
+  //   }
+  // }
+
+  const handleChange = async () => {
     let input = document.getElementById("capture");
     setImageURL(window.URL.createObjectURL(input.files[0]));
     setShowImage(true);
-    setMessage(input.files[0]);
-  };
+    setUploadedImage(input.files[0]);
 
-  const params = {
-    email: "example@gmail.com",
-    name: "Giorgi2",
-    message: message,
+    const _imageName = uuidv4();
+    setImageName(_imageName);
   };
 
   async function sendEmail() {
+    // login();
+
+    await uploadImage();
+
+    const _imageURL = CDNURL + user.id + "/" + imageName;
+    console.log("url: ", _imageURL);
+
     setImageURL("");
     setShowImage(false);
 
     try {
-      const response = await fetch(URL, {
+      await fetch(URL, {
         method: "POST",
         mode: "no-cors",
-        body: message,
+        body: JSON.stringify(_imageURL),
       });
     } catch (error) {
       console.log("error", error);
@@ -143,7 +204,7 @@ export default function App() {
             )}
           </View>
 
-          <View style={{ marginBottom: 64 }}>
+          <View style={{ marginBottom: 32 }}>
             <Button
               title="send"
               color="blue"
