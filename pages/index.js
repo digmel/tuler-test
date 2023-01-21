@@ -92,7 +92,7 @@ export default function App() {
                 <Text
                   style={{ paddingHorizontal: "20px", textAlign: "center" }}
                 >
-                  Click anywhere to activate camera and start scanning
+                  Click anywhere to activate Camera
                 </Text>
               </View>
               <input
@@ -109,17 +109,32 @@ export default function App() {
             </label>
           </View>
 
-          <View style={{ marginVertical: 24, width: 250, height: 250 }}>
+          <View
+            style={{
+              marginVertical: 24,
+              flex: 1,
+            }}
+          >
             {showImage && (
-              <Image
+              <View
                 style={{
-                  width: 250,
-                  height: 250,
+                  flex: 1,
+                  justifyContent: "center",
+                  alignContent: "center",
                 }}
-                source={{
-                  uri: imageURL,
-                }}
-              />
+              >
+                <Image
+                  style={{
+                    width: 200,
+                    height: 200,
+                    alignSelf: "center",
+                    borderRadius: 12,
+                  }}
+                  source={{
+                    uri: imageURL,
+                  }}
+                />
+              </View>
             )}
           </View>
 
