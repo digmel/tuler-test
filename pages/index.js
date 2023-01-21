@@ -2,116 +2,61 @@ import React, { useState, useEffect } from "react";
 import { Screen } from "../components";
 import { View, Text, Image, Button } from "react-native";
 import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/router";
 import { usePlatform } from "../hooks";
-
-const URL =
-  "https://script.google.com/macros/s/AKfycbxizjvxjzwDKJK_VK14XhAD3LAf2xtr1KIxbam322vuV3LwRTbKVI4tUxWDZoaEWlCsOQ/exec";
-
-const CDNURL =
-  "https://zgtxpheizfaytyphdejc.supabase.co/storage/v1/object/public/images/";
-
-// CDNURL + user.id + "/" + image.name
+import { TextInput } from "react-native-web";
 
 export default function App() {
   const { isMobile } = usePlatform();
-  const [showImage, setShowImage] = useState(true);
-  const [imageURL, setImageURL] = useState("");
-  const [uploadedImage, setUploadedImage] = useState();
-  // const [images, setImages] = useState([]);
-
-  const [imageName, setImageName] = useState("");
-
+  const router = useRouter();
   const user = useUser();
   const supabase = useSupabaseClient();
 
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     if (user) {
-      console.log("first", user);
+      console.log("Current user: ", user);
       // getImages();
     }
   }, [user]);
 
-  // async function getImages() {
-  //   const { data, error } = await supabase.storage
-  //     .from("images")
-  //     .list(user?.id + "/", {
-  //       limit: 100,
-  //       offset: 0,
-  //       sortBy: { column: "name", order: "asc" },
-  //     }); // Cooper/
-  //   // data: [ image1, image2, image3 ]
-  //   // image1: { name: "subscribeToCooperCodes.png" }
+  const handleStart = async () => {
+    await signUp(email);
+    await login(email);
 
-  //   // to load image1: CDNURL.com/subscribeToCooperCodes.png -> hosted image
-
-  //   if (data !== null) {
-  //     setImages(data);
-  //   } else {
-  //     alert("Error loading images");
-  //     console.log(error);
-  //   }
-  // }
-
-  async function uploadImage() {
-    console.log("first name: ", imageName);
-
-    const { data, error } = await supabase.storage
-      .from("images")
-      .upload(user.id + "/" + imageName, uploadedImage);
-
-    if (!data) {
-      console.log(error);
-    }
-  }
-
-  // async function login() {
-  //   const { error } = await supabase.auth.signInWithPassword({
-  //     email: "gio.digmel@gmail.com",
-  //     password: "12345678",
-  //   });
-
-  //   if (error) {
-  //     alert(
-  //       "Error communicating with supabase, make sure to use a real email address!"
-  //     );
-  //     console.log(error);
-  //   } else {
-  //     alert("Check your email for a Supabase Magic Link to log in!");
-  //   }
-  // }
-
-  const handleChange = async () => {
-    let input = document.getElementById("capture");
-    setImageURL(window.URL.createObjectURL(input.files[0]));
-    setShowImage(true);
-    setUploadedImage(input.files[0]);
-
-    const _imageName = uuidv4();
-    setImageName(_imageName);
+    setEmail("");
   };
 
-  async function sendEmail() {
-    // login();
+  async function signUp(email) {
+    const { error } = await supabase.auth.signUp({
+      email: email,
+      password: "12345678",
+    });
 
-    await uploadImage();
-
-    const _imageURL = CDNURL + user.id + "/" + imageName;
-    console.log("url: ", _imageURL);
-
-    setImageURL("");
-    setShowImage(false);
-
-    try {
-      await fetch(URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify(_imageURL),
-      });
-    } catch (error) {
-      console.log("error", error);
+    if (error) {
+      console.log("Error when sign up", error);
+    } else {
+      router.push("/main");
+      console.log("New user created: ", email);
     }
   }
+
+  async function login(email) {
+    const { error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: "12345678",
+    });
+
+    if (error) {
+      console.log("Error when login", error);
+      console.log(error);
+    } else {
+      console.log("User is logged in with: ", email);
+    }
+  }
+
   return (
     <Screen isMobile={isMobile}>
       {!isMobile && (
@@ -127,90 +72,39 @@ export default function App() {
       )}
 
       {isMobile && (
-        <View
-          style={{
-            flex: 1,
-            marginTop: 24,
-          }}
-        >
-          <View
+        <View style={{ flex: 1, justifyContent: "center" }}>
+          <View style={{ alignSelf: "center" }}>
+            <Text style={{ fontSize: 24, fontWeight: 600, marginBottom: 36 }}>
+              Hi there!
+            </Text>
+          </View>
+
+          <Text
             style={{
-              flex: 1,
-              borderColor: "gray",
-              borderWidth: 1,
-              borderRadius: "10px",
+              fontSize: 18,
+              fontWeight: 300,
             }}
           >
-            <label
+            Email:
+          </Text>
+
+          <View>
+            <TextInput
+              autoFocus
+              onChange={(ev) => setEmail(ev.target.value)}
               style={{
-                width: "100%",
-                height: "100%",
+                height: 36,
+                borderWidth: 0.5,
+                borderColor: "gray",
+                padding: 4,
+                marginVertical: 12,
+                borderRadius: 8,
               }}
-            >
-              <View
-                style={{
-                  flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginTop: "100px",
-                }}
-              >
-                <Text
-                  style={{ paddingHorizontal: "20px", textAlign: "center" }}
-                >
-                  Click anywhere to activate Camera
-                </Text>
-              </View>
-              <input
-                type="file"
-                id="capture"
-                accept="image/*,video/*"
-                capture
-                multiple
-                onChange={handleChange}
-                style={{
-                  display: "none",
-                }}
-              />
-            </label>
-          </View>
-
-          <View
-            style={{
-              marginVertical: 24,
-              flex: 1,
-            }}
-          >
-            {showImage && (
-              <View
-                style={{
-                  flex: 1,
-                  justifyContent: "center",
-                  alignContent: "center",
-                }}
-              >
-                <Image
-                  style={{
-                    width: 200,
-                    height: 200,
-                    alignSelf: "center",
-                    borderRadius: 12,
-                  }}
-                  source={{
-                    uri: imageURL,
-                  }}
-                />
-              </View>
-            )}
-          </View>
-
-          <View style={{ marginBottom: 32 }}>
-            <Button
-              title="send"
-              color="blue"
-              borderRadius="12px"
-              onPress={sendEmail}
             />
+          </View>
+
+          <View style={{ marginTop: 32 }}>
+            <Button title="Start" color="blue" onPress={handleStart}></Button>
           </View>
         </View>
       )}
