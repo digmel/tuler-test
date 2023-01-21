@@ -14,6 +14,7 @@ export default function App() {
   const [message, setMessage] = useState();
 
   const [imageURL, setImageURL] = useState("");
+  const [showImage, setShowImage] = useState(true);
 
   useEffect(() => {
     if (width < 1400) {
@@ -26,6 +27,7 @@ export default function App() {
   const handleChange = (ev) => {
     let input = document.getElementById("capture");
     setImageURL(window.URL.createObjectURL(input.files[0]));
+    setShowImage(true);
     setMessage(input.files[0]);
   };
 
@@ -36,26 +38,15 @@ export default function App() {
   };
 
   async function sendEmail() {
+    setImageURL("");
+    setShowImage(false);
+
     try {
       const response = await fetch(URL, {
         method: "POST",
         mode: "no-cors",
-        // headers: {
-        //   "Content-Type": "text/plain",
-        // },
         body: message,
       });
-
-      setImageURL("");
-
-      // const res = await response.json();
-      // console.log("first", res);
-
-      // if (res?.result?.contentLength > 0) {
-      //   setName("");
-      //   setEmail("");
-      //   setMessage("");
-      // }
     } catch (error) {
       console.log("error", error);
     }
@@ -78,30 +69,68 @@ export default function App() {
         <View
           style={{
             flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
+            marginTop: 24,
           }}
         >
-          <input
-            type="file"
-            id="capture"
-            accept="image/*,video/*"
-            capture
-            multiple
-            onChange={handleChange}
-          />
+          <View
+            style={{ flex: 1, backgroundColor: "gray", borderRadius: "10px" }}
+          >
+            <label
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "100px",
+                }}
+              >
+                <Text
+                  style={{ paddingHorizontal: "20px", textAlign: "center" }}
+                >
+                  Click anywhere to activate camera and start scanning
+                </Text>
+              </View>
+              <input
+                type="file"
+                id="capture"
+                accept="image/*,video/*"
+                capture
+                multiple
+                onChange={handleChange}
+                style={{
+                  display: "none",
+                }}
+              />
+            </label>
+          </View>
 
-          <Image
-            style={{
-              width: 250,
-              height: 250,
-            }}
-            source={{
-              uri: imageURL,
-            }}
-          />
+          <View style={{ marginVertical: 24, width: 250, height: 250 }}>
+            {showImage && (
+              <Image
+                style={{
+                  width: 250,
+                  height: 250,
+                }}
+                source={{
+                  uri: imageURL,
+                }}
+              />
+            )}
+          </View>
 
-          <Button title="send" onPress={sendEmail} />
+          <View style={{ marginBottom: 64 }}>
+            <Button
+              title="send"
+              color="blue"
+              borderRadius="12px"
+              onPress={sendEmail}
+            />
+          </View>
         </View>
       )}
     </Screen>
