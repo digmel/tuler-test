@@ -37,6 +37,7 @@ export default function App() {
 
     if (error) {
       console.log("Error when sign up", error);
+      setError("Please use another email address.");
     } else {
       router.push("/main");
       console.log("New user created: ", email);
@@ -50,6 +51,7 @@ export default function App() {
     });
 
     if (error) {
+      setError("Please use another email address.");
       console.log("Error when login", error);
       console.log(error);
     } else {
@@ -101,6 +103,18 @@ export default function App() {
               }}
             />
           </View>
+
+          {error && (
+            <Text
+              style={{
+                fontSize: 14,
+                fontWeight: 300,
+                color: "red",
+              }}
+            >
+              {error}
+            </Text>
+          )}
 
           <View style={{ marginTop: 32 }}>
             <Button title="Start" color="blue" onPress={handleStart}></Button>
