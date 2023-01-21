@@ -90,7 +90,6 @@ export default function App() {
 
           <View>
             <TextInput
-              autoFocus
               onChange={(ev) => setEmail(ev.target.value)}
               style={{
                 height: 36,
