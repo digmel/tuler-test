@@ -5,6 +5,7 @@ import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { v4 as uuidv4 } from "uuid";
 import { usePlatform } from "../hooks";
 import { useRouter } from "next/router";
+import { ActivityIndicator } from "react-native";
 
 const URL =
   "https://script.google.com/macros/s/AKfycbxizjvxjzwDKJK_VK14XhAD3LAf2xtr1KIxbam322vuV3LwRTbKVI4tUxWDZoaEWlCsOQ/exec";
@@ -23,12 +24,14 @@ export default function App() {
   // const [images, setImages] = useState([]);
 
   const [imageName, setImageName] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const user = useUser();
   const supabase = useSupabaseClient();
 
   useEffect(() => {
     if (!user) {
+      setLoading(true);
       router.push("/");
     }
     console.log("Current user: ", user);
@@ -82,13 +85,14 @@ export default function App() {
   }
 
   async function sendEmail() {
+    setImageURL("");
+    setShowImage(false);
+    setLoading(true);
+
     await uploadImage();
 
     const _imageURL = CDNURL + user.id + "/" + imageName;
     console.log("url: ", _imageURL);
-
-    setImageURL("");
-    setShowImage(false);
 
     try {
       await fetch(URL, {
@@ -116,7 +120,15 @@ export default function App() {
         </View>
       )}
 
-      {isMobile && (
+      {loading && (
+        <View
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <ActivityIndicator size="large" />
+        </View>
+      )}
+
+      {isMobile && !loading && (
         <View
           style={{
             flex: 1,
